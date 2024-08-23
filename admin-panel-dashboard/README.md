@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# **REACT PRACTICE - ADMIN PANEL DASHBOARD**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+- This is a react practice.
+- [Design](<https://www.figma.com/design/fOjW9syvEGGUOhu0hhQm97/Admin-Panel-Dashboard-(Community)?node-id=11-2&t=SMlx43xwpvb2iLma-0>)
 
-In the project directory, you can run:
+### Timeline
 
-### `npm start`
+- Estimate time: **13 days** (Start date: **22 Aug, 2024** - End date: **12 Sep, 2024**).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Task Management
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Board Gilab](https://gitlab.asoft-python.com/van.nguyenthi/react-training/-/boards)
 
-### `npm test`
+## Tech stacks
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Libraries
 
-### `npm run build`
+- [React](https://react.dev/learn): is a JavaScript library for building user interfaces.
+- [React Hook Form](https://react-hook-form.com/): React Hook Form reduces the amount of code you need to write while removing unnecessary re-renders.
+- [TailwindCSS](https://tailwindcss.com/): Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file.
+- Editor: Visual Studio Code.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node: version 18.17.1
+- pnpm: version 8.10.5
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Get source code
 
-### `npm run eject`
+| Command                                                                        | Action                                            |
+| :----------------------------------------------------------------------------- | :------------------------------------------------ |
+| `$ git clone https://gitlab.asoft-python.com/van.nguyenthi/react-training.git` | Clone Repository with HTTPS                       |
+| `$ git clone git@gitlab.asoft-python.com:van.nguyenthi/react-training.git`     | Clone Repository with SSH                         |
+| `$ cd admin-panel-dashboard`                                                   | Redirect to folder                                |
+| `$ git checkout feat/admin-panel-dashboard`                                    | Checkout into "feat/admin-panel-dashboard" branch |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Build and Run app
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Command            | Action                                                                                            | Port                  |
+| :----------------- | :------------------------------------------------------------------------------------------------ | :-------------------- |
+| `$ pnpm install`   | Install packages dependencies                                                                     | N/A                   |
+| `$ pnpm run build` | Build app. Creates an optimized production build                                                  | N/A                   |
+| `$ pnpm run start` | Starts the application in production mode. The application should be compiled with `build` first. | http://localhost:3000 |
