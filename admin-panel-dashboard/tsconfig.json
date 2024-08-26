@@ -18,9 +18,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@components": ["src/components"],
+      "@layouts": ["src/layouts"],
+      "@*": ["src/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["**/*.ts", "**/*.js", "**/*.tsx"],
+  "exclude": ["node_modules"],
+  "esModuleInterop": true,
 }
