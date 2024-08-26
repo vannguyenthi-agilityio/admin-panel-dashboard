@@ -33,8 +33,9 @@
 | :----------------------------------------------------------------------------- | :------------------------------------------------ |
 | `$ git clone https://gitlab.asoft-python.com/van.nguyenthi/react-training.git` | Clone Repository with HTTPS                       |
 | `$ git clone git@gitlab.asoft-python.com:van.nguyenthi/react-training.git`     | Clone Repository with SSH                         |
+| `$ cd react-training`                                                          | Redirect to folder react-training                 |
 | `$ git checkout feat/admin-panel-dashboard`                                    | Checkout into "feat/admin-panel-dashboard" branch |
-| `$ cd feat/admin-panel-dashboard`                                              | Redirect to folder                                |
+| `$ cd admin-panel-dashboard`                                                   | Redirect to folder admin-panel-dashboard          |
 
 ### Build and Run app
 
