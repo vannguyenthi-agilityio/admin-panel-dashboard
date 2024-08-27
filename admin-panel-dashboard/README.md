@@ -24,8 +24,8 @@
 
 ### Prerequisites
 
-- Node: last version
-- pnpm: last version
+- Node: last version (21.7.3)
+- pnpm: last version (8.14.1)
 
 ### Get source code
 

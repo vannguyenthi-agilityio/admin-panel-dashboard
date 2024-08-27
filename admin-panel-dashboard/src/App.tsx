@@ -1,5 +1,5 @@
 // Layouts
-import PageLayout from '@/layouts/PageLayout';
+import { PageLayout } from '@/layouts';
 
 const App = () => (
   <PageLayout>
