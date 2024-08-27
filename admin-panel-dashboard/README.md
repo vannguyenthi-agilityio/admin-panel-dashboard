@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# **REACT PRACTICE - ADMIN PANEL DASHBOARD**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+- This is a react practice.
+- [Design](<https://www.figma.com/design/fOjW9syvEGGUOhu0hhQm97/Admin-Panel-Dashboard-(Community)?node-id=11-2&t=SMlx43xwpvb2iLma-0>)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Timeline
 
-## Expanding the ESLint configuration
+- Estimate time: **13 days** (Start date: **22 Aug, 2024** - End date: **12 Sep, 2024**).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Task Management
 
-- Configure the top-level `parserOptions` property like this:
+- [Board Gilab](https://gitlab.asoft-python.com/van.nguyenthi/react-training/-/boards)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tech stacks
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Libraries
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- [React](https://react.dev/learn): is a JavaScript library for building user interfaces.
+- [React Hook Form](https://react-hook-form.com/): React Hook Form reduces the amount of code you need to write while removing unnecessary re-renders.
+- [TailwindCSS](https://tailwindcss.com/): Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file.
+- Editor: Visual Studio Code.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Prerequisites
+
+- Node: last version
+- pnpm: last version
+
+### Get source code
+
+| Command                                                                        | Action                                            |
+| :----------------------------------------------------------------------------- | :------------------------------------------------ |
+| `$ git clone https://gitlab.asoft-python.com/van.nguyenthi/react-training.git` | Clone Repository with HTTPS                       |
+| `$ git clone git@gitlab.asoft-python.com:van.nguyenthi/react-training.git`     | Clone Repository with SSH                         |
+| `$ cd react-training`                                                          | Redirect to folder react-training                 |
+| `$ git checkout feat/admin-panel-dashboard`                                    | Checkout into "feat/admin-panel-dashboard" branch |
+| `$ cd feat/admin-panel-dashboard`                                              | Redirect to folder                                |
+| `$ cd admin-panel-dashboard`                                                   | Redirect to folder admin-panel-dashboard          |
+
+### Build and Run app
+
+| Command            | Action                                                                                            | Port                  |
+| :----------------- | :------------------------------------------------------------------------------------------------ | :-------------------- |
+| `$ pnpm install`   | Install packages dependencies                                                                     | N/A                   |
+| `$ pnpm run build` | Build app. Creates an optimized production build                                                  | N/A                   |
+| `$ pnpm run dev` | Starts the application in production mode. The application should be compiled with `build` first. | http://localhost:3000 |
