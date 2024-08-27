@@ -1,16 +1,16 @@
 // Layouts
-import PageLayout from '../src/layouts/PageLayout'; // TODO: will apply alias `@layouts/PageLayout` in here
+import PageLayout from '@layouts/PageLayout';
 
 const App = () => {
   return (
     <PageLayout>
       <header className="App-header">
         <h1 className="text-3xl text-center font-bold underline text-red-600">
-          Simple React Typescript Tailwind Sample
+          Simple Storybook, Jest, TypeScript, Eslint, Husky, Vite and TailwindCSS Sample
         </h1>
       </header>
     </PageLayout>
   );
 };
 
-export default App;
+export default App

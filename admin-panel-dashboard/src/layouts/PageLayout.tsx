@@ -2,7 +2,7 @@
 import { ReactNode, Suspense } from 'react';
 
 // Components
-import Loading from '../../src/components/commons/Loading'; // TODO: will apply alias `@components/commons/Loading` in here
+import Loading from '@components/commons/Loading/Loading'; // TODO: will apply alias `@components/commons/Loading` in here
 
 const PageLayout = ({
   children,
@@ -12,13 +12,11 @@ const PageLayout = ({
   className?: string;
 }) => {
   return (
-    <>
-      <div className={`min-h-0 md:min-h-[calc(100vh)] ${className}`}>
-        <div className="max-h-full">
-          <Suspense fallback={<Loading />}>{children}</Suspense>
-        </div>
+    <div className={`min-h-0 md:min-h-[calc(100vh)] ${className}`}>
+      <div className="max-h-full">
+        <Suspense fallback={<Loading />}>{children}</Suspense>
       </div>
-    </>
+    </div>
   );
 };
 
