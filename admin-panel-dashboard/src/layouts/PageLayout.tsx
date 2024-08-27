@@ -2,7 +2,7 @@
 import { ReactNode, Suspense } from 'react';
 
 // Components
-import Loading from '@components/commons/Loading/Loading'; // TODO: will apply alias `@components/commons/Loading` in here
+import Loading from '@/components/commons/Loading/Loading'; // TODO: will apply alias `@components/commons/Loading` in here
 
 const PageLayout = ({
   children,

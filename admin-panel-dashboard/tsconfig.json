@@ -24,21 +24,8 @@
     //absolute import
     "baseUrl": ".",
     "paths": {
-      "@components": ["src/components"],
-      "@layouts": ["src/layouts"],
-      "@pages": ["src/pages"],
-      "@types": ["src/types"],
-      "@interfaces": ["src/interfaces"],
-      "@services": ["src/services"],
-      "@constants": ["src/constants"],
-      "@contexts": ["src/contexts"],
-      "@assets": ["src/assets"],
-      "@fonts": ["src/fonts"],
-      "@hooks": ["src/hooks"],
-      "@utils": ["src/utils"],
-      "@stores": ["src/stores"],
-      "@*": ["src/*"]
-    }
+      "@/*": ["./src/*"],
+    },
 
   },
   "include": ["src", "./jest.setup.ts", "vite.config.ts"]
