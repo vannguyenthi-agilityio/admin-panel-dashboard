@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 // Components
-import Loading from "./Loading";
+import Loading from ".";
 
 const meta = {
   title: "Components/Commons/Loading",

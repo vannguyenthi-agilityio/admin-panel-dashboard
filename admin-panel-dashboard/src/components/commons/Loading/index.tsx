@@ -1,3 +1,10 @@
+interface ILoading {
+  width?: string;
+  height?: string;
+  isFullWidth?: boolean;
+  fillColor?: string;
+  additionalClass?: string;
+}
 
 const Loading = ({
   width = "h-16",
@@ -5,13 +12,7 @@ const Loading = ({
   isFullWidth = false,
   fillColor = "black",
   additionalClass,
-}: {
-  width?: string;
-  height?: string;
-  isFullWidth?: boolean;
-  fillColor?: string;
-  additionalClass?: string;
-}) =>
+}: ILoading) =>
   isFullWidth ? (
     <div className="fixed bg-[rgba(0,0,0,0.5)] overflow-hidden w-full h-full inset-0 z-50 cursor-not-allowed">
       <div className="h-full justify-center">
