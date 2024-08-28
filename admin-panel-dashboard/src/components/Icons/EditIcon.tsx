@@ -21,8 +21,7 @@ const EditIcon: React.FC<IIcon> = ({
         stroke-linecap="round"
         stroke-linejoin="round"
       />
-</svg>
-
+  </svg>
 );
 
 export default EditIcon;
