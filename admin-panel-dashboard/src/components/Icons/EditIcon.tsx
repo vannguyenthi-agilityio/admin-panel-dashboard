@@ -6,7 +6,7 @@ const EditIcon: React.FC<IIcon> = ({
   height = "20",
   stroke = COLOR.SECONDARY[200],
   className
-  }) => (
+}) => (
   <svg
     width={width}
     height={height}
