@@ -1,21 +1,12 @@
-import { type ComponentPropsWithRef, ReactNode } from 'react';
-import { type VariantProps } from 'class-variance-authority';
-
 // Helpers
 import { clsxMerge } from '@/helpers';
+
+// Types
+import { IButton } from "@/types";
+
 import { buttonStyles } from './style';
 
-type ButtonElementProps = ComponentPropsWithRef<'button'>;
-
-export interface ButtonProps
-  extends ButtonElementProps,
-    VariantProps<typeof buttonStyles> {
-  leftIcon?: ReactNode;
-  rightIcon?: ReactNode;
-  label?: string;
-}
-
-export default function Button({
+const Button = ({
   className,
   buttonType,
   size,
@@ -25,19 +16,19 @@ export default function Button({
   spacing,
   leftIcon,
   ...props
-}: ButtonProps) {
-  return (
-    <button
-      className={clsxMerge(
-        buttonStyles({ buttonType, size, rounded, spacing }),
-        className
-      )}
-      type="button"
-      {...props}
-    >
-      {Boolean(leftIcon) && leftIcon}
-      {Boolean(label) && label}
-      {Boolean(rightIcon) && rightIcon}
-    </button>
-  );
-}
+}: IButton) => (
+  <button
+    className={clsxMerge(
+      buttonStyles({ buttonType, size, rounded, spacing }),
+      className
+    )}
+    type="button"
+    {...props}
+  >
+    {Boolean(leftIcon) && leftIcon}
+    {Boolean(label) && label}
+    {Boolean(rightIcon) && rightIcon}
+  </button>
+);
+Button.displayName = "Button";
+export default Button;
