@@ -7,6 +7,8 @@ export { default as BellIcon } from './BellIcon';
 export { default as UserIcon } from './UserIcon';
 export { default as HomeIcon } from './HomeIcon';
 export { default as HelpIcon } from './HelpIcon';
+export { default as CloseIcon } from './CloseIcon';
+export { default as CheckIcon } from './CheckIcon';
 export { default as ClockIcon } from './ClockIcon';
 export { default as DeleteIcon } from './DeleteIcon';
 export { default as SettingIcon } from './SettingIcon';
