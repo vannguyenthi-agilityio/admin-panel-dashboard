@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 // Helpers
 import { clsxMerge } from '@/helpers';
 
@@ -6,7 +8,7 @@ import { IButton } from "@/types";
 
 import { buttonStyles } from './style';
 
-const Button = ({
+const Button = memo(({
   className,
   buttonType,
   size,
@@ -25,10 +27,10 @@ const Button = ({
     type="button"
     {...props}
   >
-    {Boolean(leftIcon) && leftIcon}
-    {Boolean(label) && label}
-    {Boolean(rightIcon) && rightIcon}
+    {leftIcon && leftIcon}
+    {label && label}
+    {rightIcon && rightIcon}
   </button>
-);
+));
 Button.displayName = "Button";
 export default Button;
