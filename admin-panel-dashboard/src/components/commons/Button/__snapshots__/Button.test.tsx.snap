@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component Render correctly with buttonType prop 1`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-blood text-white border-blood hover:bg-blood text-sm py-2 px-4 rounded-lg"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Button component Render correctly with buttonType prop 2`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-yellow-500 text-white border-yellow-500 hover:bg-yellow-600 text-sm py-2 px-4 rounded-lg"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Button component Render correctly with buttonType prop 3`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-red-500 text-white border-red-500 hover:bg-red-600 text-sm py-2 px-4 rounded-lg"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Button component Render correctly with rounded prop 1`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-full"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Button component Render correctly with rounded prop 2`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Button component Render correctly with rounded prop 3`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-none"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Button component Render correctly with rounded prop 4`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-xl"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Button component Render correctly with rounded prop 5`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-2xl"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Button component Render correctly with rounded prop 6`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-md"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Button component Render correctly with rounded prop 7`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-sm"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Button component Renders correctly with left icon 1`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg"
+    type="button"
+  >
+    <span>
+      👈
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Button component Renders correctly with right icon 1`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg"
+    type="button"
+  >
+    <span>
+      👉
+    </span>
+  </button>
+</div>
+`;
