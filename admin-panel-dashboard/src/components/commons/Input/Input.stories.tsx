@@ -77,6 +77,7 @@ export const Email: Story = {
   args: {
     defaultValue: 'example@site.com',
     type: 'email',
+    required: true
   },
 };
 

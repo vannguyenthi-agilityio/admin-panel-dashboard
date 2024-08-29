@@ -13,6 +13,7 @@ const Input = forwardRef<HTMLInputElement, IInput>((
     borderHide,
     className,
     label,
+    required,
     leftElement,
     rightElement,
     placeholder,
@@ -22,10 +23,14 @@ const Input = forwardRef<HTMLInputElement, IInput>((
   },
   ref
 ) => {
+  const classNameLabel = required
+    ? "text-sm font-medium after:content-['*'] after:text-red-500 after:text-md"
+    : "text-sm font-medium";
+
   return (
     <div className="w-full">
       {label && (
-        <label htmlFor={props.id} className="text-sm font-medium ">
+        <label htmlFor={props.id} className={classNameLabel}>
           {label}
         </label>
       )}
