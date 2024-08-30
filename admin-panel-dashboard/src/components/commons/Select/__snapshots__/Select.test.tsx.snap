@@ -101,22 +101,25 @@ exports[`Select component Renders select component 1`] = `
           December
         </option>
       </select>
-      <svg
+      <div
         class="ml-1 absolute top-[18px] right-3 text-slate-700"
-        fill="none"
-        height="5"
-        viewBox="0 0 8 5"
-        width="8"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <path
-          d="M7.25 0.75L4 4.25L0.75 0.75"
-          stroke="#adb5bd"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
-        />
-      </svg>
+        <svg
+          fill="none"
+          height="5"
+          viewBox="0 0 8 5"
+          width="8"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.25 0.75L4 4.25L0.75 0.75"
+            stroke="#adb5bd"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+          />
+        </svg>
+      </div>
     </div>
   </div>
 </div>

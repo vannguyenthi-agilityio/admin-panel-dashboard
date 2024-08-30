@@ -7,7 +7,7 @@ import {
 import '@testing-library/jest-dom';
 import Select from '.'
 
-import { MONTHS } from "@/constants";
+import { MONTHS, MESSAGES_ERROR } from "@/constants";
 
 describe('Select component', () => {
   it('Renders select component', () => {
@@ -31,11 +31,22 @@ describe('Select component', () => {
     expect(selectElement[0]?.children).toHaveLength(12);
   });
 
-   it("Renders correct name of options", () => {
+  it("Renders correct name of options", () => {
     const { getAllByText } = render(
       <Select label="Month" options={MONTHS} defaultValue="4"/>,
     );
     expect(getAllByText("May")).toBeTruthy();
+  });
+
+  it("Should show error message if have errorMessage", () => {
+    const { getAllByText } = render(
+      <Select
+        label="Month"
+        options={MONTHS}
+        errorMessage={MESSAGES_ERROR.FIELD_REQUIRED}
+      />,
+    );
+    expect(getAllByText(MESSAGES_ERROR.FIELD_REQUIRED)).toBeTruthy();
   });
 
   it("Should call onChange handler with selected value", async () => {

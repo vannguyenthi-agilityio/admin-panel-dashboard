@@ -21,8 +21,10 @@ const Select =  forwardRef<HTMLSelectElement, ISelect>((
     name,
     options = MONTHS,
     className,
+    errorMessage,
     variant,
     selectSize,
+    iconElement = <ArrowDownIcon />,
     onChange,
     ...props }, ref) => {
   const classNameLabel = required
@@ -54,9 +56,18 @@ const Select =  forwardRef<HTMLSelectElement, ISelect>((
             </option>
             ))}
         </select>
-        <ArrowDownIcon  className="ml-1 absolute top-[18px] right-3 text-slate-700"/>
+        {iconElement && (
+          <div className="ml-1 absolute top-[18px] right-3 text-slate-700">
+            {iconElement}
+          </div>
+        )}
+      </div>
+      {errorMessage && (
+        <p className="pt-1 text-xs text-red-500 dark:text-red-500">
+          {errorMessage}
+        </p>
+      )}
     </div>
-  </div>
   );
 });
 

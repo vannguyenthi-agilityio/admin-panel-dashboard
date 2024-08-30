@@ -54,3 +54,11 @@ export const LabelRequired: Story = {
     required: true,
   },
 };
+
+export const WithErrorMessage: Story = {
+  args: {
+    label: "Select Field",
+    required: true,
+    errorMessage: "Field is required"
+  },
+};

@@ -11,9 +11,11 @@ export interface OptionType {
 
 export interface ISelect
   extends Omit<ComponentProps<"select">, "onChange">,
-    Omit<VariantProps<typeof selectStyles>, "onChange">  {
+    Omit<VariantProps<typeof selectStyles>, "iconElement">  {
   options: OptionType[];
   label?: string;
   required?: boolean;
+  iconElement?: React.ReactNode;
+  errorMessage?: string;
   onChange?: (event: any) => void;
 }
