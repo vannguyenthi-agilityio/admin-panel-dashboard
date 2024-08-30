@@ -15,7 +15,7 @@ const ArrowDownIcon: React.FC<IIcon> = ({
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M7.25 0.75L4 4.25L0.75 0.75" stroke={stroke} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7.25 0.75L4 4.25L0.75 0.75" stroke={stroke} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
