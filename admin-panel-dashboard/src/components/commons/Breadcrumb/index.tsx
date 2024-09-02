@@ -31,8 +31,7 @@ const Breadcrumb =  forwardRef<HTMLElement, IBreadcrumb>(
             linkIndex,
             linkActiveCrumb,
             iconElement
-          }: IItemBreadcrumb) => {
-            return (
+          }: IItemBreadcrumb) => (
               <li className={clsxMerge(
                 breadcrumbStyles({ 
                   size,
@@ -48,8 +47,8 @@ const Breadcrumb =  forwardRef<HTMLElement, IBreadcrumb>(
                   <span className="mx-2 text-gray-400">&#47;</span>
                 )}
               </li>
-            );
-          })
+            )
+          )
         }
       </ol>
     </nav>
