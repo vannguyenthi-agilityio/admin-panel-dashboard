@@ -15,7 +15,13 @@ const CloseIcon: React.FC<IIcon> = ({
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M11.5835 0.75L1.0835 11.25M1.0835 0.75L11.5835 11.25" stroke={stroke} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path
+      d="M11.5835 0.75L1.0835 11.25M1.0835 0.75L11.5835 11.25"
+      stroke={stroke}
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 

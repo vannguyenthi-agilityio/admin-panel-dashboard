@@ -15,7 +15,13 @@ const CheckIcon: React.FC<IIcon> = ({
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M1.0835 6.8665L3.67345 10.4138C4.48521 11.5256 6.1514 11.504 6.9341 10.3715L13.5835 0.75" stroke={stroke} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path
+      d="M1.0835 6.8665L3.67345 10.4138C4.48521 11.5256 6.1514 11.504 6.9341 10.3715L13.5835 0.75"
+      stroke={stroke}
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
