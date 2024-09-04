@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown component Renders dropdown component 1`] = `
+<div>
+  <div>
+    <button
+      class="font-primary border focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-center inline-flex items-center bg-white text-dark text-sm px-2 py-1.5"
+      data-dropdown-toggle="dropdown"
+      type="button"
+    >
+      <img
+        alt="user photo"
+        class="w-7 h-7 mr-2 rounded-lg"
+        src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
+      />
+      <span
+        class="mr-2"
+      >
+        Derek Alvarado
+      </span>
+      <svg
+        class="mx-2"
+        fill="none"
+        height="5"
+        viewBox="0 0 8 5"
+        width="8"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.25 0.75L4 4.25L0.75 0.75"
+          stroke="#adb5bd"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Dropdown component Renders dropdown not logout component 1`] = `
+<div>
+  <div>
+    <button
+      class="font-primary border focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-center inline-flex items-center bg-white text-dark text-sm px-2 py-1.5"
+      data-dropdown-toggle="dropdown"
+      type="button"
+    >
+      <img
+        alt="user photo"
+        class="w-7 h-7 mr-2 rounded-lg"
+        src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250"
+      />
+      <span
+        class="mr-2"
+      >
+        Derek Alvarado
+      </span>
+      <svg
+        class="mx-2"
+        fill="none"
+        height="5"
+        viewBox="0 0 8 5"
+        width="8"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.25 0.75L4 4.25L0.75 0.75"
+          stroke="#adb5bd"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;

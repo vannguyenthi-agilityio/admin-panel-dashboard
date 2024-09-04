@@ -32,13 +32,16 @@ const Breadcrumb =  forwardRef<HTMLElement, IBreadcrumb>(
             linkActiveCrumb,
             iconElement
           }: IItemBreadcrumb) => (
-              <li className={clsxMerge(
-                breadcrumbStyles({ 
-                  size,
-                  activeLink: linkActiveCrumb
-                }),
-                className
-              )}>
+              <li
+                className={clsxMerge(
+                  breadcrumbStyles({ 
+                    size,
+                    activeLink: linkActiveCrumb
+                  }),
+                  className
+                )}
+                 key={linkIndex}
+              >
                 <a href={href} className="inline-flex items-center font-normal hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
                   {iconElement && iconElement}
                   {crumbName}
