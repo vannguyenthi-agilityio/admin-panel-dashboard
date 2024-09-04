@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast component Renders toast error component 1`] = `
+<div>
+  <div
+    class="flex items-start w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+    id="toast-error"
+    role="alert"
+  >
+    <div
+      class="inline-flex items-center justify-center flex-shrink-0 rounded-lg bg-red-500 border-red-500 h-8 w-8 text-sm px-2 py-2"
+    >
+      <svg
+        fill="none"
+        height="12"
+        viewBox="0 0 15 12"
+        width="15"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.0835 6.8665L3.67345 10.4138C4.48521 11.5256 6.1514 11.504 6.9341 10.3715L13.5835 0.75"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+      </svg>
+    </div>
+    <div
+      class="flex flex-col"
+    >
+      <div
+        class="ms-4 text-xl font-medium"
+      >
+        Well done!
+      </div>
+      <div
+        class="ms-4 mt-2 text-sm font-normal"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast component Renders toast success component 1`] = `
+<div>
+  <div
+    class="flex items-start w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+    id="toast-undefined"
+    role="alert"
+  >
+    <div
+      class="inline-flex items-center justify-center flex-shrink-0 rounded-lg text-green-500 bg-green-500 h-8 w-8 text-sm px-2 py-2"
+    >
+      <svg
+        fill="none"
+        height="12"
+        viewBox="0 0 15 12"
+        width="15"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.0835 6.8665L3.67345 10.4138C4.48521 11.5256 6.1514 11.504 6.9341 10.3715L13.5835 0.75"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+      </svg>
+    </div>
+    <div
+      class="flex flex-col"
+    >
+      <div
+        class="ms-4 text-xl font-medium"
+      >
+        Well done!
+      </div>
+      <div
+        class="ms-4 mt-2 text-sm font-normal"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Toast component Renders toast warning component 1`] = `
+<div>
+  <div
+    class="flex items-start w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+    id="toast-warning"
+    role="alert"
+  >
+    <div
+      class="inline-flex items-center justify-center flex-shrink-0 rounded-lg bg-yellow-500 h-8 w-8 text-sm px-2 py-2"
+    >
+      <svg
+        fill="none"
+        height="12"
+        viewBox="0 0 15 12"
+        width="15"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.0835 6.8665L3.67345 10.4138C4.48521 11.5256 6.1514 11.504 6.9341 10.3715L13.5835 0.75"
+          stroke="#fff"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        />
+      </svg>
+    </div>
+    <div
+      class="flex flex-col"
+    >
+      <div
+        class="ms-4 text-xl font-medium"
+      >
+        Well done!
+      </div>
+      <div
+        class="ms-4 mt-2 text-sm font-normal"
+      />
+    </div>
+  </div>
+</div>
+`;
