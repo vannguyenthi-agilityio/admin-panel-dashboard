@@ -1,0 +1,496 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <nav
+        class="bg-dark antialiased w-[250px] z-50 fixed top-4 left-4 h-[calc(100vh-2rem)] transition-all ease-in translate-x-[-10rem] xl:translate-x-0 xl:w-[260px] delay-10 duration-300 text-sm px-4 py-6"
+      >
+        <div
+          class="justify-end flex items-center"
+        >
+          <a
+            href="/"
+          >
+            <div
+              class="justify-normal pl-5 gap-1 flex-nowrap"
+            >
+              <svg
+                fill="none"
+                height="22"
+                viewBox="0 0 23 22"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.4016 5.31037C16.4016 7.90656 14.8675 9.11614 13.1269 9.70618V9.76519C15.3395 10.1487 17.2277 11.7713 17.2277 14.9281C17.2277 18.9993 14.425 21.094 10.0587 21.094H0.5V0H9.55714C13.8939 0 16.4016 1.91763 16.4016 5.31037ZM4.01075 8.73261H9.43913C11.9468 8.73261 12.8909 7.72954 12.8909 5.87091C12.8909 4.01228 11.7403 2.97971 9.64564 2.97971H4.01075V8.73261ZM4.01075 11.3583V18.1143H9.79315C12.8024 18.1143 13.7169 16.6982 13.7169 14.7215C13.7169 12.5679 12.3893 11.3583 10.1767 11.3583H4.01075Z"
+                  fill="#fff"
+                />
+                <path
+                  d="M21.0724 21.33C19.9808 21.33 19.1548 20.5924 19.1548 19.4124C19.1548 18.2618 19.9808 17.4947 21.0724 17.4947C22.1345 17.4947 22.9605 18.2618 22.9605 19.4124C22.9605 20.5924 22.1345 21.33 21.0724 21.33Z"
+                  fill="#fff"
+                />
+              </svg>
+            </div>
+          </a>
+          <div
+            class="p-1 rounded-md mr-[-38px] w-[48px] cursor-pointer"
+          >
+            <button
+              class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 rounded-lg px-2.5 h-[40px] w-[40px] border-none shadow-sm"
+              type="button"
+            >
+              <svg
+                class="w-[16px] h-[16px]"
+                fill="none"
+                height="10"
+                viewBox="0 0 14 10"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.45834 0.625L13.0417 5L8.45834 9.375M12.8333 5H0.958344"
+                  stroke="#212529"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.25"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <ul>
+          <li
+            class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center hover:bg-none !p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+          >
+            <a
+              class="font-normal w-full flex items-center py-3 px-7 justify-end"
+              href="/"
+            >
+              <svg
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.75024 15.25H13.2502C14.3548 15.25 15.2502 14.3546 15.2502 13.25V5.75001L8.0002 0.75L0.750244 5.75001V13.25C0.750244 14.3546 1.64568 15.25 2.75024 15.25Z"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M5.74963 11.7491C5.74963 10.6445 6.6451 9.74906 7.7496 9.74906H8.2496C9.3542 9.74906 10.2496 10.6445 10.2496 11.7491V15.2491H5.74963V11.7491Z"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </a>
+          </li>
+          <li
+            class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center hover:bg-none !p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+          >
+            <a
+              class="font-normal w-full flex items-center py-3 px-7 justify-end"
+              href="/custommers"
+            >
+              <svg
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.75 10C13.8288 10 14.6802 12.1479 15.0239 13.696C15.2095 14.532 14.5333 15.25 13.6769 15.25H12.75M10.75 6.25C12.2688 6.25 13.25 5.01878 13.25 3.5C13.25 1.98122 12.2688 0.75 10.75 0.75M1.78167 15.25H9.21829C9.78279 15.25 10.227 14.7817 10.1145 14.2285C9.80399 12.7012 8.78969 10 5.49999 10C2.2103 10 1.19604 12.7012 0.885478 14.2285C0.772988 14.7817 1.21717 15.25 1.78167 15.25ZM8.24999 3.5C8.24999 5.01878 7.01877 6.25 5.49999 6.25C3.98121 6.25 2.74999 5.01878 2.74999 3.5C2.74999 1.98122 3.98121 0.75 5.49999 0.75C7.01877 0.75 8.24999 1.98122 8.24999 3.5Z"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </a>
+          </li>
+          <li
+            class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center hover:bg-none !p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+          >
+            <a
+              class="font-normal w-full flex items-center py-3 px-7 justify-end"
+              href="/analytics"
+            >
+              <svg
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.75 1V6.25C7.75 7.3546 8.6454 8.25 9.75 8.25H15M15.25 8C15.25 12.0041 12.0041 15.25 8 15.25C3.99594 15.25 0.75 12.0041 0.75 8C0.75 3.99594 3.99594 0.75 8 0.75C12.0041 0.75 15.25 3.99594 15.25 8Z"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <span
+          class="uppercase pl-5 text-silver font-medium text-sm"
+        >
+          Settings
+        </span>
+        <ul>
+          <li
+            class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-centerhover:bg-none p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+          >
+            <a
+              class="font-normal w-full flex items-center py-3 px-7 justify-end"
+              href="./messages"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 16 14"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.5 1.5L8 7.25L14.5 1.5M0.75 2.75C0.75 1.64543 1.64543 0.75 2.75 0.75H13.25C14.3546 0.75 15.25 1.64543 15.25 2.75V11.25C15.25 12.3546 14.3546 13.25 13.25 13.25H2.75C1.64543 13.25 0.75 12.3546 0.75 11.25V2.75Z"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </a>
+          </li>
+          <li
+            class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-centerhover:bg-none p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+          >
+            <a
+              class="font-normal w-full flex items-center py-3 px-7 justify-end"
+              href="/settings"
+            >
+              <svg
+                fill="none"
+                height="14"
+                viewBox="0 0 16 14"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.75 3H3.25M8.75 3H15.25M0.75 11H8.25M13.75 11H15.25M8.25 3C8.25 4.24264 7.24264 5.25 6 5.25C4.75736 5.25 3.75 4.24264 3.75 3C3.75 1.75736 4.75736 0.75 6 0.75C7.24264 0.75 8.25 1.75736 8.25 3ZM13.25 11C13.25 12.2426 12.2426 13.25 11 13.25C9.75736 13.25 8.75 12.2426 8.75 11C8.75 9.75736 9.75736 8.75 11 8.75C12.2426 8.75 13.25 9.75736 13.25 11Z"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </a>
+          </li>
+          <li
+            class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-centerhover:bg-none p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+          >
+            <a
+              class="font-normal w-full flex items-center py-3 px-7 justify-end"
+              href="./help-centre"
+            >
+              <svg
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.75 6C5.75 6 6 3.75 8 3.75C10 3.75 10.25 5 10.25 6C10.25 6.7513 9.8266 7.5027 8.9798 7.8299C8.4647 8.0289 8 8.4477 8 9V9.25M15.25 8C15.25 12.0041 12.0041 15.25 8 15.25C3.99594 15.25 0.75 12.0041 0.75 8C0.75 3.99594 3.99594 0.75 8 0.75C12.0041 0.75 15.25 3.99594 15.25 8ZM8.5 12C8.5 12.2761 8.2761 12.5 8 12.5C7.7239 12.5 7.5 12.2761 7.5 12C7.5 11.7239 7.7239 11.5 8 11.5C8.2761 11.5 8.5 11.7239 8.5 12Z"
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      class="bg-dark antialiased w-[250px] z-50 fixed top-4 left-4 h-[calc(100vh-2rem)] transition-all ease-in translate-x-[-10rem] xl:translate-x-0 xl:w-[260px] delay-10 duration-300 text-sm px-4 py-6"
+    >
+      <div
+        class="justify-end flex items-center"
+      >
+        <a
+          href="/"
+        >
+          <div
+            class="justify-normal pl-5 gap-1 flex-nowrap"
+          >
+            <svg
+              fill="none"
+              height="22"
+              viewBox="0 0 23 22"
+              width="48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.4016 5.31037C16.4016 7.90656 14.8675 9.11614 13.1269 9.70618V9.76519C15.3395 10.1487 17.2277 11.7713 17.2277 14.9281C17.2277 18.9993 14.425 21.094 10.0587 21.094H0.5V0H9.55714C13.8939 0 16.4016 1.91763 16.4016 5.31037ZM4.01075 8.73261H9.43913C11.9468 8.73261 12.8909 7.72954 12.8909 5.87091C12.8909 4.01228 11.7403 2.97971 9.64564 2.97971H4.01075V8.73261ZM4.01075 11.3583V18.1143H9.79315C12.8024 18.1143 13.7169 16.6982 13.7169 14.7215C13.7169 12.5679 12.3893 11.3583 10.1767 11.3583H4.01075Z"
+                fill="#fff"
+              />
+              <path
+                d="M21.0724 21.33C19.9808 21.33 19.1548 20.5924 19.1548 19.4124C19.1548 18.2618 19.9808 17.4947 21.0724 17.4947C22.1345 17.4947 22.9605 18.2618 22.9605 19.4124C22.9605 20.5924 22.1345 21.33 21.0724 21.33Z"
+                fill="#fff"
+              />
+            </svg>
+          </div>
+        </a>
+        <div
+          class="p-1 rounded-md mr-[-38px] w-[48px] cursor-pointer"
+        >
+          <button
+            class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 rounded-lg px-2.5 h-[40px] w-[40px] border-none shadow-sm"
+            type="button"
+          >
+            <svg
+              class="w-[16px] h-[16px]"
+              fill="none"
+              height="10"
+              viewBox="0 0 14 10"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.45834 0.625L13.0417 5L8.45834 9.375M12.8333 5H0.958344"
+                stroke="#212529"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.25"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <ul>
+        <li
+          class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center hover:bg-none !p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+        >
+          <a
+            class="font-normal w-full flex items-center py-3 px-7 justify-end"
+            href="/"
+          >
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.75024 15.25H13.2502C14.3548 15.25 15.2502 14.3546 15.2502 13.25V5.75001L8.0002 0.75L0.750244 5.75001V13.25C0.750244 14.3546 1.64568 15.25 2.75024 15.25Z"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+              <path
+                d="M5.74963 11.7491C5.74963 10.6445 6.6451 9.74906 7.7496 9.74906H8.2496C9.3542 9.74906 10.2496 10.6445 10.2496 11.7491V15.2491H5.74963V11.7491Z"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </a>
+        </li>
+        <li
+          class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center hover:bg-none !p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+        >
+          <a
+            class="font-normal w-full flex items-center py-3 px-7 justify-end"
+            href="/custommers"
+          >
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.75 10C13.8288 10 14.6802 12.1479 15.0239 13.696C15.2095 14.532 14.5333 15.25 13.6769 15.25H12.75M10.75 6.25C12.2688 6.25 13.25 5.01878 13.25 3.5C13.25 1.98122 12.2688 0.75 10.75 0.75M1.78167 15.25H9.21829C9.78279 15.25 10.227 14.7817 10.1145 14.2285C9.80399 12.7012 8.78969 10 5.49999 10C2.2103 10 1.19604 12.7012 0.885478 14.2285C0.772988 14.7817 1.21717 15.25 1.78167 15.25ZM8.24999 3.5C8.24999 5.01878 7.01877 6.25 5.49999 6.25C3.98121 6.25 2.74999 5.01878 2.74999 3.5C2.74999 1.98122 3.98121 0.75 5.49999 0.75C7.01877 0.75 8.24999 1.98122 8.24999 3.5Z"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </a>
+        </li>
+        <li
+          class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center hover:bg-none !p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+        >
+          <a
+            class="font-normal w-full flex items-center py-3 px-7 justify-end"
+            href="/analytics"
+          >
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.75 1V6.25C7.75 7.3546 8.6454 8.25 9.75 8.25H15M15.25 8C15.25 12.0041 12.0041 15.25 8 15.25C3.99594 15.25 0.75 12.0041 0.75 8C0.75 3.99594 3.99594 0.75 8 0.75C12.0041 0.75 15.25 3.99594 15.25 8Z"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <span
+        class="uppercase pl-5 text-silver font-medium text-sm"
+      >
+        Settings
+      </span>
+      <ul>
+        <li
+          class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-centerhover:bg-none p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+        >
+          <a
+            class="font-normal w-full flex items-center py-3 px-7 justify-end"
+            href="./messages"
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 16 14"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.5 1.5L8 7.25L14.5 1.5M0.75 2.75C0.75 1.64543 1.64543 0.75 2.75 0.75H13.25C14.3546 0.75 15.25 1.64543 15.25 2.75V11.25C15.25 12.3546 14.3546 13.25 13.25 13.25H2.75C1.64543 13.25 0.75 12.3546 0.75 11.25V2.75Z"
+                stroke="white"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </a>
+        </li>
+        <li
+          class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-centerhover:bg-none p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+        >
+          <a
+            class="font-normal w-full flex items-center py-3 px-7 justify-end"
+            href="/settings"
+          >
+            <svg
+              fill="none"
+              height="14"
+              viewBox="0 0 16 14"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.75 3H3.25M8.75 3H15.25M0.75 11H8.25M13.75 11H15.25M8.25 3C8.25 4.24264 7.24264 5.25 6 5.25C4.75736 5.25 3.75 4.24264 3.75 3C3.75 1.75736 4.75736 0.75 6 0.75C7.24264 0.75 8.25 1.75736 8.25 3ZM13.25 11C13.25 12.2426 12.2426 13.25 11 13.25C9.75736 13.25 8.75 12.2426 8.75 11C8.75 9.75736 9.75736 8.75 11 8.75C12.2426 8.75 13.25 9.75736 13.25 11Z"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </a>
+        </li>
+        <li
+          class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-centerhover:bg-none p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+        >
+          <a
+            class="font-normal w-full flex items-center py-3 px-7 justify-end"
+            href="./help-centre"
+          >
+            <svg
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.75 6C5.75 6 6 3.75 8 3.75C10 3.75 10.25 5 10.25 6C10.25 6.7513 9.8266 7.5027 8.9798 7.8299C8.4647 8.0289 8 8.4477 8 9V9.25M15.25 8C15.25 12.0041 12.0041 15.25 8 15.25C3.99594 15.25 0.75 12.0041 0.75 8C0.75 3.99594 3.99594 0.75 8 0.75C12.0041 0.75 15.25 3.99594 15.25 8ZM8.5 12C8.5 12.2761 8.2761 12.5 8 12.5C7.7239 12.5 7.5 12.2761 7.5 12C7.5 11.7239 7.7239 11.5 8 11.5C8.2761 11.5 8.5 11.7239 8.5 12Z"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
