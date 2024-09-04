@@ -1,8 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-// Constants
-//import { ICON_ITEM_BREADCRUMB } from '@/constants';
-
 // Components
 import Dropdown from './';
 

@@ -3,20 +3,15 @@ import { VariantProps } from "class-variance-authority";
 
 import { dropdownStyles } from '@/components/Dropdown/style';
 
-export interface IUser {
-  name: string;
-  avatar: string;
-  id?: number;
-}
-
+import { IUser } from './common';
 export interface IListDropDown {
   name: string;
   href: string;
 }
 
 export interface IDropdown
-  extends Omit<ComponentProps<"div">, "size">,
-    Omit<VariantProps<typeof dropdownStyles>, "">  {
+  extends Omit<VariantProps<typeof dropdownStyles>, "">  {
+  className?: string;
   user?: IUser;
   listDropDown?: IListDropDown[];
   hasLogOut?: boolean;
