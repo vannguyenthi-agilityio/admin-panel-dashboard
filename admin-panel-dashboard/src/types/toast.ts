@@ -1,4 +1,3 @@
-import { type ComponentProps } from "react";
 import { VariantProps } from "class-variance-authority";
 
 import { toastStyles } from '@/components/commons/Toast/style';
@@ -10,11 +9,12 @@ export enum TOAST_TYPE {
 }
 
 export interface IToast
-  extends Omit<ComponentProps<"div">, "size">,
-    Omit<VariantProps<typeof toastStyles>, "iconElement">  {
+  extends Omit<VariantProps<typeof toastStyles>, "iconElement">  {
+  className?: string;
   toastType?: TOAST_TYPE;
   message?: string;
   title?: string;
   hasIconClose?: boolean;
   iconElement?: React.ReactNode;
+  onChange?: (event: any) => void;
 }
