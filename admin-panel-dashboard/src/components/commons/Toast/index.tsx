@@ -24,7 +24,6 @@ const Toast =  forwardRef<HTMLDivElement, IToast>(
     toastType,
     toastSize,
     iconElement = <CheckIcon />,
-    onChange,
     ...props }, ref) => (
     <div
       id={`toast-${toastType}`}
