@@ -1,4 +1,3 @@
-import { type ComponentProps } from "react";
 import { VariantProps } from "class-variance-authority";
 
 import { dropdownStyles } from '@/components/Dropdown/style';
