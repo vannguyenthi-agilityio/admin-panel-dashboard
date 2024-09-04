@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreadCrumb component Renders breadCrumb with Icon Item component 1`] = `
+<div>
+  <nav
+    aria-label="Breadcrumb"
+  >
+    <ol
+      class="inline-flex items-center"
+    >
+      <li
+        class="flex text-seldom text-sm px-0 py-2"
+      >
+        <a
+          class="inline-flex items-center font-normal hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+          href="/"
+        >
+          <span
+            class="mr-1"
+          >
+            👉
+          </span>
+          DashBoard
+        </a>
+        <span
+          class="mx-2 text-gray-400"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="flex text-tertiary text-sm px-0 py-2"
+      >
+        <a
+          class="inline-flex items-center font-normal hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+          href="/"
+        >
+          <span
+            class="mr-1"
+          >
+            👉
+          </span>
+          Customers’ List
+        </a>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
+
+exports[`BreadCrumb component Renders breadcrumb default component 1`] = `
+<div>
+  <nav
+    aria-label="Breadcrumb"
+  >
+    <ol
+      class="inline-flex items-center"
+    >
+      <li
+        class="flex text-seldom text-sm px-0 py-2"
+      >
+        <a
+          class="inline-flex items-center font-normal hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+          href="/"
+        >
+          DashBoard
+        </a>
+        <span
+          class="mx-2 text-gray-400"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="flex text-tertiary text-sm px-0 py-2"
+      >
+        <a
+          class="inline-flex items-center font-normal hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+          href="/"
+        >
+          Customers’ List
+        </a>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;
