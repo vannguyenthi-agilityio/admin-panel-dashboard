@@ -16,5 +16,4 @@ export interface IToast
   title?: string;
   hasIconClose?: boolean;
   iconElement?: React.ReactNode;
-  onChange?: (event: any) => void;
 }
