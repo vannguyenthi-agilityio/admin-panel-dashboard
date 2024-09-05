@@ -6,7 +6,8 @@ import { Button } from "@/components";
 // Constants
 import {
   ROUTES,
-  BREAKPOINTS
+  BREAKPOINTS,
+  WINDOW_INNER_WIDTH
 } from "@/constants";
 
 // Icons
@@ -53,16 +54,18 @@ const SideBar = ({
   pathname,
 }: ISidebar) => {
   const hiddenOpenClass = !isCollapse && "hidden";
-  const centerOpenClass = isCollapse ?  "justify-start" : "justify-end";
+  const centerOpenClass = isCollapse ? "justify-start" : "justify-end";
+  const layoutOpenClass = isCollapse ? "justify-between" : "justify-end";
+
   const transitionBgClass =
     "transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20";
-  const isSmallerScreenSize = isBrowser && window.innerWidth <= BREAKPOINTS.XL;
+  const isSmallerScreenSize = isBrowser && WINDOW_INNER_WIDTH <= BREAKPOINTS.XL;
 
   const sideBarRef = useOutsideClick(() => {
     if (isSmallerScreenSize && isCollapse) {
       toggleSidebar();
     }
-  });
+  }) as RefObject<HTMLDivElement>;
 
   const handleClickSidebarItem = () => {
     if (isSmallerScreenSize) {
@@ -70,9 +73,39 @@ const SideBar = ({
     }
   };
 
+  const renderListItems = (data: typeof ITEMS_SETTING | typeof ITEMS_DASHBOARD) => (
+    <ul>
+      {data.map(({ label, icon, href }) => {
+        const isActive = href === pathname;
+        const itemBackground = isActive
+          ? "bg-primary hover:bg-primary"
+          : "hover:bg-none";
+
+        const menuItemClass = clsxMerge(
+          `w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1`,
+          `${itemBackground} `,
+          `${transitionBgClass} `,
+        );
+        const linkClass = `font-normal w-full flex items-center py-3 px-7 ${centerOpenClass}`;
+
+        return (
+          <li
+            key={label}
+            className={menuItemClass}
+            onClick={handleClickSidebarItem}>
+            <a className={linkClass} href={href}>
+              {icon}
+              {isCollapse && <span className={`${hiddenOpenClass} pl-2 text-white`}>{label}</span>}
+            </a>
+          </li>
+        ) 
+      })}
+    </ul>
+ );
+
   return (
     <nav
-      ref={sideBarRef as RefObject<HTMLDivElement>}
+      ref={sideBarRef}
       className={clsxMerge(
         sidebarStyles({
           size,
@@ -81,7 +114,7 @@ const SideBar = ({
         className
       )}
       >
-      <div className={`${isCollapse ? "justify-between" : "justify-end"} flex items-center`}>
+      <div className={`${layoutOpenClass} flex items-center`}>
         <a href="/">
           <div className="justify-normal pl-5 gap-1 flex-nowrap">
             <LogoIcon isFull={isCollapse} width={isCollapse? "80" : "48"}/>
@@ -102,65 +135,11 @@ const SideBar = ({
           }
         </div>
       </div>
-      <ul>
-        {ITEMS_DASHBOARD.map(({ label, icon, href }) => {
-          const isActive = href === pathname;
-          const itemBackground = isActive
-            ? "bg-primary hover:!bg-primary"
-            : "hover:bg-none";
-
-          const menuItemClass = [
-            `tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center `,
-            `${itemBackground} `,
-            `!p-0 leading-[26px] mt-1 rounded-md `,
-            `${transitionBgClass} `,
-          ].join("");
-          const linkClass = `font-normal w-full flex items-center py-3 px-7 ${centerOpenClass}`;
-
-          return (
-            <li
-              key={label}
-              className={menuItemClass}
-              onClick={handleClickSidebarItem}>
-              <a className={linkClass} href={href}>
-                {icon}
-                {isCollapse && <span className={`${hiddenOpenClass} pl-2 text-white`}>{label}</span>}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+      {ITEMS_DASHBOARD && renderListItems(ITEMS_DASHBOARD)}
       {ITEMS_SETTING &&
         <>
           <span className="uppercase pl-5 text-silver font-medium text-sm">Settings</span>
-          <ul>
-            {ITEMS_SETTING.map(({ label, icon, href }) => {
-              const isActive = href === pathname;
-              const itemBackground = isActive
-                ? "bg-primary hover:bg-primary"
-                : "hover:bg-none";
-
-              const menuItemClass = [
-                `tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center`,
-                `${itemBackground} `,
-                `p-0 leading-[26px] mt-1 rounded-md `,
-                `${transitionBgClass} `,
-              ].join("");
-              const linkClass = `font-normal w-full flex items-center py-3 px-7 ${centerOpenClass}`;
-
-              return (
-                <li
-                  key={label}
-                  className={menuItemClass}
-                  onClick={handleClickSidebarItem}>
-                  <a className={linkClass} href={href}>
-                    {icon}
-                    {isCollapse && <span className={`${hiddenOpenClass} pl-2 text-white`}>{label}</span>}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+          {renderListItems(ITEMS_SETTING)}
         </>
       }
     </nav>
