@@ -1,4 +1,3 @@
-
 import { memo, forwardRef } from "react";
 
 // Types
@@ -18,7 +17,7 @@ import {
 
 import { headerStyles } from './style';
 
-const Header =  forwardRef<HTMLDivElement, IHeader>(
+const Header = forwardRef<HTMLDivElement, IHeader>(
   ({ 
     className,
     size,
@@ -26,13 +25,13 @@ const Header =  forwardRef<HTMLDivElement, IHeader>(
     <div
       aria-label="Header"
       ref={ref}
-      {...props}
       className={clsxMerge(
         headerStyles({ 
           size,
         }),
         className
       )}
+      {...props}
     >
       <Button
         leftIcon={<BellIcon className="w-[16px] h-[16px]"/>}
