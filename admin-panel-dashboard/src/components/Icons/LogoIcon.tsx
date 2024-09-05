@@ -1,13 +1,13 @@
 import { COLOR } from '@/constants';
 import { IIcon } from '@/types';
 
-const LogoIcon: React.FC<IIcon> = ({
+const LogoIcon = ({
   width = "80",
   height = "22",
   isFull = false,
   fill = COLOR.PRIMARY[50],
   className
-}) => (
+}: IIcon) => (
   isFull ?
     <svg
       width={width}
