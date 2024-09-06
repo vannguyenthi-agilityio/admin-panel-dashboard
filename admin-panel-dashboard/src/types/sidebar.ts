@@ -1,11 +1,7 @@
-import { VariantProps } from "class-variance-authority";
-
-import { sidebarStyles } from '@/components/Sidebar/style';
-
-export interface ISidebar
-  extends Omit<VariantProps<typeof sidebarStyles>, "">  {
+export interface ISidebar {
   className?: string;
   pathname: string;
   isCollapse: boolean;
+  size?: 'xs' | 'sm' | 'md' | 'lg';
   toggleSidebar: () => void;
 }

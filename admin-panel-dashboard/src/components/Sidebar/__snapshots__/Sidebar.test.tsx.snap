@@ -63,7 +63,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
         </div>
         <ul>
           <li
-            class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center hover:bg-none !p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+            class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
           >
             <a
               class="font-normal w-full flex items-center py-3 px-7 justify-end"
@@ -94,7 +94,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
             </a>
           </li>
           <li
-            class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center hover:bg-none !p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+            class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
           >
             <a
               class="font-normal w-full flex items-center py-3 px-7 justify-end"
@@ -118,7 +118,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
             </a>
           </li>
           <li
-            class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center hover:bg-none !p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+            class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
           >
             <a
               class="font-normal w-full flex items-center py-3 px-7 justify-end"
@@ -149,7 +149,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
         </span>
         <ul>
           <li
-            class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-centerhover:bg-none p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+            class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
           >
             <a
               class="font-normal w-full flex items-center py-3 px-7 justify-end"
@@ -173,7 +173,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
             </a>
           </li>
           <li
-            class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-centerhover:bg-none p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+            class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
           >
             <a
               class="font-normal w-full flex items-center py-3 px-7 justify-end"
@@ -197,7 +197,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
             </a>
           </li>
           <li
-            class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-centerhover:bg-none p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+            class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
           >
             <a
               class="font-normal w-full flex items-center py-3 px-7 justify-end"
@@ -282,7 +282,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
       </div>
       <ul>
         <li
-          class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center hover:bg-none !p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+          class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
         >
           <a
             class="font-normal w-full flex items-center py-3 px-7 justify-end"
@@ -313,7 +313,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
           </a>
         </li>
         <li
-          class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center hover:bg-none !p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+          class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
         >
           <a
             class="font-normal w-full flex items-center py-3 px-7 justify-end"
@@ -337,7 +337,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
           </a>
         </li>
         <li
-          class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-center hover:bg-none !p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+          class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
         >
           <a
             class="font-normal w-full flex items-center py-3 px-7 justify-end"
@@ -368,7 +368,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
       </span>
       <ul>
         <li
-          class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-centerhover:bg-none p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+          class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
         >
           <a
             class="font-normal w-full flex items-center py-3 px-7 justify-end"
@@ -392,7 +392,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
           </a>
         </li>
         <li
-          class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-centerhover:bg-none p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+          class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
         >
           <a
             class="font-normal w-full flex items-center py-3 px-7 justify-end"
@@ -416,7 +416,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
           </a>
         </li>
         <li
-          class="tremor-ListItem-root w-full flex justify-between items-center truncate text-tremor-default !p-0 leading-[26px] rounded-md my-[3px] text-centerhover:bg-none p-0 leading-[26px] mt-1 rounded-md transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20 "
+          class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
         >
           <a
             class="font-normal w-full flex items-center py-3 px-7 justify-end"
