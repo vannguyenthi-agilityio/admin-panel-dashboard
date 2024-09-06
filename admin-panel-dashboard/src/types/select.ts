@@ -1,21 +1,22 @@
-import { type ComponentProps } from "react";
-import { VariantProps } from "class-variance-authority";
-
-import { selectStyles } from '@/components/commons/Select/style';
-
 export interface OptionType {
-  option: string;
+  option: string | number;
   value: string;
   id?: number;
 }
 
-export interface ISelect
-  extends Omit<ComponentProps<"select">, "onChange">,
-    Omit<VariantProps<typeof selectStyles>, "iconElement">  {
+export interface ISelect {
+  id?: string;
   options: OptionType[];
+  name?: string;
   label?: string;
+  defaultValue?: string | number;
+  variant?: 'primary' | 'secondary';
+  selectSize?: 'xs' | 'sm' | 'md' | 'lg';
+  'aria-invalid'?: boolean,
+  'aria-selected'?: boolean,
+  className?: string;
   required?: boolean;
   iconElement?: React.ReactNode;
   errorMessage?: string;
-  onChange?: (event: any) => void;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
