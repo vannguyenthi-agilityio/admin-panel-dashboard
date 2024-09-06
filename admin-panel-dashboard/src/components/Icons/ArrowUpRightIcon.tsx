@@ -15,7 +15,13 @@ const ArrowUpRightIcon: React.FC<IIcon> = ({
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M14.375 12.7083V5.625H7.29167M14.1667 5.83333L5.625 14.375" stroke={stroke} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path
+      d="M14.375 12.7083V5.625H7.29167M14.1667 5.83333L5.625 14.375"
+      stroke={stroke}
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 );
 
