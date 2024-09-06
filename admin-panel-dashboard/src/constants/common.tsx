@@ -83,3 +83,5 @@ export const ICON_ITEM_BREADCRUMB: IItemBreadcrumb[] = [
     iconElement: <span className="mr-1">👉</span>,
   }
 ]
+
+export const WINDOW_INNER_WIDTH = window.innerWidth;

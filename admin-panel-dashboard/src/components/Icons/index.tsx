@@ -6,6 +6,7 @@ export { default as MailIcon } from './MailIcon';
 export { default as BellIcon } from './BellIcon';
 export { default as UserIcon } from './UserIcon';
 export { default as HomeIcon } from './HomeIcon';
+export { default as LogoIcon } from './LogoIcon';
 export { default as HelpIcon } from './HelpIcon';
 export { default as CloseIcon } from './CloseIcon';
 export { default as CheckIcon } from './CheckIcon';

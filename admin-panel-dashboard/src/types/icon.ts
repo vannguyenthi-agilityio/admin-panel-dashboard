@@ -4,4 +4,5 @@ export interface IIcon {
   fill?: string;
   stroke?: string;
   className?: string;
+  isFull?: boolean;
 }
