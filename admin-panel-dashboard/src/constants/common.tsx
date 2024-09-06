@@ -85,3 +85,5 @@ export const ICON_ITEM_BREADCRUMB: IItemBreadcrumb[] = [
 ]
 
 export const RESULT_NOT_FOUND = "Result Not Found";
+
+export const WINDOW_INNER_WIDTH = window.innerWidth;
