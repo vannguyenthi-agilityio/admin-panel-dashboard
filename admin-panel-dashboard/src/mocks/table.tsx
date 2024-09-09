@@ -1,19 +1,13 @@
 // Types
-import { IColumnType } from "@/types";
+import { IColumnType, ICustomerTable } from "@/types";
 
+// Components
 import { Button } from "@/components"
 
 import { EditIcon, ArrowUpRightIcon, DeleteIcon } from "@/components/Icons";
 
-export interface Customer {
-  id: number;
-  dateOfBirth?: string;
-  fullName: string;
-  email?: string;
-  status: string;
-}
 
-export const MOCK_CUSTOMER: Customer[] = [
+export const MOCK_CUSTOMER: ICustomerTable[] = [
   {
     id: 1,
     dateOfBirth: "06/18/1978",
@@ -37,7 +31,7 @@ export const MOCK_CUSTOMER: Customer[] = [
   }
 ];
 
-export const MOCK_COLUMNS: IColumnType<Customer>[] = [
+export const MOCK_COLUMNS: IColumnType<ICustomerTable>[] = [
   {
     key: "id",
     title: "#",

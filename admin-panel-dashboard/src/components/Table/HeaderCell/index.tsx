@@ -14,22 +14,20 @@ export interface IHeaderCell {
 const HeaderCell = ({
   title,
   isSortable,
-}: IHeaderCell) => {
-  return (
-    <div className="flex items-center w-full">
-      <div className="text-sm font-normal text-darker">
-        {title}
-      </div>
-      {isSortable && (
-        <Button
-          buttonType='transprent'
-          className='w-[16px] h-[16px] p-0 ml-2'
-          aria-label="Arrow Sort"
-          leftIcon={<SortIcon />}
-        />
-      )}
+}: IHeaderCell) => (
+  <div className="flex items-center w-full">
+    <div className="text-sm font-normal text-darker">
+      {title}
     </div>
-  );
-};
+    {isSortable && (
+      <Button
+        buttonType='transprent'
+        className='w-[16px] h-[16px] p-0 ml-2'
+        aria-label="Arrow Sort"
+        leftIcon={<SortIcon />}
+      />
+    )}
+  </div>
+);
 
 export default memo(HeaderCell);
