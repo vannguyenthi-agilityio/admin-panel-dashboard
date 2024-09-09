@@ -11,7 +11,7 @@ import { CloseIcon } from "@/components/Icons";
 import { modalStyles } from './style';
 
 interface IModal {
-  open?: boolean;
+  isOpen?: boolean;
   onClose?: () => void;
   children: ReactNode;
   showIconClose?: boolean;
@@ -22,7 +22,7 @@ interface IModal {
 }
 
 const Modal = ({
-  open,
+  isOpen,
   onClose,
   children,
   showIconClose = false,
@@ -32,16 +32,15 @@ const Modal = ({
   size,
 }: IModal) => (
     <div onClick={onClose}
-      className={`fixed inset-0 flex min-h-[100px] justify-center items-center transition-colors ${open ? "visible bg-black/20" : "invisible"}`}
+      className={`fixed inset-0 flex min-h-[100px] justify-center items-center transition-colors ${isOpen ? "visible bg-black/20" : "invisible"}`}
     >
     {/* modal */}
     <div
-      onClick={(e) => e.stopPropagation()}
       className={clsxMerge(
         modalStyles({
           size
         }),
-        `${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}`,
+        `${isOpen ? "scale-100 opacity-100" : "scale-125 opacity-0"}`,
         className
       )}
       >

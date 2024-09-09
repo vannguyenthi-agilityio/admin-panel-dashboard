@@ -9,7 +9,7 @@ const meta: Meta<typeof Modal> = {
   tags: ["autodocs"],
   component: Modal,
   argTypes: {
-    open: { description: "open modal type is boolean"},
+    isOpen: { description: "isOpen modal type is boolean"},
     onClose: { description: "funct close modal type is void"},
     children: { description: "body modal type is ReactNode"},
     showIconClose: { description: "check to show close icon type is boolean"},
