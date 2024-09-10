@@ -1,5 +1,8 @@
 import { cva } from 'class-variance-authority';
 
+// Types
+import { SIZE_TYPE } from "@/types";
+
 export const paginationStyles = cva(
   'w-full flex items-senter font-primary font-light text-sm antialiased font-primary flex gap-5 flex-col md:flex-row items-start w-full justify-between p-6 appearance-none cursor-pointer',
   {
@@ -17,7 +20,7 @@ export const paginationStyles = cva(
     },
     defaultVariants: {
       variant: "primary",
-      size: "sm",
+      size: SIZE_TYPE.SM,
     },
   }
 );

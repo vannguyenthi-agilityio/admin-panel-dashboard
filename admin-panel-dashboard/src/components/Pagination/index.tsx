@@ -15,6 +15,9 @@ import { Button, Select } from "@/components";
 // Constants
 import { PAGINATION } from "@/constants";
 
+// Types
+import { SIZE_TYPE } from "@/types";
+
 // Styles
 import { paginationStyles } from './style';
 
@@ -25,7 +28,7 @@ interface PaginationProps {
   currentPage: number;
   pageSize: number;
   className?: string;
-  size?: 'xs' | 'sm' | 'md' | 'lg';
+  size?: SIZE_TYPE;
 }
 
 const Pagination = ({
@@ -44,17 +47,11 @@ const Pagination = ({
     pageSize,
   });
 
-  const onClickNextButton = () => {
-    onPageChange(currentPage + 1);
-  };
+  const onClickNextButton = () => onPageChange(currentPage + 1);
 
-  const onClickPreviousButton = () => {
-    onPageChange(currentPage - 1);
-  };
+  const onClickPreviousButton = () => onPageChange(currentPage - 1);
 
-  const onChangeTotalItemsPage = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    onPageChange(Number(event.target.value));
-  }
+  const onChangeTotalItemsPage = (event: React.ChangeEvent<HTMLSelectElement>) => onPageChange(Number(event.target.value));
 
   const paginationRangeLength = paginationRange.length;
   const showItemsPagination = paginationRangeLength > 1;
