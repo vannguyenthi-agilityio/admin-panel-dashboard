@@ -10,3 +10,4 @@ export * from './size';
 export * from './table';
 export * from './header';
 export * from './sidebar';
+export * from './form';
