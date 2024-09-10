@@ -8,7 +8,7 @@ import {
 import { SearchIcon } from "@/components/Icons";
 
 // Types
-import { IColumnType } from "@/types";
+import { IColumnType, ICustomerTable } from "@/types";
 
 // Components
 import { TableBody, TableHeader, } from "@/components/Table";
@@ -21,9 +21,9 @@ interface ISearch {
   placeholder?: string;
 }
 
-interface IDataTable<T> {
-  data: T[];
-  columns: IColumnType<T>[];
+interface IPropsTable {
+  data: ICustomerTable[];
+  columns: IColumnType<ICustomerTable>[];
   pageSize?: number;
   className?: string;
   hasPagination?: boolean;
@@ -31,12 +31,12 @@ interface IDataTable<T> {
   search?: ISearch;
 }
 
-const Table = <T,>({
+const Table = ({
   data,
   columns,
   className = "",
   search,
-}: IDataTable<T>) => {
+}: IPropsTable) => {
 
   const handleSearchChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -73,4 +73,4 @@ const Table = <T,>({
   );
 };
 
-export default memo(Table) as typeof Table;
+export default memo(Table);

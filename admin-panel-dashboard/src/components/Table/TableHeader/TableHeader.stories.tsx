@@ -7,9 +7,6 @@ import TableHeader from ".";
 // Mocks
 import { MOCK_COLUMNS } from "@/mocks";
 
-// Types
-import { IColumnType } from "@/types";
-
 const meta: Meta<typeof TableHeader> = {
   title: "Components/Table/TableHeader",
   tags: ["autodocs"],
@@ -26,7 +23,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    columns: MOCK_COLUMNS as IColumnType<unknown>[],
+    columns: MOCK_COLUMNS,
     onSort: () => {},
   },
 };

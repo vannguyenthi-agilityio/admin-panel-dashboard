@@ -4,21 +4,24 @@ import { render } from "@testing-library/react";
 import { MOCK_CUSTOMER, MOCK_COLUMNS } from "@/mocks";
 
 // Components
-import TableBody from ".";
+import Table from ".";
 
-describe("TableBody", () => {
+describe("Table", () => {
   const mockProps = {
     data: MOCK_CUSTOMER,
+    search: {
+      field: "id",
+      param: "page",
+      valueParam: "1",
+      placeholder: "Search..."
+    },
     columns: MOCK_COLUMNS,
   };
 
   it("Should matches snapshot", async () => {
     const { container } = render(
-      <table>
-        <TableBody {...mockProps} />
-      </table>,
+      <Table {...mockProps} />
     );
-
     expect(container).toMatchSnapshot();
   });
 });

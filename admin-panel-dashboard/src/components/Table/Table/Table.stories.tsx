@@ -7,9 +7,6 @@ import Table from ".";
 // Mocks
 import { MOCK_CUSTOMER, MOCK_COLUMNS } from "@/mocks";
 
-// Types
-import { IColumnType } from "@/types";
-
 const meta: Meta<typeof Table> = {
   title: "Components/Table/Table",
   tags: ["autodocs"],
@@ -33,13 +30,13 @@ export const Default: Story = {
       valueParam: "1",
       placeholder: "Search..."
     },
-    columns: MOCK_COLUMNS as IColumnType<unknown>[],
+    columns: MOCK_COLUMNS,
   },
 };
 
 export const Empty: Story = {
   args: {
     data: [],
-    columns: MOCK_COLUMNS as IColumnType<unknown>[],
+    columns: MOCK_COLUMNS,
   },
 };

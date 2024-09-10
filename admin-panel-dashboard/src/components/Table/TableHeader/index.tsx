@@ -4,17 +4,17 @@ import { memo } from "react";
 import HeaderCell from "../HeaderCell";
 
 // Types
-import { IColumnType } from "@/types";
+import { IColumnType, ICustomerTable } from "@/types";
 
-interface IDataTableHeader<T> {
-  columns: IColumnType<T>[];
+interface IPropsDataTableHeader {
+  columns: IColumnType<ICustomerTable>[];
   onSort: (key: string) => void;
 }
 
-const TableHeader = <T,>({
+const TableHeader = ({
   columns,
   onSort,
-}: IDataTableHeader<T>) => (
+}: IPropsDataTableHeader) => (
   <thead>
     <tr>
       {columns.map(({ key, title, isSortable = false }) => {
@@ -41,4 +41,4 @@ const TableHeader = <T,>({
   </thead>
 );
 
-export default memo(TableHeader) as typeof TableHeader;
+export default memo(TableHeader);

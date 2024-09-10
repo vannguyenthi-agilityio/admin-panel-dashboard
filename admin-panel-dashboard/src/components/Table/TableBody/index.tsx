@@ -1,7 +1,7 @@
 import { memo } from "react";
 
 // Types
-import { IColumnType } from "@/types";
+import { IColumnType, ICustomerTable } from "@/types";
 
 // Helpers
 import { getObjectValue } from "@/helpers";
@@ -9,12 +9,12 @@ import { getObjectValue } from "@/helpers";
 // Constants
 import { RESULT_NOT_FOUND } from "@/constants";
 
-interface IDataTableBody<T> {
-  data: T[];
-  columns: IColumnType<T>[];
+interface IPropsDataTableBody {
+  data: ICustomerTable[];
+  columns: IColumnType<ICustomerTable>[];
 }
 
-const TableBody = <T,>({ data, columns }: IDataTableBody<T>) => (
+const TableBody = ({ data, columns }: IPropsDataTableBody) => (
   <tbody>
     {data.length ? (
       data.map((item, index )=> {
@@ -55,4 +55,4 @@ const TableBody = <T,>({ data, columns }: IDataTableBody<T>) => (
   </tbody>
 );
 
-export default memo(TableBody) as typeof TableBody;
+export default memo(TableBody);

@@ -1,24 +1,25 @@
 import { render } from "@testing-library/react";
 
 // Mocks
-import { MOCK_CUSTOMER, MOCK_COLUMNS } from "@/mocks";
+import { MOCK_COLUMNS } from "@/mocks";
 
 // Components
-import TableBody from ".";
+import TableHeader from ".";
 
-describe("TableBody", () => {
+const mockFunction = jest.fn();
+
+describe("TableHeader", () => {
   const mockProps = {
-    data: MOCK_CUSTOMER,
     columns: MOCK_COLUMNS,
+    onSort: mockFunction
   };
 
   it("Should matches snapshot", async () => {
     const { container } = render(
       <table>
-        <TableBody {...mockProps} />
+        <TableHeader {...mockProps} />
       </table>,
     );
-
     expect(container).toMatchSnapshot();
   });
 });

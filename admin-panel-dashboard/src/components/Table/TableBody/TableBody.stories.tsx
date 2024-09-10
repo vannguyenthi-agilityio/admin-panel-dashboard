@@ -27,13 +27,13 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     data: MOCK_CUSTOMER,
-    columns: MOCK_COLUMNS as IColumnType<unknown>[],
+    columns: MOCK_COLUMNS,
   },
 };
 
 export const Empty: Story = {
   args: {
     data: [],
-    columns: MOCK_COLUMNS as IColumnType<unknown>[],
+    columns: MOCK_COLUMNS,
   },
 };
