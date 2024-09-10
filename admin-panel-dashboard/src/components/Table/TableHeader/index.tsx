@@ -18,14 +18,14 @@ const TableHeader = ({
   <thead>
     <tr>
       {columns.map(({ key, title, isSortable = false }) => {
-        const handleClick = () => {
+        const handleClickSort = () => {
           isSortable && onSort(key);
         };
 
         return (
           <th
             data-testid={`header-cell-${title}`}
-            onClick={handleClick}
+            onClick={handleClickSort}
             key={key}
             className={`px-6 py-2 leading-[17px] tracking-[0.2px] ${
               isSortable ? "cursor-pointer" : "cursor-default"
