@@ -1,0 +1,412 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination component Should match snapshot 1`] = `
+<div>
+  <div
+    class="items-senter font-light antialiased font-primary flex gap-5 flex-col md:flex-row items-start w-full justify-between p-6 appearance-none cursor-pointer bg-transparent text-dark text-sm px-2 py-2"
+  >
+    <div
+      class="w-full flex gap-2 justify-center md:justify-end items-center md:m-0"
+    >
+      <button
+        aria-label="Previous page button"
+        class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg w-[40px] h-[40px] bg-gray-200 border-none"
+        data-testid="prev-page-button"
+        disabled=""
+        type="button"
+      >
+        <svg
+          fill="none"
+          height="8"
+          viewBox="0 0 5 8"
+          width="5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.04167 1.29175L1.125 4.00008L4.04167 6.70841"
+            stroke="#adb5bd"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.25"
+          />
+        </svg>
+      </button>
+      <button
+        aria-label="Page button 1"
+        class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white border hover:border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg hover:bg-gray-100 text-black border-blue-500"
+        disabled=""
+        type="button"
+      >
+        1
+      </button>
+      <button
+        aria-label="Page button 2"
+        class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg hover:bg-gray-100 text-darker"
+        type="button"
+      >
+        2
+      </button>
+      <button
+        aria-label="Next page button"
+        class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg w-[40px] h-[40px]"
+        data-testid="next-page-button"
+        type="button"
+      >
+        <svg
+          fill="none"
+          height="8"
+          viewBox="0 0 5 8"
+          width="5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.958252 1.29175L3.87492 4.00008L0.958252 6.70841"
+            stroke="#adb5bd"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.25"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="flex w-full items-center ml-3 max-w-[200px]"
+    >
+      <div
+        class="w-full"
+      >
+        <div
+          class="relative"
+        >
+          <select
+            class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
+          >
+            <option
+              class="cursor-pointer"
+              data-testid="month-1"
+              value="1"
+            >
+              1
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-2"
+              value="2"
+            >
+              2
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-3"
+              value="3"
+            >
+              3
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-4"
+              value="4"
+            >
+              4
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-5"
+              value="5"
+            >
+              5
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-6"
+              value="6"
+            >
+              6
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-7"
+              value="7"
+            >
+              7
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-8"
+              value="8"
+            >
+              8
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-9"
+              value="9"
+            >
+              9
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-10"
+              selected=""
+              value="10"
+            >
+              10
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-11"
+              value="11"
+            >
+              11
+            </option>
+          </select>
+          <div
+            class="ml-1 absolute top-[18px] right-3 text-slate-700"
+          >
+            <svg
+              fill="none"
+              height="5"
+              viewBox="0 0 8 5"
+              width="8"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.25 0.75L4 4.25L0.75 0.75"
+                stroke="#adb5bd"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <span
+        class="ml-2 text-darker"
+      >
+        /Page
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pagination component Should match total count less than page size 1`] = `
+<div>
+  <div
+    class="items-senter font-light antialiased font-primary flex gap-5 flex-col md:flex-row items-start w-full justify-between p-6 appearance-none cursor-pointer bg-transparent text-dark text-sm px-2 py-2"
+  >
+    <div
+      class="w-full flex gap-2 justify-center md:justify-end items-center md:m-0"
+    >
+      <button
+        aria-label="Previous page button"
+        class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg w-[40px] h-[40px]"
+        data-testid="prev-page-button"
+        type="button"
+      >
+        <svg
+          fill="none"
+          height="8"
+          viewBox="0 0 5 8"
+          width="5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.04167 1.29175L1.125 4.00008L4.04167 6.70841"
+            stroke="#adb5bd"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.25"
+          />
+        </svg>
+      </button>
+      <button
+        aria-label="Page button 1"
+        class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg hover:bg-gray-100 text-darker"
+        type="button"
+      >
+        1
+      </button>
+      <span
+        class="text-tertiary"
+      >
+        ...
+      </span>
+      <button
+        aria-label="Page button 4"
+        class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg hover:bg-gray-100 text-darker"
+        type="button"
+      >
+        4
+      </button>
+      <button
+        aria-label="Page button 5"
+        class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white border hover:border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg hover:bg-gray-100 text-black border-blue-500"
+        disabled=""
+        type="button"
+      >
+        5
+      </button>
+      <button
+        aria-label="Page button 6"
+        class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg hover:bg-gray-100 text-darker"
+        type="button"
+      >
+        6
+      </button>
+      <span
+        class="text-tertiary"
+      >
+        ...
+      </span>
+      <button
+        aria-label="Page button 10"
+        class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg hover:bg-gray-100 text-darker"
+        type="button"
+      >
+        10
+      </button>
+      <button
+        aria-label="Next page button"
+        class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 px-4 rounded-lg w-[40px] h-[40px]"
+        data-testid="next-page-button"
+        type="button"
+      >
+        <svg
+          fill="none"
+          height="8"
+          viewBox="0 0 5 8"
+          width="5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.958252 1.29175L3.87492 4.00008L0.958252 6.70841"
+            stroke="#adb5bd"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.25"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="flex w-full items-center ml-3 max-w-[200px]"
+    >
+      <div
+        class="w-full"
+      >
+        <div
+          class="relative"
+        >
+          <select
+            class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
+          >
+            <option
+              class="cursor-pointer"
+              data-testid="month-1"
+              value="1"
+            >
+              1
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-2"
+              value="2"
+            >
+              2
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-3"
+              value="3"
+            >
+              3
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-4"
+              value="4"
+            >
+              4
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-5"
+              value="5"
+            >
+              5
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-6"
+              value="6"
+            >
+              6
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-7"
+              value="7"
+            >
+              7
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-8"
+              value="8"
+            >
+              8
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-9"
+              value="9"
+            >
+              9
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-10"
+              value="10"
+            >
+              10
+            </option>
+            <option
+              class="cursor-pointer"
+              data-testid="month-11"
+              value="11"
+            >
+              11
+            </option>
+          </select>
+          <div
+            class="ml-1 absolute top-[18px] right-3 text-slate-700"
+          >
+            <svg
+              fill="none"
+              height="5"
+              viewBox="0 0 8 5"
+              width="8"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.25 0.75L4 4.25L0.75 0.75"
+                stroke="#adb5bd"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <span
+        class="ml-2 text-darker"
+      >
+        /Page
+      </span>
+    </div>
+  </div>
+</div>
+`;
