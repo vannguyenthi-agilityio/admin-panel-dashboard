@@ -7,9 +7,6 @@ import TableBody from ".";
 // Mocks
 import { MOCK_CUSTOMER, MOCK_COLUMNS } from "@/mocks";
 
-// Types
-import { IColumnType } from "@/types";
-
 const meta: Meta<typeof TableBody> = {
   title: "Components/Table/TableBody",
   tags: ["autodocs"],
