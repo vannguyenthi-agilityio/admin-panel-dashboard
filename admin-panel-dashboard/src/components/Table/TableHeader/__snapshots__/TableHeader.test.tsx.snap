@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableHeader Should matches snapshot 1`] = `
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th
+          class="px-6 py-2 leading-[17px] tracking-[0.2px] cursor-default"
+          data-testid="header-cell-#"
+        >
+          <div
+            class="flex items-center w-full"
+          >
+            <div
+              class="text-sm font-normal text-darker"
+            >
+              #
+            </div>
+          </div>
+        </th>
+        <th
+          class="px-6 py-2 leading-[17px] tracking-[0.2px] cursor-pointer"
+          data-testid="header-cell-Full Name"
+        >
+          <div
+            class="flex items-center w-full"
+          >
+            <div
+              class="text-sm font-normal text-darker"
+            >
+              Full Name
+            </div>
+            <button
+              aria-label="Arrow Sort"
+              class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-transprent border-none hover:bg-transprent text-sm rounded-lg w-[16px] h-[16px] p-0 ml-2"
+              type="button"
+            >
+              <svg
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.66669 5.16666H13.3334M4.33335 7.83332H11.6667M5.66669 10.5H10.3334"
+                  stroke="#6c757d"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </th>
+        <th
+          class="px-6 py-2 leading-[17px] tracking-[0.2px] cursor-default"
+          data-testid="header-cell-Status"
+        >
+          <div
+            class="flex items-center w-full"
+          >
+            <div
+              class="text-sm font-normal text-darker"
+            >
+              Status
+            </div>
+          </div>
+        </th>
+        <th
+          class="px-6 py-2 leading-[17px] tracking-[0.2px] cursor-pointer"
+          data-testid="header-cell-E-Mail"
+        >
+          <div
+            class="flex items-center w-full"
+          >
+            <div
+              class="text-sm font-normal text-darker"
+            >
+              E-Mail
+            </div>
+            <button
+              aria-label="Arrow Sort"
+              class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-transprent border-none hover:bg-transprent text-sm rounded-lg w-[16px] h-[16px] p-0 ml-2"
+              type="button"
+            >
+              <svg
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.66669 5.16666H13.3334M4.33335 7.83332H11.6667M5.66669 10.5H10.3334"
+                  stroke="#6c757d"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </th>
+        <th
+          class="px-6 py-2 leading-[17px] tracking-[0.2px] cursor-pointer"
+          data-testid="header-cell-Date of Birth"
+        >
+          <div
+            class="flex items-center w-full"
+          >
+            <div
+              class="text-sm font-normal text-darker"
+            >
+              Date of Birth
+            </div>
+            <button
+              aria-label="Arrow Sort"
+              class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-transprent border-none hover:bg-transprent text-sm rounded-lg w-[16px] h-[16px] p-0 ml-2"
+              type="button"
+            >
+              <svg
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2.66669 5.16666H13.3334M4.33335 7.83332H11.6667M5.66669 10.5H10.3334"
+                  stroke="#6c757d"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </th>
+        <th
+          class="px-6 py-2 leading-[17px] tracking-[0.2px] cursor-default"
+          data-testid="header-cell-"
+        >
+          <div
+            class="flex items-center w-full"
+          >
+            <div
+              class="text-sm font-normal text-darker"
+            />
+          </div>
+        </th>
+      </tr>
+    </thead>
+  </table>
+</div>
+`;

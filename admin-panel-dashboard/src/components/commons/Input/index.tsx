@@ -41,7 +41,6 @@ const Input = forwardRef<HTMLInputElement, IInput>((
           </div>
         )}
         <input
-          {...props}
           className={clsxMerge(
             inputStyles({
               hasBorder: !borderHide,
@@ -53,6 +52,7 @@ const Input = forwardRef<HTMLInputElement, IInput>((
           )}
           placeholder={placeholder ?? " "}
           ref={ref}
+          {...props}
         />
 
         {rightElement && (

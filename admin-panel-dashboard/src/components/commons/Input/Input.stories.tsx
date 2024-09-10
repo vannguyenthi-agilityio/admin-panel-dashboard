@@ -7,7 +7,6 @@ import {
 
 const meta: Meta<typeof Input> = {
   args: {
-    'aria-invalid': false,
     disabled: false,
     id: 'input-field',
     name: 'input-field',
@@ -16,9 +15,6 @@ const meta: Meta<typeof Input> = {
   },
   argTypes: {
     'aria-invalid': {
-      control: { type: 'boolean' },
-    },
-    'aria-selected': {
       control: { type: 'boolean' },
     },
     borderHide: {

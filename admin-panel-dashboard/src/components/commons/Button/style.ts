@@ -8,6 +8,7 @@ export const buttonStyles = cva(
   {
     variants: {
       buttonType: {
+        transprent: 'bg-transprent border-none hover:bg-transprent',
         primary:
           'bg-transprent text-darker border-greyish hover:bg-greyish',
         secondary:

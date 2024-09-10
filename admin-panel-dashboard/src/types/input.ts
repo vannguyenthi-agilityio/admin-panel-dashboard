@@ -1,14 +1,20 @@
-import { type ComponentProps } from "react";
-import { type VariantProps } from "class-variance-authority";
-
-import { inputStyles } from '@/components/commons/Input/style';
-
-export interface IInput
-  extends Omit<ComponentProps<"input">, "size">,
-    Omit<VariantProps<typeof inputStyles>, "hasLeftElement" | "hasRightElement"> {
+export interface IInput {
+  id?: string;
   borderHide?: boolean;
+  size?: "sm" | "default";
   label?: string;
-  errorMessage?: string;
   leftElement?: React.ReactNode;
   rightElement?: React.ReactNode;
+  ariaLabel?: string;
+  disabled?: boolean;
+  required?: boolean;
+  'aria-invalid'?: boolean;
+  name: string;
+  defaultValue?: string;
+  type: string;
+  className?: string;
+  placeholder?: string;
+  errorMessage?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
 }

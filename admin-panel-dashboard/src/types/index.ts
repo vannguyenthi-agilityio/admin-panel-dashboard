@@ -7,3 +7,6 @@ export * from './dropdown';
 export * from './toast';
 export * from './breadcrumb';
 export * from './size';
+export * from './table';
+export * from './header';
+export * from './sidebar';
