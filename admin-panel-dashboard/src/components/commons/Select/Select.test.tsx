@@ -62,7 +62,7 @@ describe('Select component', () => {
     );
 
     fireEvent.click(getByTestId("month").firstElementChild as HTMLElement);
-    fireEvent.click(getByTestId("month-2"));
+    fireEvent.click(getByTestId("option-2"));
 
     waitFor(() => {
       expect(onChangeMock).toHaveBeenCalledTimes(1);

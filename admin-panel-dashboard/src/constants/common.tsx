@@ -134,3 +134,11 @@ export const ICON_ITEM_BREADCRUMB: IItemBreadcrumb[] = [
 export const RESULT_NOT_FOUND = "Result Not Found";
 
 export const WINDOW_INNER_WIDTH = window.innerWidth;
+
+export const PREFIX_PHONE_NUMBER = "+44";
+
+export const FORMAT_DATE = {
+  YEAR_MONTH_DATE_TIME: "YYYY-MM-DDTHH:mm:ss.SSS",
+  MONTH_DAY_YEAR_TIME: "MMM D, YYYY h:mm A",
+  MONTH_DAY_YEAR: "MM/DD/YYYY"
+};

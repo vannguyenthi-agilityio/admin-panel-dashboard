@@ -27,11 +27,11 @@ const Select =  forwardRef<HTMLSelectElement, ISelect>((
     iconElement = <ArrowDownIcon />,
     onChange,
     ...props }, ref) => {
-  const classNameLabel = `text-grey text-sm dark:text-lighter capitalize ${required ? "after:content-['*'] after:text-red-500 after:text-md" : ""}`;
+  const classNameLabel = `text-grey text-sm font-medium capitalize ${required ? "after:content-['*'] after:text-red-500 after:text-md" : ""}`;
   return (
     <div className="w-full">
      {label && <label className={clsxMerge(classNameLabel)}>{label}</label>}
-      <div className="relative">
+      <div className="relative mt-1">
         <select
           className={clsxMerge(
             selectStyles({ variant, selectSize }),
@@ -47,7 +47,7 @@ const Select =  forwardRef<HTMLSelectElement, ISelect>((
             <option
               key={item.value}
               value={item.value.toString()}
-              data-testid={`month-${item.value}`}
+              data-testid={`option-${item.value}`}
               className="cursor-pointer"
             >
               {item.option}
