@@ -54,7 +54,7 @@ const CustomerInfo = ({ control }: ICustomerInfo) => (
             id="first-name"
             data-testid="first-name"
             label="First Name"
-            required={true}
+            required
             errorMessage={error?.message}
             value={value}
             onChange={onChange}
@@ -86,7 +86,7 @@ const CustomerInfo = ({ control }: ICustomerInfo) => (
             id="last-name"
             data-testid="last-name"
             label="Last Name"
-            required={true}
+            required
             errorMessage={error?.message}
             value={value}
             onChange={onChange}
@@ -115,7 +115,7 @@ const CustomerInfo = ({ control }: ICustomerInfo) => (
               id="id-number"
               data-testid="id-number"
               label="ID Number"
-              required={true}
+              required
               errorMessage={error?.message}
               value={value}
               onChange={onChange}
@@ -199,7 +199,7 @@ const CustomerInfo = ({ control }: ICustomerInfo) => (
           <Input
             label="Email"
             id="email"
-            required={true}
+            required
             value={value}
             errorMessage={error?.message}
             onChange={onChange}
