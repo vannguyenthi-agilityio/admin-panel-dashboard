@@ -6,7 +6,6 @@ import {
   REGEX,
   MESSAGES_ERROR,
   MESSAGES_WARNING,
-  NUMBER_REGEX,
   PREFIX_PHONE_NUMBER
 } from "@/constants";
 
@@ -105,7 +104,7 @@ const CustomerInfo = ({ control }: ICustomerInfo) => (
         required: MESSAGES_ERROR.FIELD_REQUIRED,
 
         pattern: {
-          value: NUMBER_REGEX,
+          value: REGEX.NUMBER,
           message: MESSAGES_ERROR.ID_NUMBER_INVALID,
         },
       }}
@@ -140,7 +139,7 @@ const CustomerInfo = ({ control }: ICustomerInfo) => (
         }}
         render={({ field: { value, onChange }, fieldState: { error } }) => {
           return (
-          <div className="w-full min-h-[90px] my-3">
+          <div className="w-full min-h-[130px] mt-4">
             <BirthDayField
               required
               value={value}

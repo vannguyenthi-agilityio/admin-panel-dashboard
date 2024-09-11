@@ -1,7 +1,7 @@
 export interface IInput {
   id?: string;
   borderHide?: boolean;
-  contentPrefix?: string | JSX.Element | null;
+  contentPrefix?: string | JSX.Element;
   size?: "sm" | "default";
   label?: string;
   leftElement?: React.ReactNode;
