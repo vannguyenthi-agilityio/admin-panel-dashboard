@@ -1,6 +1,7 @@
 export interface IInput {
   id?: string;
   borderHide?: boolean;
+  contentPrefix?: string | JSX.Element | null;
   size?: "sm" | "default";
   label?: string;
   leftElement?: React.ReactNode;
@@ -10,8 +11,9 @@ export interface IInput {
   required?: boolean;
   'aria-invalid'?: boolean;
   name: string;
-  defaultValue?: string;
-  type: string;
+  defaultValue?: string | number;
+  value?: string | number;
+  type?: string;
   className?: string;
   placeholder?: string;
   errorMessage?: string;
