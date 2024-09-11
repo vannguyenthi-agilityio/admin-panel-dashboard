@@ -16,7 +16,7 @@ const meta: Meta<typeof CustomerInfo> = {
   argTypes: {
     control: {
       description:
-        "This is control from useForm of react-hook-form with type ProductBasicInfo({productName: string, description: string, providerName: string, weight: string, category: string, quantity: string})",
+        "This is control from useForm of react-hook-form with type ICustomerData({firstName: string, lastName: string, idNumber: number, dateOfBirth: object, phoneNumber: string})",
     }
   },
 };
