@@ -18,6 +18,7 @@ const Input = forwardRef<HTMLInputElement, IInput>((
     rightElement,
     placeholder,
     errorMessage,
+    contentPrefix,
     size = "default",
     ...props
   },
@@ -36,9 +37,14 @@ const Input = forwardRef<HTMLInputElement, IInput>((
       )}
       <div className="relative w-full mt-1">
         {leftElement && (
-          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-dark-gray">
+          <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-dark-gray w-[40px]">
             {leftElement}
           </div>
+        )}
+        {contentPrefix && (
+          <span className={`absolute top-[12px] text-xs min-h-[30px] text-darker ${leftElement ? 'left-[35px]' : 'left-[10px]'}`}>
+            {contentPrefix}
+          </span>
         )}
         <input
           className={clsxMerge(
