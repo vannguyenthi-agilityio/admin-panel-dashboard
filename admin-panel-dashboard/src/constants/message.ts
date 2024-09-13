@@ -12,7 +12,7 @@ export const MESSAGES_ERROR = {
     "Password must have at least 8 characters, 1 special character and 1 number.",
   UNKNOWN_ERROR: 'An unknown error occurred',
   CUSTOMER_CONTEXT_ERROR: 'useActionData hooks should using inside CustomerProvider!',
-  TOAST_CONTEXT_ERROR: 'useToast should called in ToastProvider!'
+  TOAST_CONTEXT_ERROR: 'useToast should called in ToastProvider!',
 };
 
 export const MESSAGES_WARNING = {
