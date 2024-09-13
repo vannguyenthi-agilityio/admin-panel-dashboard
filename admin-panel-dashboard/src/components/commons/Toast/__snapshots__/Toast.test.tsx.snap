@@ -3,7 +3,8 @@
 exports[`Toast component Renders toast error component 1`] = `
 <div>
   <div
-    class="flex items-start w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+    class="flex absolute top-20 right-4 items-start w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+    data-testid="toast"
     id="toast-error"
     role="alert"
   >
@@ -36,6 +37,7 @@ exports[`Toast component Renders toast error component 1`] = `
       </div>
       <div
         class="ms-4 mt-2 text-sm font-normal"
+        data-testid="message-toast"
       />
     </div>
   </div>
@@ -45,7 +47,8 @@ exports[`Toast component Renders toast error component 1`] = `
 exports[`Toast component Renders toast success component 1`] = `
 <div>
   <div
-    class="flex items-start w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+    class="flex absolute top-20 right-4 items-start w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+    data-testid="toast"
     id="toast-undefined"
     role="alert"
   >
@@ -78,6 +81,7 @@ exports[`Toast component Renders toast success component 1`] = `
       </div>
       <div
         class="ms-4 mt-2 text-sm font-normal"
+        data-testid="message-toast"
       />
     </div>
   </div>
@@ -87,7 +91,8 @@ exports[`Toast component Renders toast success component 1`] = `
 exports[`Toast component Renders toast warning component 1`] = `
 <div>
   <div
-    class="flex items-start w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+    class="flex absolute top-20 right-4 items-start w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+    data-testid="toast"
     id="toast-warning"
     role="alert"
   >
@@ -120,6 +125,7 @@ exports[`Toast component Renders toast warning component 1`] = `
       </div>
       <div
         class="ms-4 mt-2 text-sm font-normal"
+        data-testid="message-toast"
       />
     </div>
   </div>

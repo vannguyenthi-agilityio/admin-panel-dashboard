@@ -5,3 +5,8 @@ export { default as Select } from './commons/Select';
 export { default as Dropdown } from './Dropdown';
 export { default as Breadcrumb } from './commons/Breadcrumb';
 export { default as BirthDayField } from './BirthDayField';
+export { default as Toast } from './commons/Toast';
+export { default as Header } from './Header';
+export { default as Sidebar } from './Sidebar';
+export { default as Modal } from './Modal';
+export { default as ErrorBoundary } from './ErrorBoundary';

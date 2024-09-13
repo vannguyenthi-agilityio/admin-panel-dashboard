@@ -47,22 +47,21 @@ const ITEMS_SETTING = [
 ];
 
 const SideBar = ({
-  isCollapse = true,
+  isCollapse = false,
   toggleSidebar,
   className,
   size,
   pathname,
 }: ISidebar) => {
-  const hiddenOpenClass = !isCollapse && "hidden";
-  const centerOpenClass = isCollapse ? "justify-start" : "justify-end";
-  const layoutOpenClass = isCollapse ? "justify-between" : "justify-end";
+  const centerOpenClass = !isCollapse ? "justify-start" : "justify-end";
+  const layoutOpenClass = !isCollapse ? "justify-between" : "justify-end";
 
   const transitionBgClass =
     "transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20";
   const isSmallerScreenSize = isBrowser && WINDOW_INNER_WIDTH <= BREAKPOINTS.XL;
 
   const sideBarRef = useOutsideClick(() => {
-    if (isSmallerScreenSize && isCollapse) {
+    if (isSmallerScreenSize && !isCollapse) {
       toggleSidebar();
     }
   }) as RefObject<HTMLDivElement>;
@@ -78,7 +77,7 @@ const SideBar = ({
       {data.map(({ label, icon, href }) => {
         const isActive = href === pathname;
         const itemBackground = isActive
-          ? "bg-primary hover:bg-primary"
+          ? "bg-silver hover:bg-darker"
           : "hover:bg-none";
 
         const menuItemClass = clsxMerge(
@@ -86,7 +85,7 @@ const SideBar = ({
           `${itemBackground} `,
           `${transitionBgClass} `,
         );
-        const linkClass = `font-normal w-full flex items-center py-3 px-7 ${centerOpenClass}`;
+        const linkClass = `font-normal w-full flex items-center py-3 ${isCollapse ? "pr-7" : "px-7"} ${centerOpenClass}`;
 
         return (
           <li
@@ -95,7 +94,7 @@ const SideBar = ({
             onClick={handleClickSidebarItem}>
             <a className={linkClass} href={href}>
               {icon}
-              {isCollapse && <span className={`${hiddenOpenClass} pl-2 text-white`}>{label}</span>}
+              {!isCollapse && <span className={`pl-2 text-white`}>{label}</span>}
             </a>
           </li>
         ) 
@@ -109,21 +108,21 @@ const SideBar = ({
       className={clsxMerge(
         sidebarStyles({
           size,
-          isCollapse
+          isCollapse : isCollapse
         }),
         className
       )}
       >
       <div className={`${layoutOpenClass} flex items-center`}>
-        <a href="/">
+        <a href={ROUTES.HOME}>
           <div className="justify-normal pl-5 gap-1 flex-nowrap">
-            <LogoIcon isFull={isCollapse} width={isCollapse? "80" : "48"}/>
+            <LogoIcon isFull={!isCollapse} width={!isCollapse? "48" : "80"}/>
           </div>
         </a>
         <div
           className="p-1 rounded-md mr-[-38px] w-[48px] cursor-pointer"
           onClick={toggleSidebar}>
-          {isCollapse ? <Button
+          {!isCollapse ? <Button
             leftIcon={<ArrowLeftIcon className="w-[16px] h-[16px]" />}
             className="px-2.5 h-[40px] h-[40px] w-[40px] border-none shadow-sm"
           />
@@ -137,10 +136,10 @@ const SideBar = ({
       </div>
       {ITEMS_DASHBOARD && renderListItems(ITEMS_DASHBOARD)}
       {ITEMS_SETTING &&
-        <>
-          <span className="uppercase pl-5 text-silver font-medium text-sm">Settings</span>
+        <div className={isCollapse ? "mt-8" : "mt-0"}>
+          {!isCollapse && <span className="uppercase pl-5 text-silver font-medium text-sm">Settings</span>}
           {renderListItems(ITEMS_SETTING)}
-        </>
+        </div>
       }
     </nav>
   );
