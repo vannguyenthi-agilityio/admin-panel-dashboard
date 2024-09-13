@@ -1,5 +1,5 @@
 // Types
-import { OptionType, IItemBreadcrumb } from "@/types";
+import { OptionType } from "@/types";
 
 export const MONTHS: OptionType[] = [
   {
@@ -97,38 +97,6 @@ export const PAGINATION : OptionType[] = [
     option: 11,
     value: "11",
   },
-]
-
-export const ITEM_BREADCRUMB: IItemBreadcrumb[] = [
-  {
-    href: "/",
-    crumbName: "DashBoard",
-    linkActiveCrumb: false,
-    linkIndex: 1
-  },
-  {
-    href: "/",
-    crumbName: "Customers’ List",
-    linkActiveCrumb: true,
-    linkIndex: 2
-  }
-]
-
-export const ICON_ITEM_BREADCRUMB: IItemBreadcrumb[] = [
-  {
-    href: "/",
-    crumbName: "DashBoard",
-    linkActiveCrumb: false,
-    linkIndex: 1,
-    iconElement: <span className="mr-1">👉</span>,
-  },
-  {
-    href: "/",
-    crumbName: "Customers’ List",
-    linkActiveCrumb: true,
-    linkIndex: 2,
-    iconElement: <span className="mr-1">👉</span>,
-  }
 ]
 
 export const RESULT_NOT_FOUND = "Result Not Found";

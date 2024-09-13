@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Boundary Component renders error boundary component 1`] = `
+<div>
+  <div>
+    Content without error
+  </div>
+</div>
+`;

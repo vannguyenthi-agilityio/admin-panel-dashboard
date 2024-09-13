@@ -14,7 +14,7 @@ const Loading = ({
   additionalClass,
 }: ILoading) =>
   isFullWidth ? (
-    <div className="fixed bg-[rgba(0,0,0,0.5)] overflow-hidden w-full h-full inset-0 z-50 cursor-not-allowed">
+    <div data-testid="loading-page" className="fixed bg-[rgba(0,0,0,0.5)] overflow-hidden w-full h-full inset-0 z-50 cursor-not-allowed">
       <div className="h-full justify-center">
         <div role="status">
           <svg
@@ -33,7 +33,7 @@ const Loading = ({
       </div>
     </div>
   ) : (
-    <div role="status" className={additionalClass}>
+    <div data-testid="loading-page" role="status" className={additionalClass}>
       <svg
         aria-hidden="true"
         className={`${width} ${height} text-transparent animate-[spin_0.4s_linear_infinite] dark:text-gray-600 fill-${fillColor} dark:fill-white`}

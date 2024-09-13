@@ -12,6 +12,7 @@ export interface IToast
   extends Omit<VariantProps<typeof toastStyles>, "iconElement">  {
   className?: string;
   toastType?: TOAST_TYPE;
+  onClose?: () => void;
   message?: string;
   title?: string;
   hasIconClose?: boolean;

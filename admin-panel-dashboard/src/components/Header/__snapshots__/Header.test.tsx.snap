@@ -4,7 +4,7 @@ exports[`Header component Renders header default component 1`] = `
 <div>
   <div
     aria-label="Header"
-    class="w-full flex align-center gap-2 font-primary font-light placeholder:text-slate-400 transition duration-300 ease focus:outline-none appearance-none cursor-pointer bg-transparent text-dark text-sm px-2 py-2"
+    class="flex align-center gap-2 font-primary font-light placeholder:text-slate-400 transition duration-300 ease focus:outline-none appearance-none cursor-pointer bg-transparent text-dark text-sm px-2 py-2"
   >
     <button
       class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 rounded-lg px-2.5 h-[40px] relative"

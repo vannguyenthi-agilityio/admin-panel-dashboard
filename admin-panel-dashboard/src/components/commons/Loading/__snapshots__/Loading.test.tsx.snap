@@ -3,6 +3,7 @@
 exports[`Loading component Should render Loading snapshot correctly 1`] = `
 <div>
   <div
+    data-testid="loading-page"
     role="status"
   >
     <svg
@@ -30,6 +31,7 @@ exports[`Loading component Should render Loading snapshot full width 1`] = `
 <div>
   <div
     class="fixed bg-[rgba(0,0,0,0.5)] overflow-hidden w-full h-full inset-0 z-50 cursor-not-allowed"
+    data-testid="loading-page"
   >
     <div
       class="h-full justify-center"

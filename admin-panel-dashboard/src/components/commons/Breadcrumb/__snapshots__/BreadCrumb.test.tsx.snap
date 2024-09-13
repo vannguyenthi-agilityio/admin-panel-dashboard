@@ -33,7 +33,7 @@ exports[`BreadCrumb component Renders breadCrumb with Icon Item component 1`] = 
       >
         <a
           class="inline-flex items-center font-normal hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
-          href="/"
+          href="/customers"
         >
           <span
             class="mr-1"
@@ -76,7 +76,7 @@ exports[`BreadCrumb component Renders breadcrumb default component 1`] = `
       >
         <a
           class="inline-flex items-center font-normal hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
-          href="/"
+          href="/customers"
         >
           Customers’ List
         </a>
