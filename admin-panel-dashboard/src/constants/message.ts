@@ -8,9 +8,11 @@ export const MESSAGES_ERROR = {
   ID_NUMBER_INVALID: "Invalid number.",
   INVALID_PHONE_NUMBER: "Phone number is invalid",
   INVALID_BIRTH_DATE: "Birth date is invalid.",
-  PASSWORD_INVALID:
+  INVALID_PASSWORD:
     "Password must have at least 8 characters, 1 special character and 1 number.",
   UNKNOWN_ERROR: 'An unknown error occurred',
+  CUSTOMER_CONTEXT_ERROR: 'useActionData hooks should using inside CustomerProvider!',
+  TOAST_CONTEXT_ERROR: 'useToast should called in ToastProvider!'
 };
 
 export const MESSAGES_WARNING = {

@@ -24,7 +24,7 @@ const Layout = () => {
       />
       <Header className="absolute top-0 right-0"/>
       <CustomerProvider>
-        <div className={`${isCollapseSidebar ? "ml-[100px]" : "ml-[280px]"}`}>
+        <div className={isCollapseSidebar ? "ml-[100px]" : "ml-[280px]"}>
           <Outlet />
         </div>
       </CustomerProvider>

@@ -9,24 +9,10 @@ export enum TOAST_TYPE {
 }
 
 export const buildToastRenderer = ({ type, message }: ToastProps) => {
-  switch (type) {
-    case TOAST_TYPE.WARNING:
-      return {
-        message: message ?? "Warning!",
-      };
-
-    case TOAST_TYPE.ERROR:
-      return {
-        message: message ?? "Error!"
-      };
-
-    case TOAST_TYPE.SUCCESS:
-    default:
-      return {
-        message: message ?? "Success!",
-      };
-  }
+  const messageType = type === TOAST_TYPE.WARNING ? 'Warning!' : type === TOAST_TYPE.ERROR ? 'Error!' : 'Success!';
+  return {message : message ?? messageType};
 };
+
 export interface ToastProps {
   type?: TOAST_TYPE;
   message?: string;

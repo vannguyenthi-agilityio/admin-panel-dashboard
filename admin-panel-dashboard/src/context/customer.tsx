@@ -6,6 +6,9 @@ import { ICustomerData } from '@/types';
 // Mocks
 import { MOCK_INIT_CUSTOMER_DATA } from '@/mocks';
 
+// Constants
+import { MESSAGES_ERROR } from '@/constants';
+
 export interface Customer {
   customerData: ICustomerData;
   isEdit: boolean;
@@ -47,7 +50,7 @@ export const useCustomer = () => {
   const context = useContext(CustomerContext);
 
   if (!context) {
-    throw new Error("useActionData hooks should using inside CustomerProvider!");
+    throw new Error(MESSAGES_ERROR.CUSTOMER_CONTEXT_ERROR);
   }
 
   return context;
