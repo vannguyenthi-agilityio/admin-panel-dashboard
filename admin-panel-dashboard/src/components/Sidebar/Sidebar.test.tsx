@@ -29,7 +29,7 @@ describe("Sidebar component", () => {
       <div>
         <div id="outside-element">Outside Element</div>
         <Sidebar
-          isCollapse={true}
+          isCollapse
           toggleSidebar={toggleSidebar}
           pathname={ROUTES.HOME}
         />

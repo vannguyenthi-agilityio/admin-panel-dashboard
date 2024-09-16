@@ -163,7 +163,7 @@ const CustomerList = ({
   }, [cutomerData, fullNameFilter]);
 
   useEffect(() => {
-    fetchData(getData, setCustomerData, "Error get data");
+    fetchData(getData, setCustomerData, MESSAGE_GET_CUSTOMER.FAILED);
   }, []);
 
   const handleSearch = useCallback(
@@ -181,7 +181,7 @@ const CustomerList = ({
         !isPending && setCustomerSearchData(dataFiltered);
         return;
       }
-      if (fullNameFilter === "") fetchData(getData, setCustomerData, "Error get data");
+      if (fullNameFilter === "") fetchData(getData, setCustomerData, MESSAGE_GET_CUSTOMER.FAILED);
 
       if (params.get(search.field)) {
         params.delete(search.field);
