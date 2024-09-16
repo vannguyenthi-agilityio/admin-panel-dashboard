@@ -5,7 +5,7 @@ export const sidebarStyles = cva(
   {
     variants: {
       isCollapse: {
-        false: "translate-x-0 w-[100px] xl:w-[260px] delay-10 duration-300",
+        false: "translate-x-0 xl:w-[260px] delay-10 duration-300",
         true: "translate-x-[-10rem] xl:translate-x-0 xl:w-[100px] delay-10 duration-300"
       },
       size: {
