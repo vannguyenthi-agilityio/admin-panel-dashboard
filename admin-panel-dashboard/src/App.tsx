@@ -19,10 +19,10 @@ import { Loading } from '@/components';
 
 // Pages
 const HomePage = lazy(() => import('@/pages/Home'));
-const DetailPage = lazy(() => import('@/pages/Customer/Detail'));
+const DetailPage = lazy(() => import('@/pages/Detail'));
 const ListPage = lazy(() => import('@/pages/List'));
-const CustomerEditPage = lazy(() => import('@/pages/Customer/Edit'));
-const CustomerCreatePage = lazy(() => import('@/pages/Customer/Create'));
+const CustomerEditPage = lazy(() => import('@/pages/Edit'));
+const CustomerCreatePage = lazy(() => import('@/pages/Create'));
 import Layout from './pages/Layout';
 
 const App = () => (
