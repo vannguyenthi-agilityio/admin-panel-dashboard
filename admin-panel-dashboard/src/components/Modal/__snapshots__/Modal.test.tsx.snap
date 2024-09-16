@@ -3,7 +3,7 @@
 exports[`Modal component Renders modal component 1`] = `
 <div>
   <div
-    class="fixed inset-0 flex min-h-[100px] justify-center items-center transition-colors invisible"
+    class="fixed inset-0 z-50 flex min-h-[100px] justify-center items-center transition-colors invisible"
   >
     <div
       class="font-primary font-light rounded-xl shadow p-6 w-full transition-all bg-white text-dark text-sm px-6 py-5 scale-125 opacity-0"

@@ -22,7 +22,7 @@ exports[`BirthDayField Match snapshot 1`] = `
         class="relative mt-1"
       >
         <select
-          class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
+          class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none bg-transparent text-dark h-10 text-sm px-2 py-2 cursor-pointer"
           data-testid="month"
         >
           <option
@@ -143,7 +143,7 @@ exports[`BirthDayField Match snapshot 1`] = `
         class="relative mt-1"
       >
         <select
-          class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
+          class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none bg-transparent text-dark h-10 text-sm px-2 py-2 cursor-pointer"
           data-testid="date"
         >
           <option
@@ -397,7 +397,7 @@ exports[`BirthDayField Match snapshot 1`] = `
         class="relative mt-1"
       >
         <select
-          class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
+          class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none bg-transparent text-dark h-10 text-sm px-2 py-2 cursor-pointer"
           data-testid="year"
         >
           <option
@@ -1323,7 +1323,7 @@ exports[`BirthDayField Match snapshot with empty value 1`] = `
         class="relative mt-1"
       >
         <select
-          class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
+          class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none bg-transparent text-dark h-10 text-sm px-2 py-2 cursor-pointer"
           data-testid="month"
         >
           <option
@@ -1444,7 +1444,7 @@ exports[`BirthDayField Match snapshot with empty value 1`] = `
         class="relative mt-1"
       >
         <select
-          class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
+          class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none bg-transparent text-dark h-10 text-sm px-2 py-2 cursor-pointer"
           data-testid="date"
         />
         <div
@@ -1480,7 +1480,7 @@ exports[`BirthDayField Match snapshot with empty value 1`] = `
         class="relative mt-1"
       >
         <select
-          class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
+          class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none bg-transparent text-dark h-10 text-sm px-2 py-2 cursor-pointer"
           data-testid="year"
         >
           <option
