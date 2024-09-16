@@ -132,18 +132,6 @@ exports[`TableHeader Should matches snapshot 1`] = `
             </button>
           </div>
         </th>
-        <th
-          class="px-6 py-2 leading-[17px] tracking-[0.2px] cursor-default"
-          data-testid="header-cell-"
-        >
-          <div
-            class="flex items-center w-full"
-          >
-            <div
-              class="text-sm font-normal text-darker"
-            />
-          </div>
-        </th>
       </tr>
     </thead>
   </table>

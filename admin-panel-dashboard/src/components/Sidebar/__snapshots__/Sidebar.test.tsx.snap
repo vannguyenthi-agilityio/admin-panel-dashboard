@@ -6,7 +6,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="bg-dark antialiased w-[260px] z-50 fixed top-0 left-0 h-[calc(100vh)] transition-all ease-in translate-x-0 xl:w-[260px] delay-10 duration-300 text-sm px-4 py-6"
+        class="bg-dark antialiased z-50 fixed top-0 left-0 h-[calc(100vh)] transition-all ease-in translate-x-0 w-[100px] xl:w-[260px] delay-10 duration-300 text-sm px-4 py-6"
       >
         <div
           class="justify-between flex items-center"
@@ -275,7 +275,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
   </body>,
   "container": <div>
     <nav
-      class="bg-dark antialiased w-[260px] z-50 fixed top-0 left-0 h-[calc(100vh)] transition-all ease-in translate-x-0 xl:w-[260px] delay-10 duration-300 text-sm px-4 py-6"
+      class="bg-dark antialiased z-50 fixed top-0 left-0 h-[calc(100vh)] transition-all ease-in translate-x-0 w-[100px] xl:w-[260px] delay-10 duration-300 text-sm px-4 py-6"
     >
       <div
         class="justify-between flex items-center"

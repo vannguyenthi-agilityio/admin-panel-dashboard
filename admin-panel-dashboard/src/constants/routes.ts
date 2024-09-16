@@ -8,5 +8,6 @@ export const ROUTES = {
   MESSAGES: './messages',
   HELP_CENTRE:'./help-centre',
   DETAIL: '/customers/:id',
-  FORM: '/customers/form'
+  CREATE: '/customers/create',
+  EDIT: '/customers/edit/:id',
 };

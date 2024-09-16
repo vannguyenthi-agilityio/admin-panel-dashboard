@@ -1,12 +1,12 @@
 import { COLOR } from '@/constants';
 import { IIcon } from '@/types';
 
-const ArrowUpRightIcon: React.FC<IIcon> = ({
+const ArrowUpRightIcon = ({
   width = "20",
   height = "20",
   stroke = COLOR.SECONDARY[200],
   className
-}) => (
+}: IIcon) => (
   <svg
     width={width}
     height={height}

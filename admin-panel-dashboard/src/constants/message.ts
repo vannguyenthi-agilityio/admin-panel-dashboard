@@ -18,3 +18,25 @@ export const MESSAGES_ERROR = {
 export const MESSAGES_WARNING = {
   ID_NUMBER: "The ID number should be 10 characters"
 }
+
+export const MESSAGE_ADD_CUSTOMER = {
+  SUCCESS: "Add customer successfully",
+  FAILED: "Failed to add customer",
+};
+
+export const MESSAGE_EDIT_CUSTOMER = {
+  SUCCESS: "Edit customer successfully",
+  FAILED: "Failed to edit customer",
+};
+
+export const MESSAGE_DELETE_CUSTOMER = {
+  SUCCESS: "Delete customer successfully",
+  FAILED: "Failed to delete customer",
+};
+
+
+export const MESSAGE_GET_CUSTOMER = {
+  SUCCESS: "Get customer successfully",
+  FAILED: "Failed to get customer",
+};
+

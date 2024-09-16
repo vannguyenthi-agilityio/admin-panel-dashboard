@@ -1,12 +1,6 @@
 // Types
 import { IColumnType, ICustomerTable } from "@/types";
 
-// Components
-import { Button } from "@/components"
-
-import { EditIcon, ArrowUpRightIcon, DeleteIcon } from "@/components/Icons";
-
-
 export const MOCK_CUSTOMER: ICustomerTable[] = [
   {
     id: 1,
@@ -55,26 +49,5 @@ export const MOCK_COLUMNS: IColumnType<ICustomerTable>[] = [
     key: "dateOfBirth",
     title: "Date of Birth",
     isSortable: true,
-  },
-  {
-    key: "action",
-    title: "",
-    customNode: (_, {}) => (
-      <div className="flex gap-2">
-        <Button
-          className= 'w-[40px] h-[40px] p-0'
-          leftIcon= {<ArrowUpRightIcon />}
-        />
-        <Button
-          className= 'w-[40px] h-[40px] p-0'
-          leftIcon= {<EditIcon />}
-        />
-        <Button
-          className= 'w-[40px] h-[40px] p-0'
-          leftIcon= {<DeleteIcon />}
-        />
-      </div>
-    ),
-    isSortable: false,
   },
 ];

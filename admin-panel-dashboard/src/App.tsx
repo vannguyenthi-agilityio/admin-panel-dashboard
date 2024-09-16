@@ -19,9 +19,10 @@ import { Loading } from '@/components';
 
 // Pages
 const HomePage = lazy(() => import('@/pages/Home'));
-const DetailPage = lazy(() => import('@/pages/Detail'));
+const DetailPage = lazy(() => import('@/pages/Customer/Detail'));
 const ListPage = lazy(() => import('@/pages/List'));
-const FormPage = lazy(() => import('@/pages/Form'));
+const CustomerEditPage = lazy(() => import('@/pages/Customer/Edit'));
+const CustomerCreatePage = lazy(() => import('@/pages/Customer/Create'));
 import Layout from './pages/Layout';
 
 const App = () => (
@@ -70,7 +71,7 @@ const App = () => (
               }
             />
             <Route
-              path={ROUTES.FORM}
+              path={ROUTES.EDIT}
               element={
                 <Suspense fallback={
                   <Loading
@@ -78,7 +79,20 @@ const App = () => (
                     isFullWidth={false}
                   />
                 }>
-                  <FormPage />
+                  <CustomerEditPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path={ROUTES.CREATE}
+              element={
+                <Suspense fallback={
+                  <Loading
+                    additionalClass="flex justify-center items-center min-h-[calc(100vh)]"
+                    isFullWidth={false}
+                  />
+                }>
+                  <CustomerCreatePage />
                 </Suspense>
               }
             />

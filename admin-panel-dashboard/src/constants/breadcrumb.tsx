@@ -33,12 +33,34 @@ export const ITEM_BREADCRUMB_FORM: IItemBreadcrumb[] = [
     linkIndex: 2
   },
   {
-    href: `${ROUTES.CUSTOMERS}/form`,
+    href: "#",
     crumbName: "New Customer",
     linkActiveCrumb: true,
     linkIndex: 3
   }
 ]
+
+export const ITEM_BREADCRUMB_EDIT_FORM: IItemBreadcrumb[] = [
+  {
+    href: ROUTES.HOME,
+    crumbName: "DashBoard",
+    linkActiveCrumb: false,
+    linkIndex: 1
+  },
+  {
+    href: ROUTES.CUSTOMERS,
+    crumbName: "Customers’ List",
+    linkActiveCrumb: false,
+    linkIndex: 2
+  },
+  {
+    href: "#",
+    crumbName: "Edit Customer",
+    linkActiveCrumb: true,
+    linkIndex: 3
+  }
+]
+
 
 export const ICON_ITEM_BREADCRUMB: IItemBreadcrumb[] = [
   {
