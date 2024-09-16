@@ -24,12 +24,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     data: MOCK_CUSTOMER,
-    search: {
-      field: "id",
-      param: "page",
-      valueParam: "1",
-      placeholder: "Search..."
-    },
     columns: MOCK_COLUMNS,
   },
 };
