@@ -52,7 +52,8 @@ const BirthDayField = ({
           data-testid="month"
           value={String(months)}
           disabled={disabled}
-          required={true}
+          required
+          className={`${disabled ? "cursor-not-allowed" : "cursor-pointer"}`}
           label="Month"
           options={MONTHS}
           onChange={handleChangeMonth}
@@ -61,7 +62,8 @@ const BirthDayField = ({
           data-testid="date"
           value={String(date)}
           disabled={disabled}
-          required={true}
+          required
+          className={`${disabled ? "cursor-not-allowed" : "cursor-pointer"}`}
           label="Date"
           options={generateDays(Number(months), years)}
           onChange={handleChangeDay}
@@ -70,14 +72,15 @@ const BirthDayField = ({
           data-testid="year"
           value={String(years)}
           disabled={disabled}
-          required={true}
+          required
+          className={`${disabled ? "cursor-not-allowed" : "cursor-pointer"}`}
           label="Year"
           options={generateTimes(1900, currentYear.getFullYear())}
           onChange={handleChangeYear}
         />
       </div>
       {errorMessage && (
-        <p className="text-xs text-red-500 pt-2">
+        <p className="text-xs text-red-500 pt-1">
           {errorMessage}
         </p>
       )}

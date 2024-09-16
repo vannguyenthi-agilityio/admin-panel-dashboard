@@ -29,13 +29,13 @@ const Input = forwardRef<HTMLInputElement, IInput>((
     : "text-sm font-medium";
 
   return (
-    <div className="w-full">
+    <>
       {label && (
         <label htmlFor={props.id} className={classNameLabel}>
           {label}
         </label>
       )}
-      <div className="relative w-full mt-1">
+      <div className="relative mt-1 w-full sm:w-auto">
         {leftElement && (
           <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-dark-gray w-[40px]">
             {leftElement}
@@ -72,7 +72,7 @@ const Input = forwardRef<HTMLInputElement, IInput>((
           {errorMessage}
         </p>
       )}
-    </div>
+    </>
   );
 });
 

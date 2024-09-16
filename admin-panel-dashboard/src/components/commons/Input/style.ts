@@ -1,7 +1,7 @@
 import { cva } from 'class-variance-authority';
 
 export const inputStyles = cva(
-  "peer block w-full flex-1 font-primary text-sm font-light appearance-none rounded-lg border-gray-light bg-white px-4 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed",
+  "peer block w-full flex-1 font-primary text-sm font-light appearance-none rounded-lg border-gray-light bg-white px-2 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed",
   {
     defaultVariants: {
       hasBorder: true,

@@ -7,6 +7,9 @@ import { clsxMerge } from '@/helpers';
 import { Button } from "@/components";
 import { CloseIcon } from "@/components/Icons";
 
+// Types
+import { SIZE_TYPE } from "@/types";
+
 // Styles
 import { modalStyles } from './style';
 
@@ -18,12 +21,14 @@ interface IModal {
   labelButton?: string;
   title?:string;
   className?: string;
-  size?: 'xs' | 'sm' | 'md' | 'lg';
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  size?: SIZE_TYPE;
 }
 
 const Modal = ({
   isOpen,
   onClose,
+  onClick,
   children,
   showIconClose = false,
   labelButton = "",
@@ -32,7 +37,7 @@ const Modal = ({
   size,
 }: IModal) => (
     <div onClick={onClose}
-      className={`fixed inset-0 flex min-h-[100px] justify-center items-center transition-colors ${isOpen ? "visible bg-black/20" : "invisible"}`}
+      className={`fixed inset-0 z-50 flex min-h-[100px] justify-center items-center transition-colors ${isOpen ? "visible bg-black/20" : "invisible"}`}
     >
     {/* modal */}
     <div
@@ -68,7 +73,7 @@ const Modal = ({
         />
         {labelButton &&
           <Button
-            onClick={onClose}
+            onClick={onClick}
             size='small'
             label={labelButton}
             buttonType='blood'

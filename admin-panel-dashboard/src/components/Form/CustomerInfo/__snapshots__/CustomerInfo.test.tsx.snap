@@ -8,81 +8,69 @@ exports[`UserInfo Component should match snapshot 1`] = `
     <div
       class="min-h-[90px] w-full"
     >
-      <div
-        class="w-full"
+      <label
+        class="text-sm font-medium after:content-['*'] after:text-red-500 after:text-md"
+        for="first-name"
       >
-        <label
-          class="text-sm font-medium after:content-['*'] after:text-red-500 after:text-md"
-          for="first-name"
-        >
-          First Name
-        </label>
-        <div
-          class="relative w-full mt-1"
-        >
-          <input
-            class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-4 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px]"
-            data-testid="first-name"
-            id="first-name"
-            name="firstName"
-            placeholder=" "
-            type="text"
-            value=""
-          />
-        </div>
+        First Name
+      </label>
+      <div
+        class="relative mt-1 w-full sm:w-auto"
+      >
+        <input
+          class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-2 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px]"
+          data-testid="first-name"
+          id="first-name"
+          name="firstName"
+          placeholder=" "
+          type="text"
+          value=""
+        />
       </div>
     </div>
     <div
       class="min-h-[90px] w-full"
     >
-      <div
-        class="w-full"
+      <label
+        class="text-sm font-medium after:content-['*'] after:text-red-500 after:text-md"
+        for="last-name"
       >
-        <label
-          class="text-sm font-medium after:content-['*'] after:text-red-500 after:text-md"
-          for="last-name"
-        >
-          Last Name
-        </label>
-        <div
-          class="relative w-full mt-1"
-        >
-          <input
-            class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-4 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px]"
-            data-testid="last-name"
-            id="last-name"
-            name="lastName"
-            placeholder=" "
-            type="text"
-            value=""
-          />
-        </div>
+        Last Name
+      </label>
+      <div
+        class="relative mt-1 w-full sm:w-auto"
+      >
+        <input
+          class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-2 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px]"
+          data-testid="last-name"
+          id="last-name"
+          name="lastName"
+          placeholder=" "
+          type="text"
+          value=""
+        />
       </div>
     </div>
     <div
       class="min-h-[90px] w-full"
     >
-      <div
-        class="w-full"
+      <label
+        class="text-sm font-medium after:content-['*'] after:text-red-500 after:text-md"
+        for="id-number"
       >
-        <label
-          class="text-sm font-medium after:content-['*'] after:text-red-500 after:text-md"
-          for="id-number"
-        >
-          ID Number
-        </label>
-        <div
-          class="relative w-full mt-1"
-        >
-          <input
-            class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-4 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px]"
-            data-testid="id-number"
-            id="id-number"
-            name="idNumber"
-            placeholder=" "
-            value=""
-          />
-        </div>
+        ID Number
+      </label>
+      <div
+        class="relative mt-1 w-full sm:w-auto"
+      >
+        <input
+          class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-2 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px]"
+          data-testid="id-number"
+          id="id-number"
+          name="idNumber"
+          placeholder=" "
+          value=""
+        />
       </div>
       <p
         class="pt-1 text-xs text-seldom"
@@ -113,7 +101,7 @@ exports[`UserInfo Component should match snapshot 1`] = `
             class="relative mt-1"
           >
             <select
-              class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
+              class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none bg-transparent text-dark h-10 text-sm px-2 py-2 cursor-pointer"
               data-testid="month"
             >
               <option
@@ -234,7 +222,7 @@ exports[`UserInfo Component should match snapshot 1`] = `
             class="relative mt-1"
           >
             <select
-              class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
+              class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none bg-transparent text-dark h-10 text-sm px-2 py-2 cursor-pointer"
               data-testid="date"
             />
             <div
@@ -270,7 +258,7 @@ exports[`UserInfo Component should match snapshot 1`] = `
             class="relative mt-1"
           >
             <select
-              class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
+              class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none bg-transparent text-dark h-10 text-sm px-2 py-2 cursor-pointer"
               data-testid="year"
             >
               <option
@@ -1175,115 +1163,107 @@ exports[`UserInfo Component should match snapshot 1`] = `
     <div
       class="min-h-[90px] col-span-1"
     >
-      <div
-        class="w-full"
+      <label
+        class="text-sm font-medium"
+        for="phoneNumber"
       >
-        <label
-          class="text-sm font-medium"
-          for="phoneNumber"
-        >
-          Phone number
-        </label>
+        Phone number
+      </label>
+      <div
+        class="relative mt-1 w-full sm:w-auto"
+      >
         <div
-          class="relative w-full mt-1"
+          class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-dark-gray w-[40px]"
         >
-          <div
-            class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-dark-gray w-[40px]"
+          <svg
+            class="h-4 w-4"
+            fill="none"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              class="h-4 w-4"
-              fill="none"
-              height="20"
-              viewBox="0 0 20 20"
-              width="20"
-              xmlns="http://www.w3.org/2000/svg"
+            <g
+              clip-path="url(#clip0_2239_2203)"
             >
-              <g
-                clip-path="url(#clip0_2239_2203)"
+              <path
+                d="M19.6553 16.5193H0.345087C0.172522 16.5193 0.0325905 16.3794 0.0325905 16.2068V3.79308C0.0325905 3.62052 0.172522 3.48059 0.345087 3.48059H19.6554C19.8279 3.48059 19.9679 3.62052 19.9679 3.79308V16.2068C19.9678 16.3794 19.8279 16.5193 19.6553 16.5193Z"
+                fill="#41479B"
+                stroke="#6C757D"
+                stroke-width="0.0646926"
+              />
+              <path
+                d="M20.0002 3.79308C20.0002 3.60266 19.8458 3.44824 19.6553 3.44824H18.1126L11.7243 7.63366V3.44824H8.27603V7.63366L1.88781 3.44824H0.345087C0.154658 3.44824 0.000244141 3.60266 0.000244141 3.79308V4.68492L5.48104 8.2758H0.000244141V11.7241H5.48104L0.000244141 15.315V16.2068C0.000244141 16.3973 0.154658 16.5517 0.345087 16.5517H1.88785L8.27611 12.3663V16.5517H11.7244V12.3663L18.1126 16.5517H19.6554C19.8458 16.5517 20.0002 16.3973 20.0002 16.2068V15.315L14.5194 11.7241H20.0002V8.27584H14.5194L20.0002 4.68492V3.79308Z"
+                fill="#F5F5F5"
+              />
+              <path
+                d="M20.0002 8.96549H11.0347V3.44824H8.96572V8.96549H0.000244141V11.0344H8.96572V16.5517H11.0347V11.0344H20.0002V8.96549Z"
+                fill="#FF4B55"
+              />
+              <path
+                d="M6.99049 11.7236L0.0101318 16.2547C0.0345458 16.4213 0.17185 16.5512 0.34517 16.5512H0.820129L8.25721 11.7237H6.99049V11.7236Z"
+                fill="#FF4B55"
+              />
+              <path
+                d="M13.5312 11.7236H12.2645L19.6908 16.5441C19.8639 16.5256 20.0005 16.3843 20.0005 16.2063V15.9228L13.5312 11.7236Z"
+                fill="#FF4B55"
+              />
+              <path
+                d="M0.000549316 4.17332L6.32002 8.27541H7.58673L0.201447 3.48145C0.0834787 3.53625 0.000549316 3.65402 0.000549316 3.79265V4.17332Z"
+                fill="#FF4B55"
+              />
+              <path
+                d="M12.9914 8.2758L19.9885 3.73375C19.9594 3.57273 19.8251 3.44824 19.6557 3.44824H19.1616L11.7247 8.2758H12.9914Z"
+                fill="#FF4B55"
+              />
+            </g>
+            <defs>
+              <clippath
+                id="clip0_2239_2203"
               >
-                <path
-                  d="M19.6553 16.5193H0.345087C0.172522 16.5193 0.0325905 16.3794 0.0325905 16.2068V3.79308C0.0325905 3.62052 0.172522 3.48059 0.345087 3.48059H19.6554C19.8279 3.48059 19.9679 3.62052 19.9679 3.79308V16.2068C19.9678 16.3794 19.8279 16.5193 19.6553 16.5193Z"
-                  fill="#41479B"
-                  stroke="#6C757D"
-                  stroke-width="0.0646926"
+                <rect
+                  fill="#fff"
+                  height="20"
+                  width="20"
                 />
-                <path
-                  d="M20.0002 3.79308C20.0002 3.60266 19.8458 3.44824 19.6553 3.44824H18.1126L11.7243 7.63366V3.44824H8.27603V7.63366L1.88781 3.44824H0.345087C0.154658 3.44824 0.000244141 3.60266 0.000244141 3.79308V4.68492L5.48104 8.2758H0.000244141V11.7241H5.48104L0.000244141 15.315V16.2068C0.000244141 16.3973 0.154658 16.5517 0.345087 16.5517H1.88785L8.27611 12.3663V16.5517H11.7244V12.3663L18.1126 16.5517H19.6554C19.8458 16.5517 20.0002 16.3973 20.0002 16.2068V15.315L14.5194 11.7241H20.0002V8.27584H14.5194L20.0002 4.68492V3.79308Z"
-                  fill="#F5F5F5"
-                />
-                <path
-                  d="M20.0002 8.96549H11.0347V3.44824H8.96572V8.96549H0.000244141V11.0344H8.96572V16.5517H11.0347V11.0344H20.0002V8.96549Z"
-                  fill="#FF4B55"
-                />
-                <path
-                  d="M6.99049 11.7236L0.0101318 16.2547C0.0345458 16.4213 0.17185 16.5512 0.34517 16.5512H0.820129L8.25721 11.7237H6.99049V11.7236Z"
-                  fill="#FF4B55"
-                />
-                <path
-                  d="M13.5312 11.7236H12.2645L19.6908 16.5441C19.8639 16.5256 20.0005 16.3843 20.0005 16.2063V15.9228L13.5312 11.7236Z"
-                  fill="#FF4B55"
-                />
-                <path
-                  d="M0.000549316 4.17332L6.32002 8.27541H7.58673L0.201447 3.48145C0.0834787 3.53625 0.000549316 3.65402 0.000549316 3.79265V4.17332Z"
-                  fill="#FF4B55"
-                />
-                <path
-                  d="M12.9914 8.2758L19.9885 3.73375C19.9594 3.57273 19.8251 3.44824 19.6557 3.44824H19.1616L11.7247 8.2758H12.9914Z"
-                  fill="#FF4B55"
-                />
-              </g>
-              <defs>
-                <clippath
-                  id="clip0_2239_2203"
-                >
-                  <rect
-                    fill="#fff"
-                    height="20"
-                    width="20"
-                  />
-                </clippath>
-              </defs>
-            </svg>
-          </div>
-          <span
-            class="absolute top-[12px] text-xs min-h-[30px] text-darker left-[35px]"
-          >
-            +44
-          </span>
-          <input
-            class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-4 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px] pl-[60px]"
-            id="phoneNumber"
-            name="phoneNumber"
-            placeholder=" "
-            type="text"
-            value=""
-          />
+              </clippath>
+            </defs>
+          </svg>
         </div>
+        <span
+          class="absolute top-[12px] text-xs min-h-[30px] text-darker left-[35px]"
+        >
+          +44
+        </span>
+        <input
+          class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-2 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px] pl-[60px]"
+          id="phoneNumber"
+          name="phoneNumber"
+          placeholder=" "
+          type="text"
+          value=""
+        />
       </div>
     </div>
     <div
       class="min-h-[90px] w-full"
     >
-      <div
-        class="w-full"
+      <label
+        class="text-sm font-medium after:content-['*'] after:text-red-500 after:text-md"
+        for="email"
       >
-        <label
-          class="text-sm font-medium after:content-['*'] after:text-red-500 after:text-md"
-          for="email"
-        >
-          Email
-        </label>
-        <div
-          class="relative w-full mt-1"
-        >
-          <input
-            class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-4 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px]"
-            id="email"
-            name="email"
-            placeholder=" "
-            value=""
-          />
-        </div>
+        Email
+      </label>
+      <div
+        class="relative mt-1 w-full sm:w-auto"
+      >
+        <input
+          class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-2 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px]"
+          id="email"
+          name="email"
+          placeholder=" "
+          value=""
+        />
       </div>
     </div>
   </div>
