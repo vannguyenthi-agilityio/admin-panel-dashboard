@@ -110,3 +110,16 @@ export const FORMAT_DATE = {
   MONTH_DAY_YEAR_TIME: "MMM D, YYYY h:mm A",
   MONTH_DAY_YEAR: "MM/DD/YYYY"
 };
+
+export enum ACTION_TYPE {
+  EDIT = 'Edit',
+  CREATE = 'Create',
+  DETAIL = 'Detail',
+  DELETE = 'Delete'
+}
+
+export enum FORM_TYPE {
+  EDIT = 'Edit',
+  CREATE = 'Create',
+  DETAIL = 'Detail'
+}

@@ -76,77 +76,77 @@ exports[`Pagination component Should match snapshot 1`] = `
         class="w-full"
       >
         <div
-          class="relative"
+          class="relative mt-1"
         >
           <select
             class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
           >
             <option
               class="cursor-pointer"
-              data-testid="month-1"
+              data-testid="option-1"
               value="1"
             >
               1
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-2"
+              data-testid="option-2"
               value="2"
             >
               2
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-3"
+              data-testid="option-3"
               value="3"
             >
               3
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-4"
+              data-testid="option-4"
               value="4"
             >
               4
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-5"
+              data-testid="option-5"
               value="5"
             >
               5
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-6"
+              data-testid="option-6"
               value="6"
             >
               6
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-7"
+              data-testid="option-7"
               value="7"
             >
               7
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-8"
+              data-testid="option-8"
               value="8"
             >
               8
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-9"
+              data-testid="option-9"
               value="9"
             >
               9
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-10"
+              data-testid="option-10"
               selected=""
               value="10"
             >
@@ -154,7 +154,7 @@ exports[`Pagination component Should match snapshot 1`] = `
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-11"
+              data-testid="option-11"
               value="11"
             >
               11
@@ -297,84 +297,84 @@ exports[`Pagination component Should match total count less than page size 1`] =
         class="w-full"
       >
         <div
-          class="relative"
+          class="relative mt-1"
         >
           <select
             class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer bg-transparent text-dark h-10 text-sm px-2 py-2"
           >
             <option
               class="cursor-pointer"
-              data-testid="month-1"
+              data-testid="option-1"
               value="1"
             >
               1
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-2"
+              data-testid="option-2"
               value="2"
             >
               2
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-3"
+              data-testid="option-3"
               value="3"
             >
               3
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-4"
+              data-testid="option-4"
               value="4"
             >
               4
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-5"
+              data-testid="option-5"
               value="5"
             >
               5
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-6"
+              data-testid="option-6"
               value="6"
             >
               6
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-7"
+              data-testid="option-7"
               value="7"
             >
               7
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-8"
+              data-testid="option-8"
               value="8"
             >
               8
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-9"
+              data-testid="option-9"
               value="9"
             >
               9
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-10"
+              data-testid="option-10"
               value="10"
             >
               10
             </option>
             <option
               class="cursor-pointer"
-              data-testid="month-11"
+              data-testid="option-11"
               value="11"
             >
               11

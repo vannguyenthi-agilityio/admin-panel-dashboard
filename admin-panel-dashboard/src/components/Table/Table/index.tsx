@@ -4,22 +4,11 @@ import {
   useCallback,
 } from "react";
 
-// Icons
-import { SearchIcon } from "@/components/Icons";
-
 // Types
 import { IColumnType, ICustomerTable } from "@/types";
 
 // Components
-import { TableBody, TableHeader, } from "@/components/Table";
-import { Input } from "@/components";
-
-interface ISearch {
-  field: string;
-  param: string;
-  valueParam: string;
-  placeholder?: string;
-}
+import { TableBody, TableHeader } from "@/components/Table";
 
 interface IPropsTable {
   data: ICustomerTable[];
@@ -28,44 +17,30 @@ interface IPropsTable {
   className?: string;
   hasPagination?: boolean;
   total?: number;
-  search?: ISearch;
+  onActionCustomer: (customer: ICustomerTable, action: string) => void;
 }
 
 const Table = ({
   data,
   columns,
   className = "",
-  search,
+  onActionCustomer
 }: IPropsTable) => {
-
-  const handleSearchChange = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      console.log('value', event.target.value);
-  },[]);
+  
 
   const handleSortingChange = useCallback(
     (key: string) => {
-     console.log('key', key);
+    console.log('key', key);
   },[]);
 
   return (
     <div className="w-full">
-      {search && (
-        <Input
-          placeholder={search.placeholder}
-          name='Input search'
-          type='text'
-          onChange={handleSearchChange}
-          leftElement={ <SearchIcon />}
-          className="max-w-[320px]"
-        />
-      )}
       <div
         className={`p-0 border-none ring-0 overflow-x-auto ${className}`}>
         <div className="flex flex-col items-start justify-start my-2">
           <table className="w-full" tabIndex={0} id="table">
             <TableHeader columns={columns} onSort={handleSortingChange} />
-            <TableBody columns={columns} data={data} />
+            <TableBody columns={columns} data={data} onActionCutomer={onActionCustomer}/>
           </table>
         </div>
       </div>

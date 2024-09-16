@@ -7,6 +7,7 @@ import { MOCK_CUSTOMER, MOCK_COLUMNS } from "@/mocks";
 import Table from ".";
 
 describe("Table", () => {
+  const mockActionCutomer = jest.fn();
   const mockProps = {
     data: MOCK_CUSTOMER,
     search: {
@@ -16,6 +17,7 @@ describe("Table", () => {
       placeholder: "Search..."
     },
     columns: MOCK_COLUMNS,
+    onActionCustomer: mockActionCutomer
   };
 
   it("Should matches snapshot", async () => {

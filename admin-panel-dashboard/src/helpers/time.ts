@@ -84,7 +84,6 @@ export const convertDateTimeToObject = (time: string): BirthDay => {
   const object = dayjs(time).toObject();
 
   return {
-    ...object,
     months: object.months,
     date: object.date,
     years: object.years,

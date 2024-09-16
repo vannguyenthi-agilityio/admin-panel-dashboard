@@ -6,38 +6,6 @@ exports[`Table Should matches snapshot 1`] = `
     class="w-full"
   >
     <div
-      class="w-full"
-    >
-      <div
-        class="relative w-full mt-1"
-      >
-        <div
-          class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-dark-gray w-[40px]"
-        >
-          <svg
-            fill="none"
-            height="12"
-            viewBox="0 0 12 12"
-            width="12"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10.8333 10.8333L8.33329 8.33332M1.16663 5.33332C1.16663 3.03214 3.03211 1.16666 5.33329 1.16666C7.63449 1.16666 9.49996 3.03214 9.49996 5.33332C9.49996 7.63452 7.63449 9.49999 5.33329 9.49999C3.03211 9.49999 1.16663 7.63452 1.16663 5.33332Z"
-              stroke="#adb5bd"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </div>
-        <input
-          class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-4 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border pl-9 py-[9px] max-w-[320px]"
-          name="Input search"
-          placeholder="Search..."
-          type="text"
-        />
-      </div>
-    </div>
-    <div
       class="p-0 border-none ring-0 overflow-x-auto "
     >
       <div
@@ -177,18 +145,6 @@ exports[`Table Should matches snapshot 1`] = `
                   </button>
                 </div>
               </th>
-              <th
-                class="px-6 py-2 leading-[17px] tracking-[0.2px] cursor-default"
-                data-testid="header-cell-"
-              >
-                <div
-                  class="flex items-center w-full"
-                >
-                  <div
-                    class="text-sm font-normal text-darker"
-                  />
-                </div>
-              </th>
             </tr>
           </thead>
           <tbody>
@@ -261,74 +217,6 @@ exports[`Table Should matches snapshot 1`] = `
                   </p>
                 </div>
               </td>
-              <td
-                class="px-6 py-2 border-0 border-b border-gray-100 bg-greyish"
-              >
-                <div
-                  class="flex gap-2"
-                >
-                  <button
-                    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm rounded-lg w-[40px] h-[40px] p-0"
-                    type="button"
-                  >
-                    <svg
-                      fill="none"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14.375 12.7083V5.625H7.29167M14.1667 5.83333L5.625 14.375"
-                        stroke="#212529"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm rounded-lg w-[40px] h-[40px] p-0"
-                    type="button"
-                  >
-                    <svg
-                      fill="none"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16.0417 16.0417H11.4584M3.95837 16.0417L7.50004 15.2083L15.2441 7.46426C15.5695 7.13881 15.5695 6.61118 15.2441 6.28574L13.7143 4.75592C13.3889 4.43048 12.8612 4.43048 12.5358 4.75592L4.79171 12.5L3.95837 16.0417Z"
-                        stroke="#212529"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm rounded-lg w-[40px] h-[40px] p-0"
-                    type="button"
-                  >
-                    <svg
-                      fill="none"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      width="14"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2.62496 3.45837L3.32592 11.5195C3.40081 12.3807 4.12181 13.0417 4.98632 13.0417H9.01363C9.87813 13.0417 10.5991 12.3807 10.674 11.5195L11.375 3.45837M5.12496 3.25004V2.62504C5.12496 1.70457 5.87113 0.958374 6.79163 0.958374H7.20829C8.12879 0.958374 8.87496 1.70457 8.87496 2.62504V3.25004M1.16663 3.45837H12.8333"
-                        stroke="#212529"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </td>
             </tr>
             <tr>
               <td
@@ -364,7 +252,7 @@ exports[`Table Should matches snapshot 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"
+                    class="h-2.5 w-2.5 rounded-full bg-gray-500 me-2"
                   />
                   <p
                     class="text-darker font-normal text-sm"
@@ -397,74 +285,6 @@ exports[`Table Should matches snapshot 1`] = `
                   >
                     09/18/1983
                   </p>
-                </div>
-              </td>
-              <td
-                class="px-6 py-2 border-0 border-b border-gray-100 bg-transparent"
-              >
-                <div
-                  class="flex gap-2"
-                >
-                  <button
-                    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm rounded-lg w-[40px] h-[40px] p-0"
-                    type="button"
-                  >
-                    <svg
-                      fill="none"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14.375 12.7083V5.625H7.29167M14.1667 5.83333L5.625 14.375"
-                        stroke="#212529"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm rounded-lg w-[40px] h-[40px] p-0"
-                    type="button"
-                  >
-                    <svg
-                      fill="none"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16.0417 16.0417H11.4584M3.95837 16.0417L7.50004 15.2083L15.2441 7.46426C15.5695 7.13881 15.5695 6.61118 15.2441 6.28574L13.7143 4.75592C13.3889 4.43048 12.8612 4.43048 12.5358 4.75592L4.79171 12.5L3.95837 16.0417Z"
-                        stroke="#212529"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm rounded-lg w-[40px] h-[40px] p-0"
-                    type="button"
-                  >
-                    <svg
-                      fill="none"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      width="14"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2.62496 3.45837L3.32592 11.5195C3.40081 12.3807 4.12181 13.0417 4.98632 13.0417H9.01363C9.87813 13.0417 10.5991 12.3807 10.674 11.5195L11.375 3.45837M5.12496 3.25004V2.62504C5.12496 1.70457 5.87113 0.958374 6.79163 0.958374H7.20829C8.12879 0.958374 8.87496 1.70457 8.87496 2.62504V3.25004M1.16663 3.45837H12.8333"
-                        stroke="#212529"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                      />
-                    </svg>
-                  </button>
                 </div>
               </td>
             </tr>
@@ -502,7 +322,7 @@ exports[`Table Should matches snapshot 1`] = `
                   class="flex items-center"
                 >
                   <div
-                    class="h-2.5 w-2.5 rounded-full bg-gray-500 me-2"
+                    class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"
                   />
                   <p
                     class="text-darker font-normal text-sm"
@@ -535,74 +355,6 @@ exports[`Table Should matches snapshot 1`] = `
                   >
                     10/18/1988
                   </p>
-                </div>
-              </td>
-              <td
-                class="px-6 py-2 border-0 border-b border-gray-100 bg-greyish"
-              >
-                <div
-                  class="flex gap-2"
-                >
-                  <button
-                    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm rounded-lg w-[40px] h-[40px] p-0"
-                    type="button"
-                  >
-                    <svg
-                      fill="none"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M14.375 12.7083V5.625H7.29167M14.1667 5.83333L5.625 14.375"
-                        stroke="#212529"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm rounded-lg w-[40px] h-[40px] p-0"
-                    type="button"
-                  >
-                    <svg
-                      fill="none"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      width="20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16.0417 16.0417H11.4584M3.95837 16.0417L7.50004 15.2083L15.2441 7.46426C15.5695 7.13881 15.5695 6.61118 15.2441 6.28574L13.7143 4.75592C13.3889 4.43048 12.8612 4.43048 12.5358 4.75592L4.79171 12.5L3.95837 16.0417Z"
-                        stroke="#212529"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                      />
-                    </svg>
-                  </button>
-                  <button
-                    class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm rounded-lg w-[40px] h-[40px] p-0"
-                    type="button"
-                  >
-                    <svg
-                      fill="none"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      width="14"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2.62496 3.45837L3.32592 11.5195C3.40081 12.3807 4.12181 13.0417 4.98632 13.0417H9.01363C9.87813 13.0417 10.5991 12.3807 10.674 11.5195L11.375 3.45837M5.12496 3.25004V2.62504C5.12496 1.70457 5.87113 0.958374 6.79163 0.958374H7.20829C8.12879 0.958374 8.87496 1.70457 8.87496 2.62504V3.25004M1.16663 3.45837H12.8333"
-                        stroke="#212529"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                      />
-                    </svg>
-                  </button>
                 </div>
               </td>
             </tr>

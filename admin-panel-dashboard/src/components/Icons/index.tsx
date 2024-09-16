@@ -8,6 +8,7 @@ export { default as UserIcon } from './UserIcon';
 export { default as HomeIcon } from './HomeIcon';
 export { default as LogoIcon } from './LogoIcon';
 export { default as HelpIcon } from './HelpIcon';
+export { default as UKIcon } from './Flags/UKIcon';
 export { default as CloseIcon } from './CloseIcon';
 export { default as CheckIcon } from './CheckIcon';
 export { default as ClockIcon } from './ClockIcon';

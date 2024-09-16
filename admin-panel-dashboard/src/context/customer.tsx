@@ -11,19 +11,15 @@ import { MESSAGES_ERROR } from '@/constants';
 
 export interface Customer {
   customerData: ICustomerData;
-  isEdit: boolean;
 }
 
 interface ICustomerContext extends Customer {
   setDataCustomer: (customerData: ICustomerData) => void;
-  setShowEditForm: (isEdit: boolean) => void;
 }
 
 const initialCustomer: ICustomerContext = {
   customerData: MOCK_INIT_CUSTOMER_DATA,
   setDataCustomer: () => {},
-  isEdit: false,
-  setShowEditForm: () => {}
 };
 
 const CustomerContext = createContext<ICustomerContext>(initialCustomer);
@@ -35,11 +31,9 @@ export const CustomerProvider = ({
 }) => {
   const [customerData, setDataCustomer] = useState<ICustomerData>(MOCK_INIT_CUSTOMER_DATA);
 
-  const [isEdit, setShowEditForm] = useState<boolean>(false);
-
   const values = useMemo(() => (
-    { customerData, setDataCustomer, isEdit, setShowEditForm }
-  ), [customerData, isEdit]);
+    { customerData, setDataCustomer }
+  ), [customerData]);
 
   return (
     <CustomerContext.Provider value={values}>{children}</CustomerContext.Provider>
