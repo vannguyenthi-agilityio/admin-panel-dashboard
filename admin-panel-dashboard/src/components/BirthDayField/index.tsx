@@ -28,6 +28,7 @@ const BirthDayField = ({
 }: BirthdayProps) => {
   const { months, date, years } = value ?? { months: "", date: 0, years: 0 };
   const currentYear = new Date();
+  const disabledClass = disabled ? "cursor-not-allowed" : "cursor-pointer";
 
   const handleChangeMonth = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const optionValue = event.target.value;
@@ -53,7 +54,7 @@ const BirthDayField = ({
           value={String(months)}
           disabled={disabled}
           required
-          className={`${disabled ? "cursor-not-allowed" : "cursor-pointer"}`}
+          className={disabledClass}
           label="Month"
           options={MONTHS}
           onChange={handleChangeMonth}
@@ -63,7 +64,7 @@ const BirthDayField = ({
           value={String(date)}
           disabled={disabled}
           required
-          className={`${disabled ? "cursor-not-allowed" : "cursor-pointer"}`}
+          className={disabledClass}
           label="Date"
           options={generateDays(Number(months), years)}
           onChange={handleChangeDay}
@@ -73,7 +74,7 @@ const BirthDayField = ({
           value={String(years)}
           disabled={disabled}
           required
-          className={`${disabled ? "cursor-not-allowed" : "cursor-pointer"}`}
+          className={disabledClass}
           label="Year"
           options={generateTimes(1900, currentYear.getFullYear())}
           onChange={handleChangeYear}
