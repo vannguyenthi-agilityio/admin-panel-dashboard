@@ -43,8 +43,8 @@ interface SearchProps {
 }
 
 const CustomerList = ({
-  hasPagination,
-  search= {
+  hasPagination = false,
+  search = {
     field: "fullName",
     param: "page",
     valueParam: "1",
@@ -94,6 +94,7 @@ const CustomerList = ({
       isSortable: false,
     },
   ]
+  const currentPage = parseInt(params.get("page") ?? "1");
 
   const handleAddNewCustomer = () => {
     // TODO action add
@@ -199,6 +200,19 @@ const CustomerList = ({
     },
     [handleReplaceURL, params],
   );
+  
+  const handlePageChange = useCallback(
+    (page: number) => {
+      if (page === 1) {
+        params.delete("page");
+      } else {
+        params.set("page", `${page}`);
+      }
+
+      handleReplaceURL(params);
+    },
+    [handleReplaceURL, params],
+  );
 
   return (
     <div className="flex items-center justify-center min-h-[200px] py-[20px]">
@@ -217,7 +231,7 @@ const CustomerList = ({
             />
             { search &&
               <Input
-                placeholder='Search...'
+                placeholder={search.placeholder}
                 name='search'
                 type='text'
                 onChange={handleSearchChange}
@@ -227,16 +241,16 @@ const CustomerList = ({
             }
           </div>
           <Table
-            data={cutomerSearchData}
+            data={cutomerSearchData.slice((currentPage - 1 )*5, currentPage * 5)}
             columns={renderColumn}
             onActionCustomer={handleActionCustomer}
           />
           {hasPagination &&
             <Pagination
-              currentPage = {1}
+              currentPage = {currentPage}
               pageSize= {5}
-              totalCount={10}
-              onPageChange={ () => {}}
+              totalCount={cutomerSearchData.length}
+              onPageChange={handlePageChange}
             />
           }
           <Modal
