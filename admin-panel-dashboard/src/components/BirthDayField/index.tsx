@@ -28,7 +28,7 @@ const BirthDayField = ({
 }: BirthdayProps) => {
   const { months, date, years } = value ?? { months: "", date: 0, years: 0 };
   const currentYear = new Date();
-  const disabledClass = disabled ? "cursor-not-allowed" : "cursor-pointer"
+  const disabledClass = disabled ? "cursor-not-allowed" : "cursor-pointer";
 
   const handleChangeMonth = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const optionValue = event.target.value;
