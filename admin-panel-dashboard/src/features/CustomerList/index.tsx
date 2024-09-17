@@ -216,7 +216,7 @@ const CustomerList = ({
 
   return (
     <div className="flex items-center justify-center min-h-[200px] py-[20px]">
-      {cutomerData.length === 0  && (loading || loadingData) ?  
+      {loading || loadingData ?  
         <Loading />
         :
         <div className="w-full flex flex-col">
