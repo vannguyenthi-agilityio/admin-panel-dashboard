@@ -6,7 +6,308 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="bg-dark antialiased w-[260px] z-50 fixed top-0 left-0 h-[calc(100vh)] transition-all ease-in translate-x-0 xl:w-[260px] delay-10 duration-300 text-sm px-4 py-6"
+        class=" h-full z-50 fixed top-0 left-0 min-h-[calc(100vh)]"
+      >
+        <div
+          class="left-[240px] p-1 rounded-md absolute top-[16px] z-20 w-[48px] cursor-pointer"
+        >
+          <button
+            class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 rounded-lg px-2.5 h-[40px] w-[40px] md:border-none shadow-sm"
+            type="button"
+          >
+            <svg
+              class="w-[16px] h-[16px]"
+              fill="none"
+              height="10"
+              viewBox="0 0 14 10"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.54165 0.625L0.958313 5L5.54165 9.375M13.0416 5H1.16665"
+                stroke="#212529"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.25"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="bg-dark antialiased w-[260px] h-full transition-all ease-in translate-x-0 xl:w-[260px] delay-10 duration-300 text-sm px-4 py-8 block"
+        >
+          <div
+            class="justify-between flex items-center"
+          >
+            <a
+              href="/"
+            >
+              <div
+                class="justify-normal pl-5 gap-1 flex-nowrap mb-8"
+              >
+                <svg
+                  fill="none"
+                  height="22"
+                  viewBox="0 0 80 22"
+                  width="80"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.7516 5.92685C15.7516 8.49854 14.232 9.69672 12.5078 10.2812V10.3396C14.6995 10.7195 16.5699 12.3269 16.5699 15.4538C16.5699 19.4867 13.7936 21.5616 9.46849 21.5616H0V0.66658H8.97169C13.2676 0.66658 15.7516 2.56612 15.7516 5.92685ZM3.47763 9.31681H8.85479C11.3388 9.31681 12.274 8.3232 12.274 6.48211C12.274 4.64101 11.1342 3.61818 9.05936 3.61818H3.47763V9.31681ZM3.47763 11.9177V18.61H9.20548C12.1863 18.61 13.0922 17.2072 13.0922 15.2492C13.0922 13.1159 11.7772 11.9177 9.58539 11.9177H3.47763Z"
+                    fill="#fff"
+                  />
+                  <path
+                    d="M25.8724 6.27754C26.3984 6.27754 26.7783 6.30676 27.2167 6.36521V9.25836H27.1582C24.2066 8.76156 21.8395 10.7488 21.8395 13.9342V21.5616H18.771V6.62822H21.8395V9.4337H21.8979C22.687 7.56338 23.9144 6.27754 25.8724 6.27754Z"
+                    fill="#fff"
+                  />
+                  <path
+                    d="M37.7041 10.5442C37.7041 9.46293 37.0612 8.64466 35.0155 8.64466C32.5607 8.64466 31.6548 9.40448 31.5087 11.3332H28.5279C28.674 8.46932 30.5151 6.21909 35.0155 6.21909C38.3178 6.21909 40.7726 7.47571 40.7726 11.4501V18.5515C40.7726 19.6036 41.0064 20.1588 42.2046 20.0419V21.5031C41.5032 21.7661 41.0064 21.8246 40.4219 21.8246C38.7854 21.8246 38.0256 21.2401 37.7333 19.7789H37.6749C36.7397 21.094 35.0447 21.9999 32.7361 21.9999C29.6968 21.9999 27.8265 20.2465 27.8265 17.7332C27.8265 14.4602 30.2521 13.4374 33.9927 12.7068C36.3014 12.2684 37.7041 11.9762 37.7041 10.5442ZM33.4082 19.5743C35.9507 19.5743 37.7041 18.3177 37.7041 15.8922V13.6419C37.2073 13.9926 36.0091 14.3433 34.5772 14.6355C32.0347 15.1908 30.9242 15.9214 30.9242 17.441C30.9242 18.8145 31.7425 19.5743 33.4082 19.5743Z"
+                    fill="#fff"
+                  />
+                  <path
+                    d="M52.0358 6.21909C54.8121 6.21909 57.0039 7.8264 57.0039 11.2456V21.5616H53.9062V12.1223C53.9062 10.1058 53.0587 8.82 50.9546 8.82C48.5874 8.82 47.0678 10.252 47.0678 12.473V21.5616H43.9993V6.62822H47.0678V8.55699H47.1263C47.9153 7.38804 49.4641 6.21909 52.0358 6.21909Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M70.3011 0.66658H73.3696V21.5616H70.3011V19.8374H70.2427C69.4537 20.8602 67.9925 21.9999 65.6838 21.9999C61.8555 21.9999 59.0208 19.0191 59.0208 14.1095C59.0208 9.19991 61.8555 6.21909 65.6838 6.21909C67.9925 6.21909 69.4537 7.30037 70.2427 8.4401H70.3011V0.66658ZM66.2098 19.4867C68.7231 19.4867 70.2719 17.4118 70.2719 14.1095C70.2719 10.778 68.7231 8.73233 66.2098 8.73233C63.5212 8.73233 62.0893 11.1871 62.0893 14.1095C62.0893 17.0319 63.5212 19.4867 66.2098 19.4867Z"
+                    fill="#fff"
+                  />
+                  <path
+                    d="M77.9126 21.7953C76.8313 21.7953 76.013 21.0648 76.013 19.8958C76.013 18.7561 76.8313 17.9963 77.9126 17.9963C78.9646 17.9963 79.7829 18.7561 79.7829 19.8958C79.7829 21.0648 78.9646 21.7953 77.9126 21.7953Z"
+                    fill="#fff"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+          <ul>
+            <li
+              class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
+            >
+              <a
+                class="font-normal w-full flex items-center py-3 px-7 justify-start"
+                href="/"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.75024 15.25H13.2502C14.3548 15.25 15.2502 14.3546 15.2502 13.25V5.75001L8.0002 0.75L0.750244 5.75001V13.25C0.750244 14.3546 1.64568 15.25 2.75024 15.25Z"
+                    stroke="#fff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M5.74963 11.7491C5.74963 10.6445 6.6451 9.74906 7.7496 9.74906H8.2496C9.3542 9.74906 10.2496 10.6445 10.2496 11.7491V15.2491H5.74963V11.7491Z"
+                    stroke="#fff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  />
+                </svg>
+                <span
+                  class="pl-2 text-white"
+                >
+                  Dashboard
+                </span>
+              </a>
+            </li>
+            <li
+              class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
+            >
+              <a
+                class="font-normal w-full flex items-center py-3 px-7 justify-start"
+                href="/customers"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.75 10C13.8288 10 14.6802 12.1479 15.0239 13.696C15.2095 14.532 14.5333 15.25 13.6769 15.25H12.75M10.75 6.25C12.2688 6.25 13.25 5.01878 13.25 3.5C13.25 1.98122 12.2688 0.75 10.75 0.75M1.78167 15.25H9.21829C9.78279 15.25 10.227 14.7817 10.1145 14.2285C9.80399 12.7012 8.78969 10 5.49999 10C2.2103 10 1.19604 12.7012 0.885478 14.2285C0.772988 14.7817 1.21717 15.25 1.78167 15.25ZM8.24999 3.5C8.24999 5.01878 7.01877 6.25 5.49999 6.25C3.98121 6.25 2.74999 5.01878 2.74999 3.5C2.74999 1.98122 3.98121 0.75 5.49999 0.75C7.01877 0.75 8.24999 1.98122 8.24999 3.5Z"
+                    stroke="#fff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  />
+                </svg>
+                <span
+                  class="pl-2 text-white"
+                >
+                  Custommers
+                </span>
+              </a>
+            </li>
+            <li
+              class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
+            >
+              <a
+                class="font-normal w-full flex items-center py-3 px-7 justify-start"
+                href="/analytics"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.75 1V6.25C7.75 7.3546 8.6454 8.25 9.75 8.25H15M15.25 8C15.25 12.0041 12.0041 15.25 8 15.25C3.99594 15.25 0.75 12.0041 0.75 8C0.75 3.99594 3.99594 0.75 8 0.75C12.0041 0.75 15.25 3.99594 15.25 8Z"
+                    stroke="#fff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                  />
+                </svg>
+                <span
+                  class="pl-2 text-white"
+                >
+                  Analytics
+                </span>
+              </a>
+            </li>
+          </ul>
+          <div
+            class="mt-0"
+          >
+            <span
+              class="uppercase pl-5 text-silver font-medium text-sm"
+            >
+              Settings
+            </span>
+            <ul>
+              <li
+                class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
+              >
+                <a
+                  class="font-normal w-full flex items-center py-3 px-7 justify-start"
+                  href="./messages"
+                >
+                  <svg
+                    fill="none"
+                    height="14"
+                    viewBox="0 0 16 14"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.5 1.5L8 7.25L14.5 1.5M0.75 2.75C0.75 1.64543 1.64543 0.75 2.75 0.75H13.25C14.3546 0.75 15.25 1.64543 15.25 2.75V11.25C15.25 12.3546 14.3546 13.25 13.25 13.25H2.75C1.64543 13.25 0.75 12.3546 0.75 11.25V2.75Z"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                  <span
+                    class="pl-2 text-white"
+                  >
+                    Messages
+                  </span>
+                </a>
+              </li>
+              <li
+                class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
+              >
+                <a
+                  class="font-normal w-full flex items-center py-3 px-7 justify-start"
+                  href="/settings"
+                >
+                  <svg
+                    fill="none"
+                    height="14"
+                    viewBox="0 0 16 14"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.75 3H3.25M8.75 3H15.25M0.75 11H8.25M13.75 11H15.25M8.25 3C8.25 4.24264 7.24264 5.25 6 5.25C4.75736 5.25 3.75 4.24264 3.75 3C3.75 1.75736 4.75736 0.75 6 0.75C7.24264 0.75 8.25 1.75736 8.25 3ZM13.25 11C13.25 12.2426 12.2426 13.25 11 13.25C9.75736 13.25 8.75 12.2426 8.75 11C8.75 9.75736 9.75736 8.75 11 8.75C12.2426 8.75 13.25 9.75736 13.25 11Z"
+                      stroke="#fff"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                  <span
+                    class="pl-2 text-white"
+                  >
+                    Setting
+                  </span>
+                </a>
+              </li>
+              <li
+                class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
+              >
+                <a
+                  class="font-normal w-full flex items-center py-3 px-7 justify-start"
+                  href="./help-centre"
+                >
+                  <svg
+                    fill="none"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.75 6C5.75 6 6 3.75 8 3.75C10 3.75 10.25 5 10.25 6C10.25 6.7513 9.8266 7.5027 8.9798 7.8299C8.4647 8.0289 8 8.4477 8 9V9.25M15.25 8C15.25 12.0041 12.0041 15.25 8 15.25C3.99594 15.25 0.75 12.0041 0.75 8C0.75 3.99594 3.99594 0.75 8 0.75C12.0041 0.75 15.25 3.99594 15.25 8ZM8.5 12C8.5 12.2761 8.2761 12.5 8 12.5C7.7239 12.5 7.5 12.2761 7.5 12C7.5 11.7239 7.7239 11.5 8 11.5C8.2761 11.5 8.5 11.7239 8.5 12Z"
+                      stroke="#fff"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span
+                    class="pl-2 text-white"
+                  >
+                    Help centre
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>,
+  "container": <div>
+    <nav
+      class=" h-full z-50 fixed top-0 left-0 min-h-[calc(100vh)]"
+    >
+      <div
+        class="left-[240px] p-1 rounded-md absolute top-[16px] z-20 w-[48px] cursor-pointer"
+      >
+        <button
+          class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 rounded-lg px-2.5 h-[40px] w-[40px] md:border-none shadow-sm"
+          type="button"
+        >
+          <svg
+            class="w-[16px] h-[16px]"
+            fill="none"
+            height="10"
+            viewBox="0 0 14 10"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.54165 0.625L0.958313 5L5.54165 9.375M13.0416 5H1.16665"
+              stroke="#212529"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.25"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        class="bg-dark antialiased w-[260px] h-full transition-all ease-in translate-x-0 xl:w-[260px] delay-10 duration-300 text-sm px-4 py-8 block"
       >
         <div
           class="justify-between flex items-center"
@@ -15,13 +316,13 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
             href="/"
           >
             <div
-              class="justify-normal pl-5 gap-1 flex-nowrap"
+              class="justify-normal pl-5 gap-1 flex-nowrap mb-8"
             >
               <svg
                 fill="none"
                 height="22"
                 viewBox="0 0 80 22"
-                width="48"
+                width="80"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -51,31 +352,6 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
               </svg>
             </div>
           </a>
-          <div
-            class="p-1 rounded-md mr-[-38px] w-[48px] cursor-pointer"
-          >
-            <button
-              class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 rounded-lg px-2.5 h-[40px] w-[40px] border-none shadow-sm"
-              type="button"
-            >
-              <svg
-                class="w-[16px] h-[16px]"
-                fill="none"
-                height="10"
-                viewBox="0 0 14 10"
-                width="14"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.54165 0.625L0.958313 5L5.54165 9.375M13.0416 5H1.16665"
-                  stroke="#212529"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.25"
-                />
-              </svg>
-            </button>
-          </div>
         </div>
         <ul>
           <li
@@ -270,274 +546,6 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
             </li>
           </ul>
         </div>
-      </nav>
-    </div>
-  </body>,
-  "container": <div>
-    <nav
-      class="bg-dark antialiased w-[260px] z-50 fixed top-0 left-0 h-[calc(100vh)] transition-all ease-in translate-x-0 xl:w-[260px] delay-10 duration-300 text-sm px-4 py-6"
-    >
-      <div
-        class="justify-between flex items-center"
-      >
-        <a
-          href="/"
-        >
-          <div
-            class="justify-normal pl-5 gap-1 flex-nowrap"
-          >
-            <svg
-              fill="none"
-              height="22"
-              viewBox="0 0 80 22"
-              width="48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.7516 5.92685C15.7516 8.49854 14.232 9.69672 12.5078 10.2812V10.3396C14.6995 10.7195 16.5699 12.3269 16.5699 15.4538C16.5699 19.4867 13.7936 21.5616 9.46849 21.5616H0V0.66658H8.97169C13.2676 0.66658 15.7516 2.56612 15.7516 5.92685ZM3.47763 9.31681H8.85479C11.3388 9.31681 12.274 8.3232 12.274 6.48211C12.274 4.64101 11.1342 3.61818 9.05936 3.61818H3.47763V9.31681ZM3.47763 11.9177V18.61H9.20548C12.1863 18.61 13.0922 17.2072 13.0922 15.2492C13.0922 13.1159 11.7772 11.9177 9.58539 11.9177H3.47763Z"
-                fill="#fff"
-              />
-              <path
-                d="M25.8724 6.27754C26.3984 6.27754 26.7783 6.30676 27.2167 6.36521V9.25836H27.1582C24.2066 8.76156 21.8395 10.7488 21.8395 13.9342V21.5616H18.771V6.62822H21.8395V9.4337H21.8979C22.687 7.56338 23.9144 6.27754 25.8724 6.27754Z"
-                fill="#fff"
-              />
-              <path
-                d="M37.7041 10.5442C37.7041 9.46293 37.0612 8.64466 35.0155 8.64466C32.5607 8.64466 31.6548 9.40448 31.5087 11.3332H28.5279C28.674 8.46932 30.5151 6.21909 35.0155 6.21909C38.3178 6.21909 40.7726 7.47571 40.7726 11.4501V18.5515C40.7726 19.6036 41.0064 20.1588 42.2046 20.0419V21.5031C41.5032 21.7661 41.0064 21.8246 40.4219 21.8246C38.7854 21.8246 38.0256 21.2401 37.7333 19.7789H37.6749C36.7397 21.094 35.0447 21.9999 32.7361 21.9999C29.6968 21.9999 27.8265 20.2465 27.8265 17.7332C27.8265 14.4602 30.2521 13.4374 33.9927 12.7068C36.3014 12.2684 37.7041 11.9762 37.7041 10.5442ZM33.4082 19.5743C35.9507 19.5743 37.7041 18.3177 37.7041 15.8922V13.6419C37.2073 13.9926 36.0091 14.3433 34.5772 14.6355C32.0347 15.1908 30.9242 15.9214 30.9242 17.441C30.9242 18.8145 31.7425 19.5743 33.4082 19.5743Z"
-                fill="#fff"
-              />
-              <path
-                d="M52.0358 6.21909C54.8121 6.21909 57.0039 7.8264 57.0039 11.2456V21.5616H53.9062V12.1223C53.9062 10.1058 53.0587 8.82 50.9546 8.82C48.5874 8.82 47.0678 10.252 47.0678 12.473V21.5616H43.9993V6.62822H47.0678V8.55699H47.1263C47.9153 7.38804 49.4641 6.21909 52.0358 6.21909Z"
-                fill="white"
-              />
-              <path
-                d="M70.3011 0.66658H73.3696V21.5616H70.3011V19.8374H70.2427C69.4537 20.8602 67.9925 21.9999 65.6838 21.9999C61.8555 21.9999 59.0208 19.0191 59.0208 14.1095C59.0208 9.19991 61.8555 6.21909 65.6838 6.21909C67.9925 6.21909 69.4537 7.30037 70.2427 8.4401H70.3011V0.66658ZM66.2098 19.4867C68.7231 19.4867 70.2719 17.4118 70.2719 14.1095C70.2719 10.778 68.7231 8.73233 66.2098 8.73233C63.5212 8.73233 62.0893 11.1871 62.0893 14.1095C62.0893 17.0319 63.5212 19.4867 66.2098 19.4867Z"
-                fill="#fff"
-              />
-              <path
-                d="M77.9126 21.7953C76.8313 21.7953 76.013 21.0648 76.013 19.8958C76.013 18.7561 76.8313 17.9963 77.9126 17.9963C78.9646 17.9963 79.7829 18.7561 79.7829 19.8958C79.7829 21.0648 78.9646 21.7953 77.9126 21.7953Z"
-                fill="#fff"
-              />
-            </svg>
-          </div>
-        </a>
-        <div
-          class="p-1 rounded-md mr-[-38px] w-[48px] cursor-pointer"
-        >
-          <button
-            class="flex flex-row gap-x-4 font-primary uppercase font-medium disabled:cursor-not-allowed items-center justify-center bg-white text-darker hover:bg-greyish border hover:border-greyish border-greyish hover:shadow-md text-sm py-2 rounded-lg px-2.5 h-[40px] w-[40px] border-none shadow-sm"
-            type="button"
-          >
-            <svg
-              class="w-[16px] h-[16px]"
-              fill="none"
-              height="10"
-              viewBox="0 0 14 10"
-              width="14"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.54165 0.625L0.958313 5L5.54165 9.375M13.0416 5H1.16665"
-                stroke="#212529"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.25"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <ul>
-        <li
-          class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
-        >
-          <a
-            class="font-normal w-full flex items-center py-3 px-7 justify-start"
-            href="/"
-          >
-            <svg
-              fill="none"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2.75024 15.25H13.2502C14.3548 15.25 15.2502 14.3546 15.2502 13.25V5.75001L8.0002 0.75L0.750244 5.75001V13.25C0.750244 14.3546 1.64568 15.25 2.75024 15.25Z"
-                stroke="#fff"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-              <path
-                d="M5.74963 11.7491C5.74963 10.6445 6.6451 9.74906 7.7496 9.74906H8.2496C9.3542 9.74906 10.2496 10.6445 10.2496 11.7491V15.2491H5.74963V11.7491Z"
-                stroke="#fff"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-            </svg>
-            <span
-              class="pl-2 text-white"
-            >
-              Dashboard
-            </span>
-          </a>
-        </li>
-        <li
-          class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
-        >
-          <a
-            class="font-normal w-full flex items-center py-3 px-7 justify-start"
-            href="/customers"
-          >
-            <svg
-              fill="none"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11.75 10C13.8288 10 14.6802 12.1479 15.0239 13.696C15.2095 14.532 14.5333 15.25 13.6769 15.25H12.75M10.75 6.25C12.2688 6.25 13.25 5.01878 13.25 3.5C13.25 1.98122 12.2688 0.75 10.75 0.75M1.78167 15.25H9.21829C9.78279 15.25 10.227 14.7817 10.1145 14.2285C9.80399 12.7012 8.78969 10 5.49999 10C2.2103 10 1.19604 12.7012 0.885478 14.2285C0.772988 14.7817 1.21717 15.25 1.78167 15.25ZM8.24999 3.5C8.24999 5.01878 7.01877 6.25 5.49999 6.25C3.98121 6.25 2.74999 5.01878 2.74999 3.5C2.74999 1.98122 3.98121 0.75 5.49999 0.75C7.01877 0.75 8.24999 1.98122 8.24999 3.5Z"
-                stroke="#fff"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-            </svg>
-            <span
-              class="pl-2 text-white"
-            >
-              Custommers
-            </span>
-          </a>
-        </li>
-        <li
-          class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
-        >
-          <a
-            class="font-normal w-full flex items-center py-3 px-7 justify-start"
-            href="/analytics"
-          >
-            <svg
-              fill="none"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.75 1V6.25C7.75 7.3546 8.6454 8.25 9.75 8.25H15M15.25 8C15.25 12.0041 12.0041 15.25 8 15.25C3.99594 15.25 0.75 12.0041 0.75 8C0.75 3.99594 3.99594 0.75 8 0.75C12.0041 0.75 15.25 3.99594 15.25 8Z"
-                stroke="#fff"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              />
-            </svg>
-            <span
-              class="pl-2 text-white"
-            >
-              Analytics
-            </span>
-          </a>
-        </li>
-      </ul>
-      <div
-        class="mt-0"
-      >
-        <span
-          class="uppercase pl-5 text-silver font-medium text-sm"
-        >
-          Settings
-        </span>
-        <ul>
-          <li
-            class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
-          >
-            <a
-              class="font-normal w-full flex items-center py-3 px-7 justify-start"
-              href="./messages"
-            >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 16 14"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.5 1.5L8 7.25L14.5 1.5M0.75 2.75C0.75 1.64543 1.64543 0.75 2.75 0.75H13.25C14.3546 0.75 15.25 1.64543 15.25 2.75V11.25C15.25 12.3546 14.3546 13.25 13.25 13.25H2.75C1.64543 13.25 0.75 12.3546 0.75 11.25V2.75Z"
-                  stroke="white"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                />
-              </svg>
-              <span
-                class="pl-2 text-white"
-              >
-                Messages
-              </span>
-            </a>
-          </li>
-          <li
-            class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
-          >
-            <a
-              class="font-normal w-full flex items-center py-3 px-7 justify-start"
-              href="/settings"
-            >
-              <svg
-                fill="none"
-                height="14"
-                viewBox="0 0 16 14"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.75 3H3.25M8.75 3H15.25M0.75 11H8.25M13.75 11H15.25M8.25 3C8.25 4.24264 7.24264 5.25 6 5.25C4.75736 5.25 3.75 4.24264 3.75 3C3.75 1.75736 4.75736 0.75 6 0.75C7.24264 0.75 8.25 1.75736 8.25 3ZM13.25 11C13.25 12.2426 12.2426 13.25 11 13.25C9.75736 13.25 8.75 12.2426 8.75 11C8.75 9.75736 9.75736 8.75 11 8.75C12.2426 8.75 13.25 9.75736 13.25 11Z"
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                />
-              </svg>
-              <span
-                class="pl-2 text-white"
-              >
-                Setting
-              </span>
-            </a>
-          </li>
-          <li
-            class="w-full flex justify-between items-center truncate p-0 leading-[26px] rounded-md my-[3px] text-center mt-1 hover:bg-none transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20"
-          >
-            <a
-              class="font-normal w-full flex items-center py-3 px-7 justify-start"
-              href="./help-centre"
-            >
-              <svg
-                fill="none"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.75 6C5.75 6 6 3.75 8 3.75C10 3.75 10.25 5 10.25 6C10.25 6.7513 9.8266 7.5027 8.9798 7.8299C8.4647 8.0289 8 8.4477 8 9V9.25M15.25 8C15.25 12.0041 12.0041 15.25 8 15.25C3.99594 15.25 0.75 12.0041 0.75 8C0.75 3.99594 3.99594 0.75 8 0.75C12.0041 0.75 15.25 3.99594 15.25 8ZM8.5 12C8.5 12.2761 8.2761 12.5 8 12.5C7.7239 12.5 7.5 12.2761 7.5 12C7.5 11.7239 7.7239 11.5 8 11.5C8.2761 11.5 8.5 11.7239 8.5 12Z"
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <span
-                class="pl-2 text-white"
-              >
-                Help centre
-              </span>
-            </a>
-          </li>
-        </ul>
       </div>
     </nav>
   </div>,

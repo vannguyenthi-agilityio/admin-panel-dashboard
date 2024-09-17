@@ -1,4 +1,4 @@
-import { RefObject, memo } from "react";
+import { RefObject, memo, useEffect } from "react";
 
 // Components
 import { Button } from "@/components";
@@ -20,7 +20,7 @@ import { sidebarStyles } from './style';
 import { isBrowser, clsxMerge } from "@/helpers";
 
 // Hooks
-import useOutsideClick from "@/hooks/useOutsideClick";
+import { useOutsideClick, useScreenSize } from "@/hooks";
 
 // Types
 import { ISidebar } from "@/types";
@@ -53,6 +53,9 @@ const SideBar = ({
   size,
   pathname,
 }: ISidebar) => {
+  const screenSize = useScreenSize();
+  const screenSmall = screenSize === "md" || screenSize === "sm";
+  const screenLarge = screenSize === "lg" || screenSize === "xl"
   const centerOpenClass = !isCollapse ? "justify-start" : "justify-end";
   const layoutOpenClass = !isCollapse ? "justify-between" : "justify-end";
 
@@ -61,7 +64,7 @@ const SideBar = ({
   const isSmallerScreenSize = isBrowser && WINDOW_INNER_WIDTH <= BREAKPOINTS.XL;
 
   const sideBarRef = useOutsideClick(() => {
-    if (isSmallerScreenSize && isCollapse) {
+    if (screenLarge && isCollapse) {
       toggleSidebar();
     }
   }) as RefObject<HTMLDivElement>;
@@ -71,6 +74,14 @@ const SideBar = ({
       toggleSidebar();
     }
   };
+
+  useEffect(() => {
+    if (screenSmall && !isCollapse) {
+      toggleSidebar();
+    } else if (screenLarge && isCollapse) {
+      toggleSidebar();
+    }
+  }, [screenSize]);
 
   const renderListItems = (data: typeof ITEMS_SETTING | typeof ITEMS_DASHBOARD) => (
     <ul>
@@ -105,42 +116,45 @@ const SideBar = ({
   return (
     <nav
       ref={sideBarRef}
-      className={clsxMerge(
+      className=" h-full z-50 fixed top-0 left-0 min-h-[calc(100vh)]"
+      >
+      <div
+        className={`${isCollapse ? "left-[20px] sm:left-[80px]" : "left-[240px]"} p-1 rounded-md absolute top-[16px] z-20 w-[48px] cursor-pointer`}
+        onClick={toggleSidebar}>
+        {!isCollapse ? <Button
+          leftIcon={<ArrowLeftIcon className="w-[16px] h-[16px]" />}
+          className="px-2.5 h-[40px] h-[40px] w-[40px] md:border-none shadow-sm"
+        />
+        :
+        <Button
+          leftIcon={<ArrowRightIcon className="w-[16px] h-[16px]" />}
+          className="px-2.5 h-[40px] w-[40px] md:border-none shadow-sm"
+        />
+        }
+      </div>
+      <div className={clsxMerge(
         sidebarStyles({
           size,
           isCollapse : isCollapse
         }),
+        `${isCollapse ? "hidden sm:block" : "block"}`,
         className
-      )}
-      >
-      <div className={`${layoutOpenClass} flex items-center`}>
-        <a href={ROUTES.HOME}>
-          <div className="justify-normal pl-5 gap-1 flex-nowrap">
-            <LogoIcon isFull={!isCollapse} width={!isCollapse? "48" : "80"}/>
+      )}>
+        <div className={`${layoutOpenClass} flex items-center`}>
+          <a href={ROUTES.HOME}>
+            <div className="justify-normal pl-5 gap-1 flex-nowrap mb-8">
+              <LogoIcon isFull={!isCollapse} width={!isCollapse? "80" : "48"}/>
+            </div>
+          </a>
+        </div>
+        {ITEMS_DASHBOARD && renderListItems(ITEMS_DASHBOARD)}
+        {ITEMS_SETTING &&
+          <div className={isCollapse ? "mt-8" : "mt-0"}>
+            {!isCollapse && <span className="uppercase pl-5 text-silver font-medium text-sm">Settings</span>}
+            {renderListItems(ITEMS_SETTING)}
           </div>
-        </a>
-        <div
-          className="p-1 rounded-md mr-[-38px] w-[48px] cursor-pointer"
-          onClick={toggleSidebar}>
-          {!isCollapse ? <Button
-            leftIcon={<ArrowLeftIcon className="w-[16px] h-[16px]" />}
-            className="px-2.5 h-[40px] h-[40px] w-[40px] border-none shadow-sm"
-          />
-          :
-          <Button
-            leftIcon={<ArrowRightIcon className="w-[16px] h-[16px]" />}
-            className="px-2.5 h-[40px] w-[40px] border-none shadow-sm"
-          />
-          }
-        </div>
+        }
       </div>
-      {ITEMS_DASHBOARD && renderListItems(ITEMS_DASHBOARD)}
-      {ITEMS_SETTING &&
-        <div className={isCollapse ? "mt-8" : "mt-0"}>
-          {!isCollapse && <span className="uppercase pl-5 text-silver font-medium text-sm">Settings</span>}
-          {renderListItems(ITEMS_SETTING)}
-        </div>
-      }
     </nav>
   );
 };

@@ -35,7 +35,7 @@ const Input = forwardRef<HTMLInputElement, IInput>((
           {label}
         </label>
       )}
-      <div className="relative mt-1 w-full sm:w-auto">
+      <div className="relative w-full sm:w-auto min-w-[320px]">
         {leftElement && (
           <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-dark-gray w-[40px]">
             {leftElement}

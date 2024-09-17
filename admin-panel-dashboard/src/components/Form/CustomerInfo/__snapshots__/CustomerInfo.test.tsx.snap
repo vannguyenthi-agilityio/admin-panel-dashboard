@@ -15,7 +15,7 @@ exports[`UserInfo Component should match snapshot 1`] = `
         First Name
       </label>
       <div
-        class="relative mt-1 w-full sm:w-auto"
+        class="relative w-full sm:w-auto min-w-[320px]"
       >
         <input
           class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-2 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px]"
@@ -38,7 +38,7 @@ exports[`UserInfo Component should match snapshot 1`] = `
         Last Name
       </label>
       <div
-        class="relative mt-1 w-full sm:w-auto"
+        class="relative w-full sm:w-auto min-w-[320px]"
       >
         <input
           class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-2 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px]"
@@ -61,7 +61,7 @@ exports[`UserInfo Component should match snapshot 1`] = `
         ID Number
       </label>
       <div
-        class="relative mt-1 w-full sm:w-auto"
+        class="relative w-full sm:w-auto min-w-[320px]"
       >
         <input
           class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-2 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px]"
@@ -79,7 +79,7 @@ exports[`UserInfo Component should match snapshot 1`] = `
       </p>
     </div>
     <div
-      class="w-full min-h-[130px] mt-4"
+      class="w-full min-h-[112px] mt-4 mb-5"
     >
       <p
         class="text-2xl text-tertiary mb-2"
@@ -98,7 +98,7 @@ exports[`UserInfo Component should match snapshot 1`] = `
             Month
           </label>
           <div
-            class="relative mt-1"
+            class="relative"
           >
             <select
               class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none bg-transparent text-dark h-10 text-sm px-2 py-2 cursor-pointer"
@@ -219,7 +219,7 @@ exports[`UserInfo Component should match snapshot 1`] = `
             Date
           </label>
           <div
-            class="relative mt-1"
+            class="relative"
           >
             <select
               class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none bg-transparent text-dark h-10 text-sm px-2 py-2 cursor-pointer"
@@ -255,7 +255,7 @@ exports[`UserInfo Component should match snapshot 1`] = `
             Year
           </label>
           <div
-            class="relative mt-1"
+            class="relative"
           >
             <select
               class="w-full font-primary font-light placeholder:text-slate-400 border border-slate-200 rounded-lg transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none bg-transparent text-dark h-10 text-sm px-2 py-2 cursor-pointer"
@@ -1170,7 +1170,7 @@ exports[`UserInfo Component should match snapshot 1`] = `
         Phone number
       </label>
       <div
-        class="relative mt-1 w-full sm:w-auto"
+        class="relative w-full sm:w-auto min-w-[320px]"
       >
         <div
           class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-dark-gray w-[40px]"
@@ -1255,7 +1255,7 @@ exports[`UserInfo Component should match snapshot 1`] = `
         Email
       </label>
       <div
-        class="relative mt-1 w-full sm:w-auto"
+        class="relative w-full sm:w-auto min-w-[320px]"
       >
         <input
           class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-2 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border placeholder:opacity-0 focus:placeholder:opacity-100 py-[9px]"

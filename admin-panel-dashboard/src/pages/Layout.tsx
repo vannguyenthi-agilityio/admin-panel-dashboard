@@ -22,9 +22,9 @@ const Layout = () => {
         toggleSidebar={toggleSidebar}
         pathname={location.pathname}
       />
-      <Header className="absolute top-0 right-0"/>
+      <Header className="absolute top-0 right-[16px]"/>
       <CustomerProvider>
-        <div className={isCollapseSidebar ? "ml-[100px]" : "ml-[280px]"}>
+        <div className={isCollapseSidebar ? "sm:ml-[105px]" : "md:ml-[265px]"}>
           <Outlet />
         </div>
       </CustomerProvider>

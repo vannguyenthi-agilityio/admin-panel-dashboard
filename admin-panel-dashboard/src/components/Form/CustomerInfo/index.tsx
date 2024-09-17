@@ -146,7 +146,7 @@ const CustomerInfo = ({ control, type = FORM_TYPE.CREATE }: ICustomerInfo) => {
           }}
           render={({ field: { value, onChange }, fieldState: { error } }) => {
             return (
-            <div className="w-full min-h-[130px] mt-4">
+            <div className="w-full min-h-[112px] mt-4 mb-5">
               <BirthDayField
                 required
                 disabled={isDisable}
