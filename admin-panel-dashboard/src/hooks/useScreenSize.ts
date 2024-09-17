@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 
-import { BREAKPOINTS } from "@/constants";
+import { BREAKPOINTS, SCREEN_SIZE } from "@/constants";
 
 const getBreakPoint = (screenWidth: number) => {
   if (screenWidth) {
     if (screenWidth < BREAKPOINTS.XS) {
-      return "xs";
+      return SCREEN_SIZE.XS;
     } else if (screenWidth < BREAKPOINTS.SM) {
-      return "sm";
+      return SCREEN_SIZE.SM;
     } else if (screenWidth < BREAKPOINTS.MD) {
-      return "md";
+      return SCREEN_SIZE.MD;
     } else if (screenWidth < BREAKPOINTS.LG) {
-      return "lg";
+      return SCREEN_SIZE.LG;
     } else {
-      return "xl";
+      return SCREEN_SIZE.XL;
     }
   } else {
     return undefined;
