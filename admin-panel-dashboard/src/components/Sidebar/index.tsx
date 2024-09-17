@@ -64,7 +64,7 @@ const SideBar = ({
   const isSmallerScreenSize = isBrowser && WINDOW_INNER_WIDTH <= BREAKPOINTS.XL;
 
   const sideBarRef = useOutsideClick(() => {
-    if (screenLarge && isCollapse ) {
+    if (screenLarge && isCollapse) {
       toggleSidebar();
     }
   }) as RefObject<HTMLDivElement>;
