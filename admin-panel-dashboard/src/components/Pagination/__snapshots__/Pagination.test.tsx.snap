@@ -84,6 +84,7 @@ exports[`Pagination component Should match snapshot 1`] = `
             <option
               class="cursor-pointer"
               data-testid="option-1"
+              selected=""
               value="1"
             >
               1
@@ -147,7 +148,6 @@ exports[`Pagination component Should match snapshot 1`] = `
             <option
               class="cursor-pointer"
               data-testid="option-10"
-              selected=""
               value="10"
             >
               10
@@ -333,6 +333,7 @@ exports[`Pagination component Should match total count less than page size 1`] =
             <option
               class="cursor-pointer"
               data-testid="option-5"
+              selected=""
               value="5"
             >
               5

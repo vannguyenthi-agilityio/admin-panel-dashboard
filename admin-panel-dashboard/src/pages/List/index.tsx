@@ -10,6 +10,7 @@ const CustomerListPage = () => {
       <h4 className="text-[20px] md:text-lg text-darker font-medium">Customers' List</h4>
       <IBreadcrumb />
       <CustomerList
+        hasPagination
         search={{
           field: "fullName",
           param: "page",

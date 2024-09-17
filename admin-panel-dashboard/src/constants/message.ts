@@ -4,7 +4,7 @@ export const MESSAGES_ERROR = {
   EMAIL_REQUIRED: "Email is required.",
   EMAIL_INVALID: "Invalid email address.",
   MIN_LENGTH_2: "This field must have more than 2 characters.",
-  NAME_INVALID: "This field is no space at start or end",
+  NAME_INVALID: "This field is no space at start or end and without number",
   ID_NUMBER_INVALID: "Invalid number.",
   INVALID_PHONE_NUMBER: "Phone number is invalid",
   INVALID_BIRTH_DATE: "Birth date is invalid.",

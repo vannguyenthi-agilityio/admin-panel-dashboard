@@ -56,9 +56,7 @@ const Pagination = ({
   const paginationRangeLength = paginationRange.length;
   const showItemsPagination = paginationRangeLength > 1;
   const lastPage = paginationRange[paginationRangeLength - 1];
-  const lastItemCurrentPage =
-    currentPage * pageSize >= totalCount ? totalCount : currentPage * pageSize;
-  const totalItems = totalCount < pageSize ? pageSize : lastItemCurrentPage;
+  
   return (
     <div className={clsxMerge(
       paginationStyles({
@@ -122,14 +120,16 @@ const Pagination = ({
           />
         </div>
       )}
-      <div className="flex w-full items-center ml-3 max-w-[200px]">
-        <Select
-          options={PAGINATION}
-          onChange={onChangeTotalItemsPage}
-          defaultValue={totalItems}
-        />
-        <span className="ml-2 text-darker">/Page</span>
-      </div>
+      {showItemsPagination && 
+        <div className="flex w-full items-center ml-3 max-w-[200px]">
+          <Select
+            options={PAGINATION}
+            onChange={onChangeTotalItemsPage}
+            defaultValue={currentPage}
+          />
+          <span className="ml-2 text-darker">/Page</span>
+        </div>
+      }
     </div>
   );
 };

@@ -36,7 +36,7 @@ const CustomerInfoForm = ({
   const isEdit = type === FORM_TYPE.EDIT;
   const isDetail = type === FORM_TYPE.DETAIL;
   const [data, setData] = useState<ICustomerData>((isEdit || isDetail) ? customer : MOCK_INIT_CUSTOMER_DATA);
-  const { handleAddData, handleUpdateData } = useActionData(setData);
+  const { handleAddData, handleUpdateData,loadingData } = useActionData(setData);
   const {firstName, lastName, idNumber, dateOfBirth, phoneNumber, email} = customer;
   const [isLoading, setIsLoading] = useState(false);
 
@@ -92,14 +92,14 @@ const CustomerInfoForm = ({
           ? isEdit ? MESSAGE_EDIT_CUSTOMER.SUCCESS : MESSAGE_ADD_CUSTOMER.SUCCESS
           : isEdit ? MESSAGE_EDIT_CUSTOMER.FAILED : MESSAGE_ADD_CUSTOMER.FAILED,
       });
-      navigate(ROUTES.CUSTOMERS);
+      (!loadingData || !isLoading) && navigate(ROUTES.CUSTOMERS);
     },
     [id, openToast, reset],
   );
 
   return (
     <>
-      {isLoading && (
+      {(isLoading || loadingData) && (
         <div className="opacity-25 fixed inset-0 z-20 bg-black cursor-not-allowed" />
       )}
       <FormProvider {...formHandler as any}>
@@ -107,7 +107,6 @@ const CustomerInfoForm = ({
           id="edit-customer-form"
           onSubmit={handleSubmit(onSubmit)}
           className="relative w-full">
-         
           <CustomerInfo
             control={control}
             type={type}
