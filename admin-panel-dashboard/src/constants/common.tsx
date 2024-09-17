@@ -123,3 +123,11 @@ export enum FORM_TYPE {
   CREATE = 'Create',
   DETAIL = 'Detail'
 }
+
+export enum SCREEN_SIZE {
+  XS = "xs",
+  SM = "sm",
+  MD = "md",
+  LG = "lg",
+  XL = "xl"
+}

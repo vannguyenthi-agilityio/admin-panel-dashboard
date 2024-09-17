@@ -65,7 +65,7 @@ const Pagination = ({
       className)}
     >
       {showItemsPagination && (
-        <div className="w-full flex gap-2 justify-center md:justify-end items-center md:m-0">
+        <div className="w-full flex gap-2 md:justify-end items-center md:m-0">
           <Button
             className={`w-[40px] h-[40px] ${
               currentPage === 1 ? "bg-gray-200 border-none" : ""
@@ -121,7 +121,7 @@ const Pagination = ({
         </div>
       )}
       {showItemsPagination && 
-        <div className="flex w-full items-center ml-3 max-w-[200px]">
+        <div className="flex w-full items-center max-w-[200px]">
           <Select
             options={PAGINATION}
             onChange={onChangeTotalItemsPage}
