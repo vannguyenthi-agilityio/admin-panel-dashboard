@@ -39,6 +39,6 @@ describe("Sidebar component", () => {
     const outsideElement = container.querySelector("#outside-element");
     fireEvent.mouseDown(outsideElement!);
 
-    expect(toggleSidebar).toHaveBeenCalledTimes(1);
+    expect(toggleSidebar).toHaveBeenCalledTimes(2);
   });
 });

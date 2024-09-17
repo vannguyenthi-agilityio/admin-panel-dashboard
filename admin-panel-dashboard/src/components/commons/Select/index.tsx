@@ -31,7 +31,7 @@ const Select =  forwardRef<HTMLSelectElement, ISelect>((
   return (
     <div className="w-full">
      {label && <label className={clsxMerge(classNameLabel)}>{label}</label>}
-      <div className="relative mt-1">
+      <div className="relative">
         <select
           className={clsxMerge(
             selectStyles({ variant, selectSize }),

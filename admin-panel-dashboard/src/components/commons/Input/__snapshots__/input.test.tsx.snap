@@ -3,7 +3,7 @@
 exports[`Input component Renders input component 1`] = `
 <div>
   <div
-    class="relative mt-1 w-full sm:w-auto"
+    class="relative w-full sm:w-auto min-w-[320px]"
   >
     <input
       class="peer block w-full flex-1 font-primary font-light appearance-none rounded-lg border-gray-light bg-white px-2 text-sm text-tertiary placeholder-text-gray focus:outline-none hover:enabled:border-dark-gray aria-invalid:!border-red disabled:text-gray disabled:cursor-not-allowed border py-[9px]"
