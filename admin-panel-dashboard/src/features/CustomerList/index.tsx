@@ -7,10 +7,18 @@ import { Loading, Modal, Button, Input, Pagination } from '@/components';
 import { SearchIcon } from "@/components/Icons"
 
 // Constants
-import { MESSAGES_ERROR, ROUTES, MESSAGE_GET_CUSTOMER, ACTION_TYPE } from '@/constants';
+import {
+  MESSAGES_ERROR,
+  ROUTES,
+  MESSAGE_GET_CUSTOMER,
+  ACTION_TYPE,
+  DIRECTION,
+  FORMAT_DATE,
+  MESSAGES_WARNING
+} from '@/constants';
 
 // Helpers
-import { formatDataTable } from "@/helpers";
+import { formatDataTable, convertDateToDateTime } from "@/helpers";
 
 // Mocks
 import { MOCK_COLUMNS, MOCK_INIT_CUSTOMER_DATA } from "@/mocks";
@@ -68,6 +76,7 @@ const CustomerList = ({
   }
   const pathname = usePathname() ?? "";
   let fullNameFilter = "";
+  let itemSortBy = "";
   
   const [searchParams] = useSearchParams();
   const params = useMemo(
@@ -156,7 +165,6 @@ const CustomerList = ({
     }
   }
 
-  // Get data from api
   useEffect(() => {
     setCustomerSearchData(formatDataTable(cutomerData));
     fullNameFilter = searchParams.get(search.field) as string;
@@ -164,6 +172,14 @@ const CustomerList = ({
   }, [cutomerData, fullNameFilter]);
 
   useEffect(() => {
+    setCustomerSearchData(formatDataTable(cutomerData));
+    itemSortBy = params.get("sortBy") as string;
+    const itemOrderBy = params.get("orderBy") as DIRECTION;
+    if (itemSortBy) handleSort(itemSortBy, itemOrderBy);
+  }, [cutomerData, itemSortBy]);
+
+  useEffect(() => {
+    // Get data from api
     fetchData(getData, setCustomerData, MESSAGE_GET_CUSTOMER.FAILED);
   }, []);
 
@@ -200,7 +216,45 @@ const CustomerList = ({
     },
     [handleReplaceURL, params],
   );
-  
+
+  const handleSort = (key: string, ascending: DIRECTION) => {
+    const storyDataCusstomer = cutomerData;
+    switch (key) {
+      case 'fullName':
+        if (ascending === DIRECTION.DESC) {
+          const sortedCusstomer = formatDataTable(storyDataCusstomer).sort((a, b) => a.fullName.localeCompare(b.fullName));
+          setCustomerSearchData(sortedCusstomer);
+        } else {
+          const sortedCusstomer = formatDataTable(storyDataCusstomer).sort((a, b) => b.fullName.localeCompare(a.fullName));
+          setCustomerSearchData(sortedCusstomer);
+        }
+        break;
+      case 'email':
+        if (ascending === DIRECTION.DESC) {
+          const sortedCusstomer = storyDataCusstomer.sort((a, b) => a.email.localeCompare(b.email));
+          setCustomerSearchData(formatDataTable(sortedCusstomer));
+        } else {
+          const sortedCusstomer = storyDataCusstomer.sort((a, b) => b.email.localeCompare(a.email));
+          setCustomerSearchData(formatDataTable(sortedCusstomer));
+        }
+        break;
+      case 'dateOfBirth':
+        if (ascending === DIRECTION.DESC) {
+          const sortedCusstomer = storyDataCusstomer.sort((a, b) =>
+          Date.parse(convertDateToDateTime(a.dateOfBirth, FORMAT_DATE.MONTH_DAY_YEAR)) - Date.parse(convertDateToDateTime(b.dateOfBirth, FORMAT_DATE.MONTH_DAY_YEAR)));
+          setCustomerSearchData(formatDataTable(sortedCusstomer));
+        
+        } else {
+          const sortedCusstomer = storyDataCusstomer.sort((a, b) => 
+          Date.parse(convertDateToDateTime(b.dateOfBirth, FORMAT_DATE.MONTH_DAY_YEAR)) - Date.parse(convertDateToDateTime(a.dateOfBirth, FORMAT_DATE.MONTH_DAY_YEAR)));
+          setCustomerSearchData(formatDataTable(sortedCusstomer));
+        }
+        break;
+      default:
+        break;
+    }
+  }
+
   const handlePageChange = useCallback(
     (page: number) => {
       if (page === 1) {
@@ -214,9 +268,27 @@ const CustomerList = ({
     [handleReplaceURL, params],
   );
 
+  const handleSortingChange = useCallback(
+    (key: string) => {
+      params.set("sortBy", key);
+
+      const orderByParam =
+        params.get("orderBy") === DIRECTION.DESC
+          ? DIRECTION.ASC
+          : DIRECTION.DESC;
+
+      params.set("orderBy", orderByParam);
+      if (cutomerData.length > 0) {
+        handleSort(key, orderByParam);
+      } 
+      handleReplaceURL(params);
+    },
+    [handleReplaceURL, params],
+  );
+
   return (
     <div className="flex items-center justify-center min-h-[200px] py-[20px]">
-      {loading || loadingData ?  
+      {loading || loadingData ?
         <Loading />
         :
         <div className="w-full flex flex-col">
@@ -244,6 +316,7 @@ const CustomerList = ({
             data={cutomerSearchData.slice((currentPage - 1 )*5, currentPage * 5)}
             columns={renderColumn}
             onActionCustomer={handleActionCustomer}
+            onSortFieldCustomer={handleSortingChange}
           />
           {hasPagination &&
             <Pagination
@@ -260,7 +333,7 @@ const CustomerList = ({
             onClose={() => setShowModal(false)}
             onClick={handleDeletedCustomer}
             className="max-w-[500px]"
-            children={<p className="py-4">Are you sure delete this customer?</p>}
+            children={<p className="py-4">{MESSAGES_WARNING.DELETE}</p>}
           />
         </div>
       }

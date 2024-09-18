@@ -1,4 +1,5 @@
 import { render } from "@testing-library/react";
+import { BrowserRouter } from 'react-router-dom';
 
 // Mocks
 import { MOCK_CUSTOMER, MOCK_COLUMNS } from "@/mocks";
@@ -17,12 +18,15 @@ describe("Table", () => {
       placeholder: "Search..."
     },
     columns: MOCK_COLUMNS,
-    onActionCustomer: mockActionCutomer
+    onActionCustomer: mockActionCutomer,
+    onSortFieldCustomer: mockActionCutomer,
   };
 
   it("Should matches snapshot", async () => {
     const { container } = render(
-      <Table {...mockProps} />
+      <BrowserRouter>
+        <Table {...mockProps} />
+      </BrowserRouter>
     );
     expect(container).toMatchSnapshot();
   });

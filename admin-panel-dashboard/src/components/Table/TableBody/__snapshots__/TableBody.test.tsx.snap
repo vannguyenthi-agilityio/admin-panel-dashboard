@@ -12,7 +12,7 @@ exports[`TableBody Should matches snapshot 1`] = `
             class="flex items-center"
           >
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               1
             </p>
@@ -25,7 +25,7 @@ exports[`TableBody Should matches snapshot 1`] = `
             class="flex items-center"
           >
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               Alyvia Kelley
             </p>
@@ -41,7 +41,7 @@ exports[`TableBody Should matches snapshot 1`] = `
               class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"
             />
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               Approved
             </p>
@@ -54,7 +54,7 @@ exports[`TableBody Should matches snapshot 1`] = `
             class="flex items-center"
           >
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               test@gmail.com
             </p>
@@ -67,7 +67,7 @@ exports[`TableBody Should matches snapshot 1`] = `
             class="flex items-center"
           >
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               06/18/1978
             </p>
@@ -82,7 +82,7 @@ exports[`TableBody Should matches snapshot 1`] = `
             class="flex items-center"
           >
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               2
             </p>
@@ -95,7 +95,7 @@ exports[`TableBody Should matches snapshot 1`] = `
             class="flex items-center"
           >
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               Jaiden Nixon
             </p>
@@ -111,7 +111,7 @@ exports[`TableBody Should matches snapshot 1`] = `
               class="h-2.5 w-2.5 rounded-full bg-gray-500 me-2"
             />
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               Rejected
             </p>
@@ -124,7 +124,7 @@ exports[`TableBody Should matches snapshot 1`] = `
             class="flex items-center"
           >
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               jaiden.n@gmail.com
             </p>
@@ -137,7 +137,7 @@ exports[`TableBody Should matches snapshot 1`] = `
             class="flex items-center"
           >
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               09/18/1983
             </p>
@@ -152,7 +152,7 @@ exports[`TableBody Should matches snapshot 1`] = `
             class="flex items-center"
           >
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               3
             </p>
@@ -165,7 +165,7 @@ exports[`TableBody Should matches snapshot 1`] = `
             class="flex items-center"
           >
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               Jaiden Nixon
             </p>
@@ -181,7 +181,7 @@ exports[`TableBody Should matches snapshot 1`] = `
               class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"
             />
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               Blocked
             </p>
@@ -194,7 +194,7 @@ exports[`TableBody Should matches snapshot 1`] = `
             class="flex items-center"
           >
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               me@clayton.com
             </p>
@@ -207,7 +207,7 @@ exports[`TableBody Should matches snapshot 1`] = `
             class="flex items-center"
           >
             <p
-              class="text-darker font-normal text-sm"
+              class="text-darker font-normal text-sm max-w-[200px] truncate"
             >
               10/18/1988
             </p>

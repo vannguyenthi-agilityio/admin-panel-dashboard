@@ -124,6 +124,11 @@ export enum FORM_TYPE {
   DETAIL = 'Detail'
 }
 
+export enum DIRECTION {
+  ASC = "asc",
+  DESC = "desc",
+}
+
 export enum SCREEN_SIZE {
   XS = "xs",
   SM = "sm",
