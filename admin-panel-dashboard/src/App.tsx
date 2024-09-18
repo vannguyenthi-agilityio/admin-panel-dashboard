@@ -19,10 +19,14 @@ import { Loading } from '@/components';
 
 // Pages
 const HomePage = lazy(() => import('@/pages/Home'));
-const DetailPage = lazy(() => import('@/pages/Detail'));
-const ListPage = lazy(() => import('@/pages/List'));
-const CustomerEditPage = lazy(() => import('@/pages/Edit'));
-const CustomerCreatePage = lazy(() => import('@/pages/Create'));
+const AnalyticsPage = lazy(() => import('@/pages/Analytics'));
+const MessagesPage = lazy(() => import('@/pages/Messages'));
+const SettingPage = lazy(() => import('@/pages/Setting'));
+const HelpCentrePage = lazy(() => import('@/pages/HelpCentre'));
+const DetailPage = lazy(() => import('@/pages/Customers/Detail'));
+const ListPage = lazy(() => import('@/pages/Customers/List'));
+const CustomerEditPage = lazy(() => import('@/pages/Customers/Edit'));
+const CustomerCreatePage = lazy(() => import('@/pages/Customers/Create'));
 import Layout from './pages/Layout';
 
 const App = () => (
@@ -41,6 +45,58 @@ const App = () => (
                   />
                 }>
                   <HomePage />
+                </Suspense>
+              }
+            />
+            <Route
+              path={ROUTES.ANALYTICS}
+              element= {
+                <Suspense fallback={
+                  <Loading
+                    additionalClass="flex justify-center items-center min-h-[calc(100vh)]"
+                    isFullWidth={false}
+                  />
+                }>
+                  <AnalyticsPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path={ROUTES.MESSAGES}
+              element= {
+                <Suspense fallback={
+                  <Loading
+                    additionalClass="flex justify-center items-center min-h-[calc(100vh)]"
+                    isFullWidth={false}
+                  />
+                }>
+                  <MessagesPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path={ROUTES.SETTINGS}
+              element= {
+                <Suspense fallback={
+                  <Loading
+                    additionalClass="flex justify-center items-center min-h-[calc(100vh)]"
+                    isFullWidth={false}
+                  />
+                }>
+                  <SettingPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path={ROUTES.HELP_CENTRE}
+              element= {
+                <Suspense fallback={
+                  <Loading
+                    additionalClass="flex justify-center items-center min-h-[calc(100vh)]"
+                    isFullWidth={false}
+                  />
+                }>
+                  <HelpCentrePage />
                 </Suspense>
               }
             />
