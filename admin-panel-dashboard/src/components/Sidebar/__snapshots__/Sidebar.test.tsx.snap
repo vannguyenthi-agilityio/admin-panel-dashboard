@@ -190,7 +190,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
               >
                 <a
                   class="font-normal w-full flex items-center py-3 px-7 justify-start"
-                  href="./messages"
+                  href="/messages"
                 >
                   <svg
                     fill="none"
@@ -248,7 +248,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
               >
                 <a
                   class="font-normal w-full flex items-center py-3 px-7 justify-start"
-                  href="./help-centre"
+                  href="/help-centre"
                 >
                   <svg
                     fill="none"
@@ -463,7 +463,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
             >
               <a
                 class="font-normal w-full flex items-center py-3 px-7 justify-start"
-                href="./messages"
+                href="/messages"
               >
                 <svg
                   fill="none"
@@ -521,7 +521,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
             >
               <a
                 class="font-normal w-full flex items-center py-3 px-7 justify-start"
-                href="./help-centre"
+                href="/help-centre"
               >
                 <svg
                   fill="none"
