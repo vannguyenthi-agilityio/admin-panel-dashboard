@@ -16,7 +16,8 @@ export const MESSAGES_ERROR = {
 };
 
 export const MESSAGES_WARNING = {
-  ID_NUMBER: "The ID number should be 10 characters"
+  ID_NUMBER: "The ID number should be 10 characters",
+  CONFIRM_DELETE: "Are you sure delete this customer?"
 }
 
 export const MESSAGE_ADD_CUSTOMER = {

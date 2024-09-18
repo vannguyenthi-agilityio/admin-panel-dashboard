@@ -34,7 +34,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
           </button>
         </div>
         <div
-          class="bg-dark antialiased w-[260px] h-full transition-all ease-in translate-x-0 xl:w-[260px] delay-10 duration-300 text-sm px-4 py-8 block"
+          class="bg-dark antialiased w-[260px] h-full transition-all ease-in translate-x-0 xl:w-[260px] text-sm px-4 py-8 delay-10 duration-300 block"
         >
           <div
             class="justify-between flex items-center"
@@ -307,7 +307,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
         </button>
       </div>
       <div
-        class="bg-dark antialiased w-[260px] h-full transition-all ease-in translate-x-0 xl:w-[260px] delay-10 duration-300 text-sm px-4 py-8 block"
+        class="bg-dark antialiased w-[260px] h-full transition-all ease-in translate-x-0 xl:w-[260px] text-sm px-4 py-8 delay-10 duration-300 block"
       >
         <div
           class="justify-between flex items-center"

@@ -137,7 +137,7 @@ const SideBar = ({
           size,
           isCollapse : isCollapse
         }),
-        `${isCollapse ? "hidden sm:block" : "block"}`,
+        ` delay-10 duration-300 ${isCollapse ? "hidden sm:block" : "block"}`,
         className
       )}>
         <div className={`${layoutOpenClass} flex items-center`}>

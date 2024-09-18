@@ -1,7 +1,6 @@
 // Hooks
 import {
   memo,
-  useCallback,
 } from "react";
 
 // Types
@@ -18,20 +17,16 @@ interface IPropsTable {
   hasPagination?: boolean;
   total?: number;
   onActionCustomer: (customer: ICustomerTable, action: string) => void;
+  onSortFieldCustomer: (key: string) => void;
 }
 
 const Table = ({
   data,
   columns,
   className = "",
-  onActionCustomer
+  onActionCustomer,
+  onSortFieldCustomer
 }: IPropsTable) => {
-  
-
-  const handleSortingChange = useCallback(
-    (key: string) => {
-    console.log('key', key);
-  },[]);
 
   return (
     <div className="w-full">
@@ -39,7 +34,7 @@ const Table = ({
         className={`p-0 border-none ring-0 overflow-x-auto ${className}`}>
         <div className="flex flex-col items-start justify-start my-2">
           <table className="w-full" tabIndex={0} id="table">
-            <TableHeader columns={columns} onSort={handleSortingChange} />
+            <TableHeader columns={columns} onSort={onSortFieldCustomer} />
             <TableBody columns={columns} data={data} onActionCutomer={onActionCustomer}/>
           </table>
         </div>
