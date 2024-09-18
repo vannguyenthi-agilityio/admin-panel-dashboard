@@ -333,7 +333,7 @@ const CustomerList = ({
             onClose={() => setShowModal(false)}
             onClick={handleDeletedCustomer}
             className="max-w-[500px]"
-            children={<p className="py-4">{MESSAGES_WARNING.DELETE}</p>}
+            children={<p className="py-4">{MESSAGES_WARNING.CONFIRM_DELETE}</p>}
           />
         </div>
       }
