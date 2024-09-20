@@ -21,7 +21,7 @@ const NotFound = ({ message="Not Found", className, size }: INotFound) => (
       className
     )}
   >
-    <p className="font-bold">{message}</p>
+    <p className="font-bold">{message.toString()}</p>
   </div>
 );
 
