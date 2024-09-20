@@ -1,11 +1,27 @@
+// Helpers
+import { clsxMerge } from '@/helpers';
+
+// Types
+import { SIZE_TYPE } from '@/types'
+
+import { notFoundStyles } from './style';
 interface INotFound {
   message?: string;
+  className?: string;
+  size?: SIZE_TYPE;
 }
 
-const NotFound = ({ message="Not Found" }: INotFound) => {
+const NotFound = ({ message="Not Found", className, size }: INotFound) => {
   return (
-    <div className="flex items-center justify-center w-full min-h-[calc(100vh - 8rem)]">
-      <p className="text-red-500 text-xl font-bold">{message}</p>
+    <div
+      className={clsxMerge(
+        notFoundStyles({ 
+          size,
+        }),
+        className
+      )}
+    >
+      <p className="font-bold">{message}</p>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import {
 
 const useGetData = () => {
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   // Get data
  const getData = useCallback(async (onError: (error: Error) => void) => {
   setLoading(true);
@@ -20,6 +21,7 @@ const useGetData = () => {
     }
     return customerData;
   } catch (error) {
+    setErrorMessage(error as string);
     if (error instanceof Error) {
       onError(error);
     } else {
@@ -32,6 +34,6 @@ const useGetData = () => {
     setLoading(false);
   }}, [])
 
-  return {getData, loading}
+  return {getData, loading, errorMessage}
 }
 export default useGetData;

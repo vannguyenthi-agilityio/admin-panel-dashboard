@@ -29,6 +29,7 @@ const useActionData = (
         throw new Error(error.message)}
       );
     } catch (error) {
+      setErrorMessage(error as string);
       throw new Error(MESSAGE_ADD_CUSTOMER.FAILED)
     } finally {
       setLoading(false);
@@ -43,6 +44,7 @@ const useActionData = (
         throw new Error(error.message)}
       );
     } catch (error) {
+      setErrorMessage(error as string);
       throw new Error(MESSAGE_EDIT_CUSTOMER.FAILED)
     } finally {
       setLoading(false);
@@ -57,6 +59,7 @@ const useActionData = (
         throw new Error(error.message)}
       );
     } catch (error) {
+      setErrorMessage(error as string);
       throw new Error(MESSAGE_DELETE_CUSTOMER.FAILED);
     } finally {
       setLoading(false);
