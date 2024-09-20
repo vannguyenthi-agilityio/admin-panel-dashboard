@@ -28,6 +28,7 @@ const ListPage = lazy(() => import('@/pages/Customers/List'));
 const CustomerEditPage = lazy(() => import('@/pages/Customers/Edit'));
 const CustomerCreatePage = lazy(() => import('@/pages/Customers/Create'));
 import Layout from './pages/Layout';
+import ErrorPage from './pages/NotFound';
 
 const App = () => (
   <BrowserRouter>
@@ -35,6 +36,10 @@ const App = () => (
       <ErrorBoundary>
         <Routes>
           <Route path="/" element={<Layout />}>
+            <Route
+              path='*'
+              element= {<ErrorPage />}
+            />
             <Route
               path={ROUTES.HOME}
               element= {

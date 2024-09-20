@@ -1,9 +1,9 @@
-import { useEffect, useState, useCallback, useMemo, useTransition } from "react";
+import { useEffect, useState, useCallback, useMemo, useTransition, memo } from "react";
 import { useSearchParams, useLocation, useNavigate } from 'react-router-dom';
 
 // Components
 import { Table } from '@/components/Table';
-import { Loading, Modal, Button, Input, Pagination } from '@/components';
+import { Loading, Modal, Button, Input, Pagination, NotFound } from '@/components';
 import { SearchIcon } from "@/components/Icons"
 
 // Constants
@@ -94,7 +94,7 @@ const CustomerList = ({
   const { setDataCustomer } = useCustomer();
   const [isShowModal, setShowModal] = useState<boolean>(false);
   const [data, setData] = useState<ICustomerData>(MOCK_INIT_CUSTOMER_DATA);
-  const { handleDeleteCustomer, loadingData } = useActionData(setData);
+  const { handleDeleteCustomer, loadingData, errorMessage } = useActionData(setData);
   const renderColumn = [
     ...MOCK_COLUMNS,
     {
@@ -286,6 +286,10 @@ const CustomerList = ({
     [handleReplaceURL, params],
   );
 
+  if (errorMessage) {
+    return <NotFound message={errorMessage} />
+  }
+
   return (
     <div className="flex items-center justify-center min-h-[200px] py-[20px]">
       {loading || loadingData ?
@@ -343,4 +347,4 @@ const CustomerList = ({
 
 const CustomerListWithToast = withToast(CustomerList);
 
-export default CustomerListWithToast;
+export default memo(CustomerListWithToast);

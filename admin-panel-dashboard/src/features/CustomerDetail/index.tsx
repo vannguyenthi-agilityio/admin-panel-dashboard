@@ -11,7 +11,7 @@ import { FORM_TYPE } from "@/constants";
 import { MOCK_INIT_CUSTOMER_DATA } from "@/mocks";
 
 // Components
-import { Loading } from '@/components';
+import { Loading, NotFound } from '@/components';
 import CustomerInfoForm from '@/components/Form/CustomerInfoForm';
 
 // Hooks
@@ -23,12 +23,16 @@ const CustomerDetail = () => {
 
   const [data, setData] = useState<ICustomerData>(MOCK_INIT_CUSTOMER_DATA);
 
-  const { handleGetCustomer } = useActionData(setData);
+  const { handleGetCustomer, errorMessage } = useActionData(setData);
 
   // Get data from api
   useEffect(() => {
     if(id) handleGetCustomer(id);
   }, []);
+
+  if (errorMessage) {
+    return <NotFound message={errorMessage} />
+  }
 
   return (
     <div className="w-full flex items-center justify-center min-h-[200px] py-[20px]">

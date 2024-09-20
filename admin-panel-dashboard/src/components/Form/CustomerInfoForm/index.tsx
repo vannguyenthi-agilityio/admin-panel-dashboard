@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState, memo } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 
@@ -138,4 +138,4 @@ const CustomerInfoForm = ({
 
 const CustomerInfoFormWithToast = withToast(CustomerInfoForm);
 
-export default CustomerInfoFormWithToast;
+export default memo(CustomerInfoFormWithToast);

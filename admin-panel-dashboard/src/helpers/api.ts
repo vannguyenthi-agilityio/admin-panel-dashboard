@@ -34,3 +34,8 @@ export const findCustomerIndexById = (
 ): number => {
   return data.findIndex((customer: ICustomerData) => customer.id === customerId);
 };
+
+export const getErrorMessage = (statusCode: number, statusText: string) => {
+  const errorMessage = `An error has occurred: ${statusCode} - ${statusText}`;
+  return errorMessage;
+};

@@ -1,4 +1,4 @@
-import { MESSAGES_ERROR } from '@/constants';
+import { MESSAGES_ERROR, MESSAGE_GET_CUSTOMER } from '@/constants';
 import {
   ICustomerData,
 } from '@/types';
@@ -36,7 +36,7 @@ export const addToCustomer = async (
 ) => {
   try {
 
-    // Call the helper function to adđ
+    // Call the helper function to add
     const response = await addCustomer(customerData);
     response ? setDataCustomer(response) : (() => { throw new Error('Fail update')})();
   } catch (error) {
@@ -75,7 +75,7 @@ export const getedCustomer = async (
 ) => {
   try {
     const response = await getCustomer(id);
-    response ? setDataCustomer(response)  : (() => { throw new Error('Fail get')})();
+    response ? setDataCustomer(response)  : (() => { throw new Error(MESSAGE_GET_CUSTOMER.FAILED)})();
     
   } catch (error) {
     if (error instanceof Error) {
