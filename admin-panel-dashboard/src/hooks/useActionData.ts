@@ -19,6 +19,7 @@ const useActionData = (
   setData: React.Dispatch<React.SetStateAction<ICustomerData>>
 ) => {
   const [loadingData, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   // Handle update data
   const handleAddData = async (customer: ICustomerData) => {
@@ -66,16 +67,17 @@ const useActionData = (
   const handleGetCustomer = async (id: string | number) => {
     setLoading(true);
     try {
-      await getedCustomer(id,  setData, (error) => {
+      await getedCustomer(id, setData, (error) => {
         throw new Error(error.message)}
       );
     } catch (error) {
+      setErrorMessage(error as string);
       throw new Error(MESSAGE_GET_CUSTOMER.FAILED);
     } finally {
       setLoading(false);
     }
   }
-  return { handleAddData, handleUpdateData, handleDeleteCustomer, handleGetCustomer, loadingData }
+  return { handleAddData, handleUpdateData, handleDeleteCustomer, handleGetCustomer, loadingData, errorMessage }
 }
 
 export default useActionData;

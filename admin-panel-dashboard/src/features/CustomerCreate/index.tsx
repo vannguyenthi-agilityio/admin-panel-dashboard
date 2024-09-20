@@ -1,5 +1,3 @@
-import { memo } from 'react';
-
 // Components
 import CustomerInfoForm from '@/components/Form/CustomerInfoForm';
 
@@ -18,4 +16,4 @@ const CustomerCreateForm = () => {
   );
 };
 
-export default memo(CustomerCreateForm);
+export default CustomerCreateForm;

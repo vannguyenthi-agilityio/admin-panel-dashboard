@@ -62,7 +62,6 @@ export const deleteCustomer = async (dataCutomer: ICustomerData) => {
   return await deleted(`${API_ROUTES}/${id}`, dataCutomer);
 }
 
-
 // Get the data on the server.
 export const getCustomer = async (id: string | number) => {
   return await geted<ICustomerData>(`${API_ROUTES}/${id}`);
