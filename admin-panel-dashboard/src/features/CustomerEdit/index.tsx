@@ -29,7 +29,7 @@ const CustomerEditForm = () => {
   }, []);
 
   if (errorMessage) {
-    return <NotFound message={errorMessage.toString()} />
+    return <NotFound message={errorMessage} />
   }
 
   return (
