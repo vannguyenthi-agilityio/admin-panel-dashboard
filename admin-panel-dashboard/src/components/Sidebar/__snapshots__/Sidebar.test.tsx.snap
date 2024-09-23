@@ -43,7 +43,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
               href="/"
             >
               <div
-                class="justify-normal pl-5 gap-1 flex-nowrap mb-8"
+                class="justify-normal gap-1 flex-nowrap mb-8 pl-5"
               >
                 <svg
                   fill="none"
@@ -316,7 +316,7 @@ exports[`Sidebar component Should render Sidebar snapshot correctly 1`] = `
             href="/"
           >
             <div
-              class="justify-normal pl-5 gap-1 flex-nowrap mb-8"
+              class="justify-normal gap-1 flex-nowrap mb-8 pl-5"
             >
               <svg
                 fill="none"

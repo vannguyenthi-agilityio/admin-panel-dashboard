@@ -56,8 +56,9 @@ const SideBar = ({
   const screenSize = useScreenSize();
   const screenSmall = screenSize === "md" || screenSize === "sm";
   const screenLarge = screenSize === "lg" || screenSize === "xl"
-  const centerOpenClass = !isCollapse ? "justify-start" : "justify-end";
-  const layoutOpenClass = !isCollapse ? "justify-between" : "justify-end";
+  const centerOpenClass = !isCollapse ? "justify-start" : "justify-center";
+  const layoutOpenClass = !isCollapse ? "justify-between" : "justify-center";
+  const layoutLogoClass = !isCollapse ? "pl-5" : "pl-0";
 
   const transitionBgClass =
     "transition-[background-color] duration-300 ease-[cubic-bezier(0.4,0,0.6,1)] delay-20";
@@ -96,7 +97,7 @@ const SideBar = ({
           `${itemBackground} `,
           `${transitionBgClass} `,
         );
-        const linkClass = `font-normal w-full flex items-center py-3 ${isCollapse ? "pr-7" : "px-7"} ${centerOpenClass}`;
+        const linkClass = `font-normal w-full flex items-center py-3 ${isCollapse ? "pr-0" : "px-7"} ${centerOpenClass}`;
 
         return (
           <li
@@ -142,7 +143,7 @@ const SideBar = ({
       )}>
         <div className={`${layoutOpenClass} flex items-center`}>
           <a href={ROUTES.HOME}>
-            <div className="justify-normal pl-5 gap-1 flex-nowrap mb-8">
+            <div className={`justify-normal gap-1 flex-nowrap mb-8 ${layoutLogoClass}`}>
               <LogoIcon isFull={!isCollapse} width={!isCollapse? "80" : "48"}/>
             </div>
           </a>
