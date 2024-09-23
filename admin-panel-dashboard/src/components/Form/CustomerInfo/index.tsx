@@ -20,7 +20,7 @@ import {
 import { ICustomerData } from "@/types";
 
 // Helper
-import { validateBirthDate, formatPhoneNumber } from "@/helpers";
+import { formatPhoneNumber } from "@/helpers";
 
 // Icons
 import { UKIcon } from "@/components/Icons";
@@ -141,10 +141,7 @@ const CustomerInfo = ({ control, type = FORM_TYPE.CREATE }: ICustomerInfo) => {
       <Controller
           control={control}
           name="dateOfBirth"
-          rules={{
-            validate: validateBirthDate,
-          }}
-          render={({ field: { value, onChange }, fieldState: { error } }) => {
+          render={({ field: { value, onChange } }) => {
             return (
             <div className="w-full min-h-[112px] mt-4 mb-5">
               <BirthDayField
@@ -152,7 +149,6 @@ const CustomerInfo = ({ control, type = FORM_TYPE.CREATE }: ICustomerInfo) => {
                 disabled={isDisable}
                 value={value}
                 onChange={onChange}
-                errorMessage={error?.message}
               />
             </div>)
           }}
