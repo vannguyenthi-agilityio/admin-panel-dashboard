@@ -70,7 +70,7 @@ exports[`Pagination component Should match snapshot 1`] = `
       </button>
     </div>
     <div
-      class="flex w-full items-center max-w-[200px]"
+      class="flex w-full items-center max-w-[180px]"
     >
       <div
         class="w-full"
@@ -291,7 +291,7 @@ exports[`Pagination component Should match total count less than page size 1`] =
       </button>
     </div>
     <div
-      class="flex w-full items-center max-w-[200px]"
+      class="flex w-full items-center max-w-[180px]"
     >
       <div
         class="w-full"
