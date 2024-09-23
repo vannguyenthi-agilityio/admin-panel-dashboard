@@ -121,7 +121,7 @@ const Pagination = ({
         </div>
       )}
       {showItemsPagination && 
-        <div className="flex w-full items-center max-w-[200px]">
+        <div className="flex w-full items-center max-w-[180px]">
           <Select
             options={PAGINATION}
             onChange={onChangeTotalItemsPage}

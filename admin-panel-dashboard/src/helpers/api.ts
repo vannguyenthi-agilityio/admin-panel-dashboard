@@ -36,6 +36,6 @@ export const findCustomerIndexById = (
 };
 
 export const getErrorMessage = (statusCode: number, statusText: string) => {
-  const errorMessage = `An error has occurred: ${statusCode} - ${statusText}`;
+  const errorMessage = `An error has occurred: ${statusCode} - User ${statusText}`;
   return errorMessage;
 };

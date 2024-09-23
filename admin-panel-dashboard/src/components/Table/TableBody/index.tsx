@@ -45,47 +45,50 @@ const TableBody = ({ data, columns, onActionCutomer }: IPropsDataTableBody) => {
           const id = getObjectValue(item, "id");
           return (
             <tr key={`table-body-${id}`}>
-              {columns.map(column => (
-                <td
-                  key={`table-row-cell-${column.key}`}
-                  className={`px-6 py-2 border-0 border-b border-gray-100 ${index % 2 ? "bg-transparent" : "bg-greyish"}`}>
-                  {column.customNode ? (
-                    column.customNode(column, item)
-                  ) : 
-                    column.key === 'action' ? 
-                    (
-                    <div className="flex gap-2">
-                      <Button
-                        className= 'w-[40px] h-[40px] p-0'
-                        leftIcon= {<ArrowUpRightIcon />}
-                        onClick={() => handleDetailCustomer(item)}
-                      />
-                      <Button
-                        className= 'w-[40px] h-[40px] p-0'
-                        leftIcon= {<EditIcon />}
-                        onClick={() => handleEditCustomer(item)}
-                      />
-                      <Button
-                        className= 'w-[40px] h-[40px] p-0'
-                        leftIcon= {<DeleteIcon />}
-                        onClick={() => handleDeleteCustomer(item)}
-                      />
-                    </div>
-                    )
-                    :
-                    (
-                      <div className="flex items-center">
-                        {column.key === "status" && (getObjectValue(item, column.key) === STATUS[0] ?  <div className="h-2.5 w-2.5 rounded-full bg-green-500 me-2" /> :
-                        getObjectValue(item, column.key) === STATUS[1] ? <div className="h-2.5 w-2.5 rounded-full bg-red-500 me-2" /> : <div className="h-2.5 w-2.5 rounded-full bg-gray-500 me-2" />
-                          )
-                        }
-                        <p className="text-darker font-normal text-sm max-w-[200px] truncate">
-                          {getObjectValue(item, column.key)}
-                        </p>
+              {columns.map(column => {
+                const customWidthClass = column.key === "email" || column.key === "fullName" ? "xl:min-w-[200px]" : "xl:min-w-[30px]"
+                return (
+                  <td
+                    key={`table-row-cell-${column.key}`}
+                    className={`px-6 py-2 border-0 border-b border-gray-100 ${index % 2 ? "bg-transparent" : "bg-greyish"}`}>
+                    {column.customNode ? (
+                      column.customNode(column, item)
+                    ) :
+                      column.key === 'action' ?
+                      (
+                      <div className="flex gap-2 justify-end">
+                        <Button
+                          className= 'w-[40px] h-[40px] p-0'
+                          leftIcon= {<ArrowUpRightIcon />}
+                          onClick={() => handleDetailCustomer(item)}
+                        />
+                        <Button
+                          className= 'w-[40px] h-[40px] p-0'
+                          leftIcon= {<EditIcon />}
+                          onClick={() => handleEditCustomer(item)}
+                        />
+                        <Button
+                          className= 'w-[40px] h-[40px] p-0'
+                          leftIcon= {<DeleteIcon />}
+                          onClick={() => handleDeleteCustomer(item)}
+                        />
                       </div>
-                    )}
-                </td>
-              ))}
+                      )
+                      :
+                      (
+                        <div className="flex items-center">
+                          {column.key === "status" && (getObjectValue(item, column.key) === STATUS[0] ?  <div className="h-2.5 w-2.5 rounded-full bg-green-500 me-2" /> :
+                          getObjectValue(item, column.key) === STATUS[1] ? <div className="h-2.5 w-2.5 rounded-full bg-red-500 me-2" /> : <div className="h-2.5 w-2.5 rounded-full bg-gray-500 me-2" />
+                            )
+                          }
+                          <p className={`text-darker font-normal text-sm max-w-[200px] truncate ${customWidthClass}`}>
+                            {getObjectValue(item, column.key)}
+                          </p>
+                        </div>
+                      )}
+                  </td>
+                )}
+              )}
             </tr>
           );
         })
