@@ -117,12 +117,12 @@ const CustomerInfoForm = ({
               <Button
                 label={`${isEdit ? 'Edit' : 'Create'}`}
                 type="submit"
-                buttonType={`${isDisable ? "disabled" : "secondary"}`}
+                buttonType={isDisable ? "disabled" : "secondary"}
               />
               <Button
                 onClick={hanleDiscardChange}
                 label="Discard Changes"
-                buttonType={`${!formState.isDirty || isLoading ? "disabled" : "outline"}`}
+                buttonType={!formState.isDirty || isLoading ? "disabled" : "outline"}
               />
               <Button
                 label="Cancel"
