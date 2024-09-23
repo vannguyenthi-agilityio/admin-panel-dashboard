@@ -57,7 +57,7 @@ const CustomerInfoForm = ({
   const isDisable = !formState.isDirty || !formState.isValid || isLoading;
 
   const hanleDiscardChange = () => {
-    reset({ ...MOCK_INIT_CUSTOMER_DATA })
+    reset({ ...customer })
   }
 
   const hanleCancelEdit = () => {
