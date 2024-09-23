@@ -54,6 +54,7 @@ const CustomerInfoForm = ({
   });
 
   const { handleSubmit, formState, control, reset } = formHandler;
+  const isDisable = !formState.isDirty || !formState.isValid || isLoading;
 
   const hanleDiscardChange = () => {
     reset({ ...MOCK_INIT_CUSTOMER_DATA })
@@ -116,7 +117,7 @@ const CustomerInfoForm = ({
               <Button
                 label={`${isEdit ? 'Edit' : 'Create'}`}
                 type="submit"
-                buttonType={`${!formState.isDirty || isLoading ? "disabled" : "secondary"}`}
+                buttonType={`${isDisable ? "disabled" : "secondary"}`}
               />
               <Button
                 onClick={hanleDiscardChange}
