@@ -16,7 +16,8 @@ import {
   FORMAT_DATE,
   MESSAGES_WARNING,
   MESSAGE_EDIT_CUSTOMER,
-  MESSAGE_ADD_CUSTOMER
+  MESSAGE_ADD_CUSTOMER,
+  MESSAGE_DELETE_CUSTOMER
 } from '@/constants';
 
 // Helpers
@@ -93,7 +94,7 @@ const CustomerList = ({
   },
   [pathname, navigate]);
 
-  const { setDataCustomer, customerAction } = useCustomer();
+  const { setDataCustomer, customerAction, setActionCustomer } = useCustomer();
   const [isShowModal, setShowModal] = useState<boolean>(false);
   const [data, setData] = useState<ICustomerData>(MOCK_INIT_CUSTOMER_DATA);
   const { handleDeleteCustomer, loadingData, errorMessage } = useActionData(setData);
@@ -108,6 +109,7 @@ const CustomerList = ({
   const currentPage = parseInt(params.get("page") ?? "1");
   const isEdit = customerAction ===  ACTION_TYPE.EDIT;
   const isCreate = customerAction === ACTION_TYPE.CREATE;
+  const isDelete = customerAction === ACTION_TYPE.DELETE;
 
   const handleAddNewCustomer = () => {
     // TODO action add
@@ -117,7 +119,9 @@ const CustomerList = ({
   const handleActionCustomer = (customer: ICustomerTable, action: string) => {
     if (customer && action === ACTION_TYPE.EDIT) {
       // TODO action edit
-      setDataCustomer(formatCustomerData(customer))
+      setDataCustomer(formatCustomerData(customer));
+      const newDataList = cutomerData.map(item => item.id === customer.id ? {...item, id: customer.id} : item);
+      setCustomerData(newDataList);
     }
 
     if (customer && action === ACTION_TYPE.DELETE) {
@@ -135,6 +139,8 @@ const CustomerList = ({
   const handleDeletedCustomer = () => {
     handleDeleteCustomer(data);
     fetchData(getData, setCustomerData, MESSAGE_GET_CUSTOMER.FAILED);
+    const newDataCustomer = cutomerData.filter((item) => item.id !== data.id);
+    setCustomerData(newDataCustomer);
     setShowModal(false);
   }
 
@@ -153,11 +159,14 @@ const CustomerList = ({
         message: `${message}: ${error.message}`,
       }));
       setData(data);
-      data && (isEdit || isCreate) && openToast(
+      data && (isEdit || isCreate || isDelete) && openToast(
         {
           type: data ? TOAST_TYPE.SUCCESS : TOAST_TYPE.ERROR,
-          message: isEdit ? MESSAGE_EDIT_CUSTOMER.SUCCESS : MESSAGE_ADD_CUSTOMER.SUCCESS
-        }
+          message: isEdit ? MESSAGE_EDIT_CUSTOMER.SUCCESS : isCreate ? MESSAGE_ADD_CUSTOMER.SUCCESS : MESSAGE_DELETE_CUSTOMER.SUCCESS
+        },
+        () => {
+          setActionCustomer(ACTION_TYPE.DETAIL);
+        },
       );
     } catch (error) {
       if (error instanceof Error) {
@@ -190,8 +199,8 @@ const CustomerList = ({
 
   useEffect(() => {
     // Get data from api
-    fetchData(getData, setCustomerData, MESSAGE_GET_CUSTOMER.FAILED);
-  }, []);
+    if (cutomerSearchData.length === 0) fetchData(getData, setCustomerData, MESSAGE_GET_CUSTOMER.FAILED);
+  }, [cutomerSearchData]);
 
   const handleSearch = useCallback(
     (valueFilter: string, cutomerData: ICustomerData[]) => {
