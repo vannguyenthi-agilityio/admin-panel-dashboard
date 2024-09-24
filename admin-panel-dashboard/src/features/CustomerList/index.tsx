@@ -14,7 +14,9 @@ import {
   ACTION_TYPE,
   DIRECTION,
   FORMAT_DATE,
-  MESSAGES_WARNING
+  MESSAGES_WARNING,
+  MESSAGE_EDIT_CUSTOMER,
+  MESSAGE_ADD_CUSTOMER
 } from '@/constants';
 
 // Helpers
@@ -91,7 +93,7 @@ const CustomerList = ({
   },
   [pathname, navigate]);
 
-  const { setDataCustomer } = useCustomer();
+  const { setDataCustomer, customerAction } = useCustomer();
   const [isShowModal, setShowModal] = useState<boolean>(false);
   const [data, setData] = useState<ICustomerData>(MOCK_INIT_CUSTOMER_DATA);
   const { handleDeleteCustomer, loadingData, errorMessage } = useActionData(setData);
@@ -104,6 +106,8 @@ const CustomerList = ({
     },
   ]
   const currentPage = parseInt(params.get("page") ?? "1");
+  const isEdit = customerAction ===  ACTION_TYPE.EDIT;
+  const isCreate = customerAction === ACTION_TYPE.CREATE;
 
   const handleAddNewCustomer = () => {
     // TODO action add
@@ -149,6 +153,12 @@ const CustomerList = ({
         message: `${message}: ${error.message}`,
       }));
       setData(data);
+      data && (isEdit || isCreate) && openToast(
+        {
+          type: data ? TOAST_TYPE.SUCCESS : TOAST_TYPE.ERROR,
+          message: isEdit ? MESSAGE_EDIT_CUSTOMER.SUCCESS : MESSAGE_ADD_CUSTOMER.SUCCESS
+        }
+      );
     } catch (error) {
       if (error instanceof Error) {
         openToast({

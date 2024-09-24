@@ -7,19 +7,23 @@ import { ICustomerData } from '@/types';
 import { MOCK_INIT_CUSTOMER_DATA } from '@/mocks';
 
 // Constants
-import { MESSAGES_ERROR } from '@/constants';
+import { MESSAGES_ERROR, ACTION_TYPE } from '@/constants';
 
 export interface Customer {
   customerData: ICustomerData;
+  customerAction: ACTION_TYPE;
 }
 
 interface ICustomerContext extends Customer {
   setDataCustomer: (customerData: ICustomerData) => void;
+  setActionCustomer: (customerAction: ACTION_TYPE) => void;
 }
 
 const initialCustomer: ICustomerContext = {
   customerData: MOCK_INIT_CUSTOMER_DATA,
   setDataCustomer: () => {},
+  setActionCustomer: () => {},
+  customerAction: ACTION_TYPE.DETAIL
 };
 
 const CustomerContext = createContext<ICustomerContext>(initialCustomer);
@@ -30,10 +34,11 @@ export const CustomerProvider = ({
   children?: ReactNode;
 }) => {
   const [customerData, setDataCustomer] = useState<ICustomerData>(MOCK_INIT_CUSTOMER_DATA);
+  const [customerAction, setActionCustomer] = useState<ACTION_TYPE>(ACTION_TYPE.DETAIL);
 
   const values = useMemo(() => (
-    { customerData, setDataCustomer }
-  ), [customerData]);
+    { customerData, setDataCustomer, customerAction, setActionCustomer }
+  ), [customerData, customerAction]);
 
   return (
     <CustomerContext.Provider value={values}>{children}</CustomerContext.Provider>
