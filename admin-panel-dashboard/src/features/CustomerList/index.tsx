@@ -21,7 +21,7 @@ import {
 } from '@/constants';
 
 // Helpers
-import { formatDataTable, convertDateToDateTime } from "@/helpers";
+import { formatDataTable, convertDateToDateTime, formatCustomerData } from "@/helpers";
 
 // Mocks
 import { MOCK_COLUMNS, MOCK_INIT_CUSTOMER_DATA } from "@/mocks";
@@ -42,9 +42,6 @@ import {
 
 // Hocs
 import { TOAST_TYPE, TWithToast, withToast } from "@/hocs/withToast";
-
-// Helpers
-import { formatCustomerData } from "@/helpers";
 
 interface SearchProps {
   field: string;
@@ -71,6 +68,7 @@ const CustomerList = ({
 }>) => {
   
   const { getData, loading } = useGetData();
+  const [customerFetchData, setCustomerFetchData] = useState<ICustomerData[]>([]);
   const navigate = useNavigate();
   const [isPending, startTransition] = useTransition();
   const usePathname = () => {
@@ -110,6 +108,7 @@ const CustomerList = ({
   const isEdit = customerAction ===  ACTION_TYPE.EDIT;
   const isCreate = customerAction === ACTION_TYPE.CREATE;
   const isDelete = customerAction === ACTION_TYPE.DELETE;
+  const [cutomersData, setCustomersData] = useState<ICustomerTable[]>(formatDataTable(customerFetchData));
 
   const handleAddNewCustomer = () => {
     // TODO action add
@@ -120,8 +119,6 @@ const CustomerList = ({
     if (customer && action === ACTION_TYPE.EDIT) {
       // TODO action edit
       setDataCustomer(formatCustomerData(customer));
-      const newDataList = cutomerData.map(item => item.id === customer.id ? {...item, id: customer.id} : item);
-      setCustomerData(newDataList);
     }
 
     if (customer && action === ACTION_TYPE.DELETE) {
@@ -138,15 +135,12 @@ const CustomerList = ({
 
   const handleDeletedCustomer = () => {
     handleDeleteCustomer(data);
-    fetchData(getData, setCustomerData, MESSAGE_GET_CUSTOMER.FAILED);
-    const newDataCustomer = cutomerData.filter((item) => item.id !== data.id);
-    setCustomerData(newDataCustomer);
+    fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
+    const newDataCustomer = customerFetchData.filter((item) => item.id !== data.id);
+    setCustomersData(formatDataTable(newDataCustomer));
     setShowModal(false);
   }
 
-  const [cutomerData, setCustomerData] = useState<ICustomerData[]>([]);
-  const [cutomerSearchData, setCustomerSearchData] = useState<ICustomerTable[]>(formatDataTable(cutomerData));
-  
   const fetchData = async <T,>(
     database: FetchFunction<T>,
     setData: React.Dispatch<React.SetStateAction<T>>,
@@ -185,39 +179,49 @@ const CustomerList = ({
   }
 
   useEffect(() => {
-    setCustomerSearchData(formatDataTable(cutomerData));
+    if (!cutomersData.length) setCustomersData(formatDataTable(customerFetchData));
     fullNameFilter = searchParams.get(search.field) as string;
-    if (fullNameFilter) handleSearch(fullNameFilter, cutomerData);
-  }, [cutomerData, fullNameFilter]);
+    if (fullNameFilter) handleSearch(fullNameFilter, customerFetchData);
 
-  useEffect(() => {
-    setCustomerSearchData(formatDataTable(cutomerData));
     itemSortBy = params.get("sortBy") as string;
     const itemOrderBy = params.get("orderBy") as DIRECTION;
     if (itemSortBy) handleSort(itemSortBy, itemOrderBy);
-  }, [cutomerData, itemSortBy]);
+  }, [customerFetchData]);
 
   useEffect(() => {
-    // Get data from api
-    if (cutomerSearchData.length === 0) fetchData(getData, setCustomerData, MESSAGE_GET_CUSTOMER.FAILED);
-  }, [cutomerSearchData]);
+    if (customerFetchData.length === 0) {
+      // Get data from api
+      fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
+    }
+
+    if (isDelete) {
+      params.delete(search.field);
+      params.delete("page");
+      handleReplaceURL(params);
+    }
+
+    if (isDelete || isCreate || isEdit) {
+      fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
+      setCustomersData(formatDataTable(customerFetchData))
+    }
+  }, [customerFetchData]);
 
   const handleSearch = useCallback(
-    (valueFilter: string, cutomerData: ICustomerData[]) => {
+    (valueFilter: string, customerFetchData: ICustomerData[]) => {
       if (valueFilter) {
         params.set(search.field, valueFilter);
         params.delete("page");
         handleReplaceURL(params);
-        const dataFiltered = formatDataTable(cutomerData).filter( (customer) =>
+        const dataFiltered = formatDataTable(customerFetchData).filter( (customer) =>
           customer.fullName
             .toString()
             .toLowerCase()
             .includes(valueFilter.toString().trim().toLowerCase()) 
         ) as ICustomerTable[];
-        !isPending && setCustomerSearchData(dataFiltered);
+        !isPending && setCustomersData(dataFiltered);
         return;
       }
-      if (fullNameFilter === "") fetchData(getData, setCustomerData, MESSAGE_GET_CUSTOMER.FAILED);
+      if (fullNameFilter === "") fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
 
       if (params.get(search.field)) {
         params.delete(search.field);
@@ -231,42 +235,42 @@ const CustomerList = ({
   const handleSearchChange = useCallback (
     (event: React.ChangeEvent<HTMLInputElement>) => {
       const value =  event.target.value;
-      handleSearch(value, cutomerData);
+      handleSearch(value, customerFetchData);
     },
     [handleReplaceURL, params],
   );
 
   const handleSort = (key: string, ascending: DIRECTION) => {
-    const storyDataCusstomer = cutomerData;
+    const storyDataCusstomer = customerFetchData;
     switch (key) {
       case 'fullName':
         if (ascending === DIRECTION.DESC) {
           const sortedCusstomer = formatDataTable(storyDataCusstomer).sort((a, b) => a.fullName.localeCompare(b.fullName));
-          setCustomerSearchData(sortedCusstomer);
+          setCustomersData(sortedCusstomer);
         } else {
           const sortedCusstomer = formatDataTable(storyDataCusstomer).sort((a, b) => b.fullName.localeCompare(a.fullName));
-          setCustomerSearchData(sortedCusstomer);
+          setCustomersData(sortedCusstomer);
         }
         break;
       case 'email':
         if (ascending === DIRECTION.DESC) {
           const sortedCusstomer = storyDataCusstomer.sort((a, b) => a.email.localeCompare(b.email));
-          setCustomerSearchData(formatDataTable(sortedCusstomer));
+          setCustomersData(formatDataTable(sortedCusstomer));
         } else {
           const sortedCusstomer = storyDataCusstomer.sort((a, b) => b.email.localeCompare(a.email));
-          setCustomerSearchData(formatDataTable(sortedCusstomer));
+          setCustomersData(formatDataTable(sortedCusstomer));
         }
         break;
       case 'dateOfBirth':
         if (ascending === DIRECTION.DESC) {
           const sortedCusstomer = storyDataCusstomer.sort((a, b) =>
           Date.parse(convertDateToDateTime(a.dateOfBirth, FORMAT_DATE.MONTH_DAY_YEAR)) - Date.parse(convertDateToDateTime(b.dateOfBirth, FORMAT_DATE.MONTH_DAY_YEAR)));
-          setCustomerSearchData(formatDataTable(sortedCusstomer));
+          setCustomersData(formatDataTable(sortedCusstomer));
         
         } else {
           const sortedCusstomer = storyDataCusstomer.sort((a, b) => 
           Date.parse(convertDateToDateTime(b.dateOfBirth, FORMAT_DATE.MONTH_DAY_YEAR)) - Date.parse(convertDateToDateTime(a.dateOfBirth, FORMAT_DATE.MONTH_DAY_YEAR)));
-          setCustomerSearchData(formatDataTable(sortedCusstomer));
+          setCustomersData(formatDataTable(sortedCusstomer));
         }
         break;
       default:
@@ -297,7 +301,7 @@ const CustomerList = ({
           : DIRECTION.DESC;
 
       params.set("orderBy", orderByParam);
-      if (cutomerData.length > 0) {
+      if (customerFetchData.length > 0) {
         handleSort(key, orderByParam);
       } 
       handleReplaceURL(params);
@@ -336,7 +340,7 @@ const CustomerList = ({
             }
           </div>
           <Table
-            data={cutomerSearchData.slice((currentPage - 1 )*5, currentPage * 5)}
+            data={cutomersData.slice((currentPage - 1 )*5, currentPage * 5)}
             columns={renderColumn}
             onActionCustomer={handleActionCustomer}
             onSortFieldCustomer={handleSortingChange}
@@ -345,7 +349,7 @@ const CustomerList = ({
             <Pagination
               currentPage = {currentPage}
               pageSize= {5}
-              totalCount={cutomerSearchData.length}
+              totalCount={cutomersData.length}
               onPageChange={handlePageChange}
             />
           }
