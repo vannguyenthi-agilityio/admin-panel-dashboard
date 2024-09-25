@@ -221,7 +221,10 @@ const CustomerList = ({
         !isPending && setCustomersData(dataFiltered);
         return;
       }
-      if (fullNameFilter === "") fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
+      if (fullNameFilter === "") {
+        fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
+        setCustomersData(formatDataTable(customerFetchData));
+      }
 
       if (params.get(search.field)) {
         params.delete(search.field);
