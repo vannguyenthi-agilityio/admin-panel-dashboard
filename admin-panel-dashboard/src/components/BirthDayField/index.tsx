@@ -28,7 +28,7 @@ const BirthDayField = ({
   onChange,
   onBlur
 }: BirthdayProps) => {
-  const { months, date, years } = value ?? { months: 0, date: 0, years: 0 };
+  const { months, date, years } = value ?? { months: "", date: 0, years: 0 };
   const currentYear = new Date();
   const disabledClass = disabled ? "cursor-not-allowed" : "cursor-pointer";
 
