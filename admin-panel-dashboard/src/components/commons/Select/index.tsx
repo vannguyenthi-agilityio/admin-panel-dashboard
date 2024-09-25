@@ -26,6 +26,7 @@ const Select =  forwardRef<HTMLSelectElement, ISelect>((
     selectSize,
     iconElement = <ArrowDownIcon />,
     onChange,
+    onBlur,
     ...props }, ref) => {
   const classNameLabel = `text-grey text-sm font-medium capitalize ${required ? "after:content-['*'] after:text-red-500 after:text-md" : ""}`;
   return (
@@ -41,6 +42,7 @@ const Select =  forwardRef<HTMLSelectElement, ISelect>((
           data-testid={name}
           ref={ref}
           onChange={onChange}
+          onBlur={onBlur}
           {...props}
         >
           {options.map((item: OptionType) => (

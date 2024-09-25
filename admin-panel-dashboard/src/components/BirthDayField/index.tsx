@@ -18,6 +18,7 @@ interface BirthdayProps {
   disabled?: boolean;
   required?: boolean;
   onChange: (value: BirthDay) => void;
+  onBlur?: (event: React.FocusEvent<HTMLSelectElement>) => void;
 }
 
 const BirthDayField = ({
@@ -25,6 +26,7 @@ const BirthDayField = ({
   errorMessage = "",
   disabled = false,
   onChange,
+  onBlur
 }: BirthdayProps) => {
   const { months, date, years } = value ?? { months: "", date: 0, years: 0 };
   const currentYear = new Date();
@@ -58,6 +60,7 @@ const BirthDayField = ({
           label="Month"
           options={MONTHS}
           onChange={handleChangeMonth}
+          onBlur={onBlur}
         />
         <Select
           data-testid="date"
@@ -68,6 +71,7 @@ const BirthDayField = ({
           label="Date"
           options={generateDays(Number(months), years)}
           onChange={handleChangeDay}
+          onBlur={onBlur}
         />
         <Select
           data-testid="year"
@@ -78,6 +82,7 @@ const BirthDayField = ({
           label="Year"
           options={generateTimes(1900, currentYear.getFullYear())}
           onChange={handleChangeYear}
+          onBlur={onBlur}
         />
       </div>
       {errorMessage && (
