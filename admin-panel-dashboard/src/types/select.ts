@@ -21,4 +21,5 @@ export interface ISelect {
   iconElement?: React.ReactNode;
   errorMessage?: string;
   onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLSelectElement>) => void;
 }

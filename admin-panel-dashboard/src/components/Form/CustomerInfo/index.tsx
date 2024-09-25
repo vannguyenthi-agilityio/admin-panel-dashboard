@@ -141,7 +141,7 @@ const CustomerInfo = ({ control, type = FORM_TYPE.CREATE }: ICustomerInfo) => {
       <Controller
           control={control}
           name="dateOfBirth"
-          render={({ field: { value, onChange } }) => {
+          render={({ field: { value, onChange, onBlur } }) => {
             return (
             <div className="w-full min-h-[112px] mt-4 mb-5">
               <BirthDayField
@@ -149,6 +149,7 @@ const CustomerInfo = ({ control, type = FORM_TYPE.CREATE }: ICustomerInfo) => {
                 disabled={isDisable}
                 value={value}
                 onChange={onChange}
+                onBlur={onBlur}
               />
             </div>)
           }}
