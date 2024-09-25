@@ -15,6 +15,11 @@ import { Button } from "@/components"
 
 import { EditIcon, ArrowUpRightIcon, DeleteIcon } from "@/components/Icons";
 
+// Context
+import {
+  useCustomer,
+} from '@/context/customer';
+
 interface IPropsDataTableBody {
   data: ICustomerTable[];
   columns: IColumnType<ICustomerTable>[];
@@ -23,14 +28,17 @@ interface IPropsDataTableBody {
 
 const TableBody = ({ data, columns, onActionCutomer }: IPropsDataTableBody) => {
   const navigate = useNavigate();
+  const { setActionCustomer, setDataCustomers } = useCustomer();
 
   const handleEditCustomer = (customer: ICustomerTable) => {
     onActionCutomer(customer, ACTION_TYPE.EDIT);
+    setDataCustomers(data);
     navigate(`${ROUTES.CUSTOMERS}/edit/${customer.id}`);
   };
 
   const handleDeleteCustomer = (customer: ICustomerTable) => {
     onActionCutomer(customer, ACTION_TYPE.DELETE);
+    setActionCustomer(ACTION_TYPE.DELETE);
   };
 
   const handleDetailCustomer = (customer: ICustomerTable) => {

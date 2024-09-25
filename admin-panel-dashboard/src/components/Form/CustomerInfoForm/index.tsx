@@ -9,14 +9,22 @@ import CustomerInfo from '@/components/Form/CustomerInfo'
 // Types
 import { ICustomerData } from "@/types";
 
+// Constants
+import { ACTION_TYPE } from "@/constants";
+
 // Hocs
-import { TOAST_TYPE, TWithToast, withToast } from "@/hocs/withToast";
+import { TWithToast, withToast } from "@/hocs/withToast";
 
 // Hooks
 import { useActionData } from '@/hooks';
 
+// Context
+import {
+  useCustomer,
+} from '@/context/customer';
+
 // Constants
-import { ROUTES, MESSAGE_ADD_CUSTOMER, MESSAGE_EDIT_CUSTOMER, FORM_TYPE } from '@/constants';
+import { ROUTES, FORM_TYPE } from '@/constants';
 
 // Mocks
 import { MOCK_INIT_CUSTOMER_DATA } from '@/mocks';
@@ -36,7 +44,8 @@ const CustomerInfoForm = ({
   const isEdit = type === FORM_TYPE.EDIT;
   const isDetail = type === FORM_TYPE.DETAIL;
   const [data, setData] = useState<ICustomerData>((isEdit || isDetail) ? customer : MOCK_INIT_CUSTOMER_DATA);
-  const { handleAddData, handleUpdateData,loadingData } = useActionData(setData);
+  const { handleAddData, handleUpdateData, loadingData } = useActionData(setData);
+  const { setActionCustomer } = useCustomer();
   const {firstName, lastName, idNumber, dateOfBirth, phoneNumber, email} = customer;
   const [isLoading, setIsLoading] = useState(false);
 
@@ -57,7 +66,7 @@ const CustomerInfoForm = ({
   const isDisable = !formState.isDirty || !formState.isValid || isLoading;
 
   const hanleDiscardChange = () => {
-    reset({ ...customer })
+    reset({ ...customer });
   }
 
   const hanleCancelEdit = () => {
@@ -66,6 +75,7 @@ const CustomerInfoForm = ({
 
   const onSubmit = useCallback(
     async (data: ICustomerData) => {
+      setIsLoading(true);
       const newData = {
         id: data?.id,
         idNumber: data?.idNumber,
@@ -77,22 +87,15 @@ const CustomerInfoForm = ({
       };
       if (isEdit) {
         handleUpdateData(newData);
+        setActionCustomer(ACTION_TYPE.EDIT);
       } else {
         handleAddData(newData);
+        setActionCustomer(ACTION_TYPE.CREATE);
       }
-
-      setIsLoading(true);
-
       reset(data);
 
       setIsLoading(false);
 
-      openToast({
-        type: data ? TOAST_TYPE.SUCCESS : TOAST_TYPE.ERROR,
-        message: data
-          ? isEdit ? MESSAGE_EDIT_CUSTOMER.SUCCESS : MESSAGE_ADD_CUSTOMER.SUCCESS
-          : isEdit ? MESSAGE_EDIT_CUSTOMER.FAILED : MESSAGE_ADD_CUSTOMER.FAILED,
-      });
       (!loadingData || !isLoading) && navigate(ROUTES.CUSTOMERS);
     },
     [id, openToast, reset],
