@@ -4,7 +4,7 @@ import { memo, ReactNode } from "react";
 import { clsxMerge } from '@/helpers';
 
 // Components
-import { Button } from "@/components";
+import { Button, Loading } from "@/components";
 import { CloseIcon } from "@/components/Icons";
 
 // Types
@@ -19,6 +19,7 @@ interface IModal {
   children: ReactNode;
   showIconClose?: boolean;
   labelButton?: string;
+  isDisable?: boolean;
   title?:string;
   className?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -30,13 +31,14 @@ const Modal = ({
   onClose,
   onClick,
   children,
+  isDisable = false,
   showIconClose = false,
   labelButton = "",
   title = "Modal title",
   className,
   size,
 }: IModal) => (
-    <div onClick={onClose}
+    <div
       className={`fixed inset-0 z-50 flex min-h-[100px] justify-center items-center transition-colors ${isOpen ? "visible bg-black/20" : "invisible"}`}
     >
     {/* modal */}
@@ -64,6 +66,7 @@ const Modal = ({
         />
       }
       {/* <!--Modal body--> */}
+      {isDisable && <Loading additionalClass="absolute left-[50%]" />}
       {children}
       {/* <!--Modal footer--> */}
       <div className="flex flex-shrink-0 gap-3 flex-wrap items-center justify-end rounded-b-md border-t-2 mt-2 border-neutral-100 border-opacity-100 pt-4">
@@ -75,8 +78,9 @@ const Modal = ({
           <Button
             onClick={onClick}
             size='small'
+            disabled={isDisable}
             label={labelButton}
-            buttonType='blood'
+            buttonType={isDisable ? 'disabled' : 'blood'}
           />
         }
       </div>

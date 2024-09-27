@@ -135,10 +135,7 @@ const CustomerList = ({
 
   const handleDeletedCustomer = () => {
     handleDeleteCustomer(data);
-    fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
-    const newDataCustomer = customerFetchData.filter((item) => item.id !== data.id);
-    setCustomersData(formatDataTable(newDataCustomer));
-    setShowModal(false);
+    !loadingData && setShowModal(false);
   }
 
   const fetchData = async <T,>(
@@ -153,7 +150,7 @@ const CustomerList = ({
         message: `${message}: ${error.message}`,
       }));
       setData(data);
-      data && (isEdit || isCreate || isDelete) && openToast(
+      data && ((isEdit || isCreate || isDelete) && !loadingData) && openToast(
         {
           type: data ? TOAST_TYPE.SUCCESS : TOAST_TYPE.ERROR,
           message: isEdit ? MESSAGE_EDIT_CUSTOMER.SUCCESS : isCreate ? MESSAGE_ADD_CUSTOMER.SUCCESS : MESSAGE_DELETE_CUSTOMER.SUCCESS
@@ -189,21 +186,23 @@ const CustomerList = ({
   }, [customerFetchData]);
 
   useEffect(() => {
-    if (customerFetchData.length === 0) {
-      // Get data from api
-      fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
-    }
-
     if (isDelete) {
       params.delete(search.field);
       params.delete("page");
       handleReplaceURL(params);
     }
-
-    if (isDelete || isCreate || isEdit) {
+    if ((isDelete || isEdit) && !loadingData) {
       fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
-      setCustomersData(formatDataTable(customerFetchData))
+      setCustomersData(formatDataTable(customerFetchData));
     }
+  }, [loadingData]);
+
+  useEffect(() => {
+    if (customerFetchData.length === 0 && (!isEdit || !isDelete)) {
+      // Get data from api
+      fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
+    }
+    formatDataTable(customerFetchData) !== cutomersData && setCustomersData(formatDataTable(customerFetchData));
   }, [customerFetchData]);
 
   const handleSearch = useCallback(
@@ -318,7 +317,7 @@ const CustomerList = ({
 
   return (
     <div className="flex items-center justify-center min-h-[200px] py-[20px]">
-      {loading || loadingData ?
+      {loading?
         <Loading />
         :
         <div className="w-full flex flex-col">
@@ -357,10 +356,11 @@ const CustomerList = ({
             />
           }
           <Modal
-            isOpen={isShowModal}
+            isOpen={isShowModal || loadingData}
             title="Confirm Delete Customer"
             labelButton="Yes"
             onClose={() => setShowModal(false)}
+            isDisable={loadingData}
             onClick={handleDeletedCustomer}
             className="max-w-[500px]"
             children={<p className="py-4">{MESSAGES_WARNING.CONFIRM_DELETE}</p>}

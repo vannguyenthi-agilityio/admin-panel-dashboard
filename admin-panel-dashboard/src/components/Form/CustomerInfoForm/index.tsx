@@ -18,6 +18,9 @@ import { TWithToast, withToast } from "@/hocs/withToast";
 // Hooks
 import { useActionData } from '@/hooks';
 
+// Helper
+import { debounce } from "@/helpers";
+
 // Context
 import {
   useCustomer,
@@ -47,7 +50,7 @@ const CustomerInfoForm = ({
   const { handleAddData, handleUpdateData, loadingData } = useActionData(setData);
   const { setActionCustomer } = useCustomer();
   const {firstName, lastName, idNumber, dateOfBirth, phoneNumber, email} = customer;
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const formHandler = useForm<ICustomerData>({
     defaultValues: {
@@ -93,10 +96,11 @@ const CustomerInfoForm = ({
         setActionCustomer(ACTION_TYPE.CREATE);
       }
       reset(data);
-
-      setIsLoading(false);
-
-      (!loadingData || !isLoading) && navigate(ROUTES.CUSTOMERS);
+      
+      debounce(() => {
+        setIsLoading(false);
+        navigate(ROUTES.CUSTOMERS);
+      })();
     },
     [id, openToast, reset],
   );
