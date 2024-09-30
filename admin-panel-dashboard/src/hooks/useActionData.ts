@@ -1,19 +1,28 @@
 import { useState } from 'react';
+
+// Constants
 import {
   MESSAGE_ADD_CUSTOMER,
   MESSAGE_EDIT_CUSTOMER,
   MESSAGE_DELETE_CUSTOMER,
   MESSAGE_GET_CUSTOMER
 } from '@/constants';
+
+// Types
 import {
   ICustomerData
 } from '@/types';
+
+// Services
 import {
   updateToCustomer,
   addToCustomer,
   deletedCustomer,
   getedCustomer
 } from '@/services';
+
+// Helpers
+import { debounce } from "@/helpers";
 
 const useActionData = (
   setData: React.Dispatch<React.SetStateAction<ICustomerData>>
@@ -62,7 +71,9 @@ const useActionData = (
       setErrorMessage(error as string);
       throw new Error(MESSAGE_DELETE_CUSTOMER.FAILED);
     } finally {
-      setLoading(false);
+      debounce(() => {
+        setLoading(false);
+      })();
     }
   }
 

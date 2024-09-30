@@ -375,6 +375,7 @@ const CustomerList = ({
             title="Confirm Delete Customer"
             labelButton="Yes"
             onClose={() => setShowModal(false)}
+            isDisable={loadingData}
             onClick={handleDeletedCustomer}
             className="max-w-[500px]"
             children={<p className="py-4">{MESSAGES_WARNING.CONFIRM_DELETE}</p>}
