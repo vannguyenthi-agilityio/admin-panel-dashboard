@@ -23,6 +23,7 @@ import { paginationStyles } from './style';
 
 interface PaginationProps {
   onPageChange: (page: number) => void;
+  onPageSizeChange?: (pageSizeValue: number) => void;
   totalCount: number;
   siblingCount?: number;
   currentPage: number;
@@ -33,6 +34,7 @@ interface PaginationProps {
 
 const Pagination = ({
   onPageChange,
+  onPageSizeChange = () => {},
   totalCount,
   siblingCount = 1,
   currentPage,
@@ -51,7 +53,7 @@ const Pagination = ({
 
   const onClickPreviousButton = () => onPageChange(currentPage - 1);
 
-  const onChangeTotalItemsPage = (event: React.ChangeEvent<HTMLSelectElement>) => onPageChange(Number(event.target.value));
+  const onChangeTotalItemsPage = (event: React.ChangeEvent<HTMLSelectElement>) => onPageSizeChange(Number(event.target.value) || 5);
 
   const paginationRangeLength = paginationRange.length;
   const showItemsPagination = paginationRangeLength > 1;
@@ -120,16 +122,14 @@ const Pagination = ({
           />
         </div>
       )}
-      {showItemsPagination && 
-        <div className="flex w-full items-center max-w-[180px]">
-          <Select
-            options={PAGINATION}
-            onChange={onChangeTotalItemsPage}
-            defaultValue={currentPage}
-          />
-          <span className="ml-2 text-darker">/Page</span>
-        </div>
-      }
+      <div className="flex w-full items-center max-w-[180px]">
+        <Select
+          options={PAGINATION}
+          onChange={onChangeTotalItemsPage}
+          defaultValue={pageSize}
+        />
+        <span className="ml-2 text-darker">/Page</span>
+      </div>
     </div>
   );
 };

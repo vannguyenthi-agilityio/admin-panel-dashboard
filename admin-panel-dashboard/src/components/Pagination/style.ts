@@ -4,7 +4,7 @@ import { cva } from 'class-variance-authority';
 import { SIZE_TYPE } from "@/types";
 
 export const paginationStyles = cva(
-  'w-full flex flex-wrap sm:flex-nowrap items-center justify-center font-primary font-light text-sm antialiased font-primary flex gap-6 flex-col sm:flex-row items-start w-full justify-between appearance-none cursor-pointer mt-6',
+  'w-full flex flex-wrap sm:flex-nowrap items-center justify-center font-primary font-light text-sm antialiased font-primary flex gap-6 flex-col sm:flex-row items-start w-full justify-end appearance-none cursor-pointer mt-6',
   {
     variants: {
       variant: {

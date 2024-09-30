@@ -3,7 +3,7 @@
 exports[`Pagination component Should match snapshot 1`] = `
 <div>
   <div
-    class="flex-wrap sm:flex-nowrap font-light antialiased font-primary flex gap-6 flex-col sm:flex-row items-start w-full justify-between appearance-none cursor-pointer mt-6 bg-transparent text-dark text-sm px-0 py-2"
+    class="flex-wrap sm:flex-nowrap font-light antialiased font-primary flex gap-6 flex-col sm:flex-row items-start w-full justify-end appearance-none cursor-pointer mt-6 bg-transparent text-dark text-sm px-0 py-2"
   >
     <div
       class="w-full flex gap-2 md:justify-end items-center md:m-0"
@@ -84,7 +84,6 @@ exports[`Pagination component Should match snapshot 1`] = `
             <option
               class="cursor-pointer"
               data-testid="option-1"
-              selected=""
               value="1"
             >
               1
@@ -148,6 +147,7 @@ exports[`Pagination component Should match snapshot 1`] = `
             <option
               class="cursor-pointer"
               data-testid="option-10"
+              selected=""
               value="10"
             >
               10
@@ -194,7 +194,7 @@ exports[`Pagination component Should match snapshot 1`] = `
 exports[`Pagination component Should match total count less than page size 1`] = `
 <div>
   <div
-    class="flex-wrap sm:flex-nowrap font-light antialiased font-primary flex gap-6 flex-col sm:flex-row items-start w-full justify-between appearance-none cursor-pointer mt-6 bg-transparent text-dark text-sm px-0 py-2"
+    class="flex-wrap sm:flex-nowrap font-light antialiased font-primary flex gap-6 flex-col sm:flex-row items-start w-full justify-end appearance-none cursor-pointer mt-6 bg-transparent text-dark text-sm px-0 py-2"
   >
     <div
       class="w-full flex gap-2 md:justify-end items-center md:m-0"
@@ -333,7 +333,6 @@ exports[`Pagination component Should match total count less than page size 1`] =
             <option
               class="cursor-pointer"
               data-testid="option-5"
-              selected=""
               value="5"
             >
               5
@@ -369,6 +368,7 @@ exports[`Pagination component Should match total count less than page size 1`] =
             <option
               class="cursor-pointer"
               data-testid="option-10"
+              selected=""
               value="10"
             >
               10

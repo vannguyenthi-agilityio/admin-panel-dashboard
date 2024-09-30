@@ -69,6 +69,7 @@ const CustomerList = ({
   
   const { getData, loading } = useGetData();
   const [customerFetchData, setCustomerFetchData] = useState<ICustomerData[]>([]);
+  const [pageSize, setPageSize] = useState<number>(5);
   const navigate = useNavigate();
   const [isPending, startTransition] = useTransition();
   const usePathname = () => {
@@ -108,7 +109,9 @@ const CustomerList = ({
   const isEdit = customerAction ===  ACTION_TYPE.EDIT;
   const isCreate = customerAction === ACTION_TYPE.CREATE;
   const isDelete = customerAction === ACTION_TYPE.DELETE;
-  const [cutomersData, setCustomersData] = useState<ICustomerTable[]>(formatDataTable(customerFetchData));
+  const [customersData, setCustomersData] = useState<ICustomerTable[]>(formatDataTable(customerFetchData));
+  const totalCustomers = customersData.length;
+  const dataCustomers = customersData.slice((currentPage - 1 ) * pageSize, currentPage * pageSize);
 
   const handleAddNewCustomer = () => {
     // TODO action add
@@ -135,10 +138,7 @@ const CustomerList = ({
 
   const handleDeletedCustomer = () => {
     handleDeleteCustomer(data);
-    fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
-    const newDataCustomer = customerFetchData.filter((item) => item.id !== data.id);
-    setCustomersData(formatDataTable(newDataCustomer));
-    setShowModal(false);
+    !loadingData && setShowModal(false);
   }
 
   const fetchData = async <T,>(
@@ -153,7 +153,7 @@ const CustomerList = ({
         message: `${message}: ${error.message}`,
       }));
       setData(data);
-      data && (isEdit || isCreate || isDelete) && openToast(
+      data && ((isEdit || isCreate || isDelete) && !loadingData) && openToast(
         {
           type: data ? TOAST_TYPE.SUCCESS : TOAST_TYPE.ERROR,
           message: isEdit ? MESSAGE_EDIT_CUSTOMER.SUCCESS : isCreate ? MESSAGE_ADD_CUSTOMER.SUCCESS : MESSAGE_DELETE_CUSTOMER.SUCCESS
@@ -179,7 +179,7 @@ const CustomerList = ({
   }
 
   useEffect(() => {
-    if (!cutomersData.length) setCustomersData(formatDataTable(customerFetchData));
+    if (!totalCustomers) setCustomersData(formatDataTable(customerFetchData));
     fullNameFilter = searchParams.get(search.field) as string;
     if (fullNameFilter) handleSearch(fullNameFilter, customerFetchData);
 
@@ -189,21 +189,23 @@ const CustomerList = ({
   }, [customerFetchData]);
 
   useEffect(() => {
-    if (customerFetchData.length === 0) {
-      // Get data from api
-      fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
-    }
-
     if (isDelete) {
       params.delete(search.field);
       params.delete("page");
       handleReplaceURL(params);
     }
-
-    if (isDelete || isCreate || isEdit) {
+    if ((isDelete || isEdit) && !loadingData) {
       fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
-      setCustomersData(formatDataTable(customerFetchData))
+      setCustomersData(formatDataTable(customerFetchData));
     }
+  }, [loadingData]);
+
+  useEffect(() => {
+    if (customerFetchData.length === 0 && (!isEdit || !isDelete)) {
+      // Get data from api
+      fetchData(getData, setCustomerFetchData, MESSAGE_GET_CUSTOMER.FAILED);
+    }
+    formatDataTable(customerFetchData) !== customersData && setCustomersData(formatDataTable(customerFetchData));
   }, [customerFetchData]);
 
   const handleSearch = useCallback(
@@ -294,6 +296,17 @@ const CustomerList = ({
     [handleReplaceURL, params],
   );
 
+  const handlePageSizeChange = useCallback(
+    (pageSize: number) => {
+      if (params.get("page")){
+        params.delete("page");
+        handleReplaceURL(params);
+      };
+      setPageSize(pageSize);
+    },
+    [handleReplaceURL, params, totalCustomers],
+  );
+
   const handleSortingChange = useCallback(
     (key: string) => {
       params.set("sortBy", key);
@@ -318,7 +331,7 @@ const CustomerList = ({
 
   return (
     <div className="flex items-center justify-center min-h-[200px] py-[20px]">
-      {loading || loadingData ?
+      {loading?
         <Loading />
         :
         <div className="w-full flex flex-col">
@@ -343,7 +356,7 @@ const CustomerList = ({
             }
           </div>
           <Table
-            data={cutomersData.slice((currentPage - 1 )*5, currentPage * 5)}
+            data={dataCustomers}
             columns={renderColumn}
             onActionCustomer={handleActionCustomer}
             onSortFieldCustomer={handleSortingChange}
@@ -351,13 +364,14 @@ const CustomerList = ({
           {hasPagination &&
             <Pagination
               currentPage = {currentPage}
-              pageSize= {5}
-              totalCount={cutomersData.length}
+              pageSize= {pageSize}
+              totalCount={customersData.length}
               onPageChange={handlePageChange}
+              onPageSizeChange={handlePageSizeChange}
             />
           }
           <Modal
-            isOpen={isShowModal}
+            isOpen={isShowModal || loadingData}
             title="Confirm Delete Customer"
             labelButton="Yes"
             onClose={() => setShowModal(false)}
