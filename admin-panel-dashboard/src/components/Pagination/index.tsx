@@ -126,6 +126,7 @@ const Pagination = ({
         <Select
           options={PAGINATION}
           onChange={onChangeTotalItemsPage}
+          className="text-center"
           defaultValue={pageSize}
         />
         <span className="ml-2 text-darker">/Page</span>
