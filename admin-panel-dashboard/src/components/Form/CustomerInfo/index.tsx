@@ -141,17 +141,23 @@ const CustomerInfo = ({ control, type = FORM_TYPE.CREATE }: ICustomerInfo) => {
       <Controller
           control={control}
           name="dateOfBirth"
-          render={({ field: { value, onChange, onBlur } }) => {
+          render={({ field: { value, onChange, onBlur }, fieldState: { error } }) => {
+            const birthOfDate = new Date(value.years, Number(value.months), value.date);
+            const currentYear = new Date().getFullYear();
+            const birthYear = birthOfDate.getFullYear();
+            const isValidAge = currentYear - birthYear >= 18;
             return (
-            <div className="w-full min-h-[112px] mt-4 mb-5">
-              <BirthDayField
-                required
-                disabled={isDisable}
-                value={value}
-                onChange={onChange}
-                onBlur={onBlur}
-              />
-            </div>)
+              <div className="w-full min-h-[112px] mt-4 mb-5">
+                <BirthDayField
+                  required
+                  disabled={isDisable}
+                  errorMessage={error?.message || !isValidAge ? MESSAGES_ERROR.INVALID_AGE : "" }
+                  value={value}
+                  onChange={onChange}
+                  onBlur={onBlur}
+                />
+              </div>
+            )
           }}
         />
       <Controller

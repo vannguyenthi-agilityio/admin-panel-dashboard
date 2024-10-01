@@ -13,6 +13,7 @@ export const MESSAGES_ERROR = {
   UNKNOWN_ERROR: 'An unknown error occurred',
   CUSTOMER_CONTEXT_ERROR: 'useActionData hooks should using inside CustomerProvider!',
   TOAST_CONTEXT_ERROR: 'useToast should called in ToastProvider!',
+  INVALID_AGE: "Age must be greater than 18",
 };
 
 export const MESSAGES_WARNING = {

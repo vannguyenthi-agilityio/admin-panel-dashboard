@@ -3,7 +3,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 
 // Components
-import { Button } from "@/components";
+import { Button, Loading } from "@/components";
 import CustomerInfo from '@/components/Form/CustomerInfo'
 
 // Types
@@ -108,7 +108,7 @@ const CustomerInfoForm = ({
   return (
     <>
       {(isLoading || loadingData) && (
-        <div className="opacity-25 fixed inset-0 z-20 bg-black cursor-not-allowed" />
+        <div className="opacity-25 absolute inset-0 z-20 cursor-not-allowed flex justify-center items-center"><Loading /></div>
       )}
       <FormProvider {...formHandler as any}>
         <form
