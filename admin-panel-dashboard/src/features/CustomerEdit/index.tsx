@@ -33,7 +33,7 @@ const CustomerEditForm = () => {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-[200px] py-[20px]">
+    <div className="flex items-center justify-center min-h-[200px] py-[20px] relative">
       {!data.id ?
         <Loading />
         :

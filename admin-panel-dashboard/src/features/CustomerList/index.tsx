@@ -331,7 +331,7 @@ const CustomerList = ({
 
   return (
     <div className="flex items-center justify-center min-h-[200px] py-[20px]">
-      {loading?
+      {loading || loadingData ?
         <Loading />
         :
         <div className="w-full flex flex-col">
@@ -371,7 +371,7 @@ const CustomerList = ({
             />
           }
           <Modal
-            isOpen={isShowModal || loadingData}
+            isOpen={isShowModal}
             title="Confirm Delete Customer"
             labelButton="Yes"
             onClose={() => setShowModal(false)}

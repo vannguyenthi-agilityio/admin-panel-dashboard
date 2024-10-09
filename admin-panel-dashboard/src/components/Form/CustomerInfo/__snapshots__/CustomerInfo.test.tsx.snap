@@ -1159,6 +1159,11 @@ exports[`UserInfo Component should match snapshot 1`] = `
           </div>
         </div>
       </div>
+      <p
+        class="text-xs text-red-500 pt-1"
+      >
+        Age must be greater than 18
+      </p>
     </div>
     <div
       class="min-h-[90px] col-span-1"
